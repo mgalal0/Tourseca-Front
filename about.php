@@ -31,34 +31,35 @@
 </section>
 
 <!-- About Content Section -->
-<section class="bg-white py-16">
+<section class="bg-white py-12">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <!-- Main Text -->
-        <h2 class="text-[#095763] text-4xl mb-8 max-w-6xl">
+        <h2 class="text-[#095763] lg:text-4xl  sm:text-[18px] font-[500] mb-8 max-w-6xl">
             Touresca is an online tour operator made up of passionate travel experts whose goal is to help travellers worldwide fulfil their dreams.
         </h2>
 
         <!-- Images Grid -->
         <div class="rounded-2xl overflow-hidden mb-12">
-            <div class="grid grid-cols-3 gap-4">
-                <img src="images/about/about-1.jpg" alt="Tour Guide" class="w-full h-[250px] object-cover rounded-2xl">
-                <img src="images/about/about-2.jpg" alt="Desert Group" class="w-full h-[250px] object-cover rounded-2xl">
-                <img src="images/about/about-3.jpg" alt="Sphinx Visit" class="w-full h-[250px] object-cover rounded-2xl">
+            <div class="grid grid-cols-3 gap-0">
+                <img src="images/about/about-1.jpg" alt="Tour Guide" class="w-full h-[300px] object-cover ">
+                <img src="images/about/about-2.jpg" alt="Desert Group" class="w-full h-[300px] object-cover ">
+                <img src="images/about/about-3.jpg" alt="Sphinx Visit" class="w-full h-[300px] object-cover ">
             </div>
         </div>
 
         <!-- Vision & Mission Grid -->
         <div class="grid md:grid-cols-2 gap-8">
             <!-- Vision -->
-            <div>
-                <div class="flex items-center gap-3 mb-4">
-                    <div class="w-8 h-8">
-                        <svg viewBox="0 0 24 24" fill="none" class="w-full h-full text-[#006778]">
-                            <path d="M12 5.25A.75.75 0 0112.75 6v6a.75.75 0 01-.75.75H6a.75.75 0 010-1.5h5.25V6a.75.75 0 01.75-.75z" fill="currentColor"/>
-                            <path fill-rule="evenodd" d="M12 1.25C6.063 1.25 1.25 6.063 1.25 12S6.063 22.75 12 22.75 22.75 17.937 22.75 12 17.937 1.25 12 1.25zM2.75 12a9.25 9.25 0 1118.5 0 9.25 9.25 0 01-18.5 0z" fill="currentColor"/>
-                        </svg>
-                    </div>
-                    <h3 class="text-[#006778] text-2xl font-medium">Vision</h3>
+            <div class="bg-[#F4F8F3] p-6 rounded-2xl">
+                <div class="flex items-center gap-3 pt-10 text-[#5A5B59] text-[18px] mb-4 ">
+<svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M30.0421 23.3389C30.6488 23.3389 31.14 22.8473 31.14 22.241C31.14 21.6347 30.6488 21.1431 30.0421 21.1431C25.1917 21.1431 21.2594 25.0753 21.2594 29.9261C21.2594 34.7767 25.1917 38.7089 30.0421 38.7089C34.893 38.7089 38.8253 34.7767 38.8253 29.9261C38.8253 29.3196 38.3337 28.8283 37.7274 28.8283C37.1211 28.8283 36.6295 29.3196 36.6295 29.9261C36.6295 33.5641 33.6805 36.5135 30.0421 36.5135C26.4042 36.5135 23.4549 33.5641 23.4549 29.9261C23.4549 26.2879 26.4042 23.3389 30.0421 23.3389Z" fill="#095763"/>
+<path d="M50.9899 23.4051C50.7991 22.829 50.1778 22.5167 49.6014 22.7073C49.0385 22.8936 48.725 23.4928 48.8929 24.0614C52.1761 34.5167 46.3622 45.6539 35.9069 48.9371C25.452 52.2203 14.3148 46.4065 11.0316 35.9512C7.74801 25.4959 13.5623 14.3587 24.0172 11.0755C27.8873 9.86024 32.0368 9.86024 35.9069 11.0755C36.488 11.2507 37.101 10.9218 37.2762 10.3408C37.4487 9.76841 37.1323 9.16351 36.5636 8.97861C24.9543 5.33622 12.5901 11.7948 8.94782 23.4044C5.30543 35.0137 11.7643 47.3779 23.3736 51.0202C34.9832 54.6626 47.3471 48.204 50.9894 36.5944C52.3364 32.3012 52.3365 27.6984 50.9898 23.4051H50.9899Z" fill="#095763"/>
+<path d="M32.1331 15.8061C32.1388 15.181 31.6586 14.6584 31.0352 14.6117C30.7073 14.5838 30.3792 14.5559 30.0425 14.5559C21.5537 14.5559 14.6722 21.4374 14.6722 29.9262C14.6722 38.4148 21.5537 45.2963 30.0425 45.2963C38.5311 45.2963 45.4126 38.4148 45.4126 29.9263C45.4126 29.5291 45.3884 29.1324 45.3397 28.7383C45.2519 28.1357 44.6923 27.7184 44.0898 27.8062C43.4872 27.8936 43.0699 28.4535 43.1573 29.0561C43.1607 29.0789 43.1647 29.1014 43.1694 29.1243C43.1933 29.3903 43.2168 29.6539 43.2168 29.9256C43.2172 37.2019 37.3189 43.1002 30.0429 43.1009C22.7666 43.1012 16.8682 37.2025 16.868 29.9266C16.8676 22.6506 22.7656 16.752 30.0419 16.7517H30.0422C30.3146 16.7517 30.5785 16.7752 30.8439 16.7987L31.0496 16.8159C31.6233 16.8404 32.1082 16.3952 32.1324 15.8216C32.1328 15.8162 32.1328 15.8112 32.1331 15.8061Z" fill="#095763"/>
+<path d="M36.6294 17.8496V21.7866L29.2659 29.15C28.8298 29.5713 28.8178 30.2664 29.239 30.7025C29.6604 31.1386 30.3555 31.1507 30.7915 30.7294C30.8007 30.7206 30.8097 30.7116 30.8185 30.7025L38.1819 23.3391H42.1187C42.41 23.3391 42.689 23.2234 42.8952 23.0173L49.4822 16.4299C49.9109 16.0013 49.9109 15.3062 49.4822 14.8775C49.3803 14.7755 49.2593 14.6947 49.1261 14.6395C48.993 14.5844 48.8502 14.556 48.7061 14.556H45.4124V11.2623C45.4124 10.6561 44.9209 10.1645 44.3142 10.1648C44.0232 10.1649 43.7442 10.2805 43.5385 10.4862L36.9511 17.0736C36.8491 17.1754 36.7682 17.2964 36.713 17.4296C36.6578 17.5627 36.6294 17.7055 36.6294 17.8496ZM38.8252 18.3043L43.2166 13.9127V15.6539C43.2166 16.2602 43.7083 16.7518 44.3145 16.7518H46.0557L41.6641 21.1433H38.8252V18.3043Z" fill="#095763"/>
+</svg>
+
+                    <h3 class="text-[#006778] text-3xl font-[600]">Vision</h3>
                 </div>
                 <p class="text-gray-600">
                     Lorem ipsum dolor sit amet consectetur. Est felis vitae amet cursus amet magna. Curabitur quisque volutpat volutpat in a pretium luctus neque vitae. Donec non cras nulla adipiscing vitae ultricies. Mi quam ridiculus cras ut nullam amet senean faucibus sed.
@@ -66,15 +67,21 @@
             </div>
 
             <!-- Mission -->
-            <div>
-                <div class="flex items-center gap-3 mb-4">
-                    <div class="w-8 h-8">
-                        <svg viewBox="0 0 24 24" fill="none" class="w-full h-full text-[#006778]">
-                            <path d="M12 2.25a.75.75 0 01.75.75v2.25h2.25a.75.75 0 010 1.5H12v2.25a.75.75 0 01-1.5 0V6.75H8.25a.75.75 0 010-1.5h2.25V3a.75.75 0 01.75-.75z" fill="currentColor"/>
-                            <path fill-rule="evenodd" d="M12 1.25C6.063 1.25 1.25 6.063 1.25 12S6.063 22.75 12 22.75 22.75 17.937 22.75 12 17.937 1.25 12 1.25zM2.75 12a9.25 9.25 0 1118.5 0 9.25 9.25 0 01-18.5 0z" fill="currentColor"/>
-                        </svg>
-                    </div>
-                    <h3 class="text-[#006778] text-2xl font-medium">Mission</h3>
+            <div class="bg-[#F4F8F3] p-6 rounded-2xl">
+                <div class="flex items-center gap-3 pt-10 text-[#5A5B59] text-[18px] mb-4">
+                <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_133_345)">
+<path d="M27.0997 18.2089C22.7847 19.215 19.3113 22.6369 18.2506 26.9265C17.1866 31.23 18.4043 35.6164 21.5082 38.6602C22.6061 39.737 23.2617 41.4628 23.2617 43.2768V43.5664C23.2617 44.761 23.7829 45.8359 24.6094 46.5766V48.957C24.6094 51.1863 26.423 53 28.6523 53H31.3477C33.577 53 35.3906 51.1863 35.3906 48.957V46.5766C36.2171 45.8359 36.7383 44.7611 36.7383 43.5664V43.2715C36.7383 41.4851 37.4289 39.7265 38.5857 38.5672C40.8706 36.2774 42.1289 33.2348 42.1289 30C42.1289 22.2663 34.9622 16.3763 27.0997 18.2089ZM32.6953 48.957C32.6953 49.7001 32.0908 50.3047 31.3477 50.3047H28.6523C27.9092 50.3047 27.3047 49.7001 27.3047 48.957V47.6094H32.6953V48.957ZM36.6777 36.6634C35.0033 38.3414 34.043 40.7499 34.043 43.2715V43.5664C34.043 44.3095 33.4384 44.9141 32.6953 44.9141H27.3047C26.5616 44.9141 25.957 44.3095 25.957 43.5664V43.2768C25.957 40.7164 25.0233 38.3323 23.3953 36.7359C20.9794 34.3667 20.0344 30.9416 20.867 27.5735C21.6868 24.2576 24.3735 21.6121 27.7117 20.8339C33.8814 19.3952 39.4336 24.001 39.4336 30C39.4336 32.516 38.4548 34.8824 36.6777 36.6634ZM19.5177 17.6118L15.7059 13.8001C15.1796 13.2738 14.3263 13.2738 13.8 13.8001C13.2737 14.3264 13.2737 15.1796 13.8 15.7059L17.6118 19.5177C18.138 20.044 18.9914 20.044 19.5177 19.5177C20.044 18.9914 20.044 18.1381 19.5177 17.6118ZM13.8281 28.6523H8.34766C7.60339 28.6523 7 29.2557 7 30C7 30.7443 7.60339 31.3477 8.34766 31.3477H13.8281C14.5724 31.3477 15.1758 30.7443 15.1758 30C15.1758 29.2557 14.5724 28.6523 13.8281 28.6523ZM51.6523 28.6523H46.1719C45.4276 28.6523 44.8242 29.2557 44.8242 30C44.8242 30.7443 45.4276 31.3477 46.1719 31.3477H51.6523C52.3966 31.3477 53 30.7443 53 30C53 29.2557 52.3966 28.6523 51.6523 28.6523ZM46.2 13.8001C45.6739 13.2738 44.8205 13.2738 44.2941 13.8001L40.4823 17.6118C39.956 18.138 39.956 18.9914 40.4823 19.5177C41.0086 20.044 41.8619 20.044 42.3882 19.5177L46.2 15.7059C46.7263 15.1797 46.7263 14.3264 46.2 13.8001ZM30 7C29.2557 7 28.6523 7.60339 28.6523 8.34766V13.8281C28.6523 14.5724 29.2557 15.1758 30 15.1758C30.7443 15.1758 31.3477 14.5724 31.3477 13.8281V8.34766C31.3477 7.60339 30.7443 7 30 7Z" fill="#095763"/>
+<path d="M30 23.2617C29.446 23.2617 28.8817 23.3281 28.3237 23.4588C25.9999 24.0012 24.0545 25.9141 23.483 28.2187C23.3038 28.9411 23.7442 29.6719 24.4665 29.8511C25.189 30.0303 25.9198 29.5898 26.099 28.8675C26.4279 27.5416 27.5946 26.3968 28.9374 26.0834C29.2952 25.9995 29.6527 25.957 30 25.957C30.7443 25.957 31.3476 25.3536 31.3476 24.6094C31.3476 23.8651 30.7443 23.2617 30 23.2617Z" fill="#095763"/>
+</g>
+<defs>
+<clipPath id="clip0_133_345">
+<rect width="46" height="46" fill="white" transform="translate(7 7)"/>
+</clipPath>
+</defs>
+</svg>
+
+                    <h3 class="text-[#006778] text-3xl font-[600]">Mission</h3>
                 </div>
                 <p class="text-gray-600">
                     Lorem ipsum dolor sit amet consectetur. Est felis vitae amet cursus amet magna. Curabitur quisque volutpat volutpat in a pretium luctus neque vitae. Donec non cras nulla adipiscing vitae ultricies. Mi quam ridiculus cras ut nullam amet senean faucibus sed.
@@ -83,6 +90,208 @@
         </div>
     </div>
 </section>
+
+<!-- How We Do It Section -->
+<section class="py-16" style="background: #276C76;">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Section Header -->
+        <div class="text-center mb-12">
+            <h2 class="font-['Berkshire_Swash'] text-[#C8E677] text-4xl md:text-6xl mb-4">
+                How we do it
+            </h2>
+            <p class="text-[16px]   text-[#C8E677] sm:text-3xl">Our commitment to quality</p>
+        </div>
+
+        <!-- Grid Container -->
+        <div class="grid md:grid-cols-2 gap-16">
+            <!-- Item 1 -->
+            <div class="flex gap-4">
+                <div class="flex-shrink-0 w-10 h-10 text-xl bg-[#C8E677] rounded-full flex items-center justify-center text-[#095763] font-semibold">
+                    1
+                </div>
+                <div>
+                    <h3 class="text-white font-semibold mb-2 sm:text-xl">Extraordinary experiences:</h3>
+                    <p class="text-white">Our expert crafters work closely with trusted partners to take you to the most incredible locations around the world- our 300+ itineraries span more than 60 countries!</p>
+                </div>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="flex gap-4">
+                <div class="flex-shrink-0 w-10 h-10 text-xl bg-[#C8E677] rounded-full flex items-center justify-center text-[#095763] font-semibold">
+                    2
+                </div>
+                <div>
+                    <h3 class="text-white font-semibold mb-2 sm:text-xl">Extraordinary experiences:</h3>
+                    <p class="text-white">Our expert crafters work closely with trusted partners to take you to the most incredible locations around the world- our 300+ itineraries span more than 60 countries!</p>
+                </div>
+            </div>
+
+            <!-- Item 3 -->
+            <div class="flex gap-4">
+                <div class="flex-shrink-0 w-10 h-10 text-xl bg-[#C8E677] rounded-full flex items-center justify-center text-[#095763] font-semibold">
+                    3
+                </div>
+                <div>
+                    <h3 class="text-white font-semibold mb-2 sm:text-xl">Extraordinary experiences:</h3>
+                    <p class="text-white">Our expert crafters work closely with trusted partners to take you to the most incredible locations around the world- our 300+ itineraries span more than 60 countries!</p>
+                </div>
+            </div>
+
+            <!-- Item 4 -->
+            <div class="flex gap-4">
+                <div class="flex-shrink-0 w-10 h-10 text-xl bg-[#C8E677] rounded-full flex items-center justify-center text-[#095763] font-semibold">
+                    4
+                </div>
+                <div>
+                    <h3 class="text-white font-semibold mb-2 sm:text-xl">Extraordinary experiences:</h3>
+                    <p class="text-white">Our expert crafters work closely with trusted partners to take you to the most incredible locations around the world- our 300+ itineraries span more than 60 countries!</p>
+                </div>
+            </div>
+
+            <!-- Item 5 -->
+            <div class="flex gap-4">
+                <div class="flex-shrink-0 w-10 h-10 text-xl bg-[#C8E677] rounded-full flex items-center justify-center text-[#095763] font-semibold">
+                    5
+                </div>
+                <div>
+                    <h3 class="text-white font-semibold mb-2 sm:text-xl">Extraordinary experiences:</h3>
+                    <p class="text-white">Our expert crafters work closely with trusted partners to take you to the most incredible locations around the world- our 300+ itineraries span more than 60 countries!</p>
+                </div>
+            </div>
+
+            <!-- Item 6 -->
+            <div class="flex gap-4">
+                <div class="flex-shrink-0 w-10 h-10 text-xl bg-[#C8E677] rounded-full flex items-center justify-center text-[#095763] font-semibold">
+                    6
+                </div>
+                <div>
+                    <h3 class="text-white font-semibold mb-2 sm:text-xl">Extraordinary experiences:</h3>
+                    <p class="text-white">Our expert crafters work closely with trusted partners to take you to the most incredible locations around the world- our 300+ itineraries span more than 60 countries!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+<!-- Our Commitment to Excellence Section -->
+<section class="bg-white pt-16 py-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <!-- Grid Layout -->
+        <div class="grid md:grid-cols-2 gap-12">
+            
+            <!-- Left Column: List -->
+            <div class="space-y-6">
+                                        <!-- Section Header -->
+
+            <h2 class="text-[#095763] text-4xl font-[600] mb-4 mt-6">Our commitment to excellence</h2>
+                <!-- List Items -->
+                <div class="flex items-center gap-3  text-[#5A5B59] text-[18px]">
+                    <div class="flex-shrink-0">
+                        <svg class="w-10 h-10 text-[#309CAB]" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                        </svg>
+                    </div>
+                    <p class="text-gray-600 text-[16px] sm:text-[18px]">Assisting companies in establishing internal audit departments.</p>
+                </div>
+
+                <div class="flex items-center gap-3 pt-10 text-[#5A5B59] text-[18px]">
+                    <div class="flex-shrink-0">
+                        <svg class="w-10 h-10 text-[#309CAB]" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                        </svg>
+                    </div>
+                    <p class="text-gray-600">Assisting companies in establishing internal audit departments.</p>
+                </div>
+
+                <div class="flex items-center gap-3 pt-10 text-[#5A5B59] text-[18px]">
+                    <div class="flex-shrink-0">
+                        <svg class="w-10 h-10 text-[#309CAB]" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                        </svg>
+                    </div>
+                    <p class="text-gray-600">Assisting companies in establishing internal audit departments.</p>
+                </div>
+
+                <div class="flex items-center gap-3 pt-10 text-[#5A5B59] text-[18px]">
+                    <div class="flex-shrink-0">
+                        <svg class="w-10 h-10 text-[#309CAB]" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                        </svg>
+                    </div>
+                    <p class="text-gray-600">Assisting companies in establishing internal audit departments.</p>
+                </div>
+
+                <div class="flex items-center gap-3 pt-10 text-[#5A5B59] text-[18px]">
+                    <div class="flex-shrink-0">
+                        <svg class="w-10 h-10 text-[#309CAB]" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                        </svg>
+                    </div>
+                    <p class="text-gray-600">Assisting companies in establishing internal audit departments.</p>
+                </div>
+
+                <div class="flex items-center gap-3 pt-10 text-[#5A5B59] text-[18px]">
+                    <div class="flex-shrink-0">
+                        <svg class="w-10 h-10 text-[#309CAB]" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                        </svg>
+                    </div>
+                    <p class="text-gray-600">Assisting companies in establishing internal audit departments.</p>
+                </div>
+            </div>
+
+            <!-- Right Column: Images -->
+            <div class="grid grid-cols-2 gap-4">
+                <!-- Large Image -->
+                <div class="col-span-2">
+                    <img src="images/about/ex-1.jpg" alt="Excellence 1" class="w-full h-60 object-cover rounded-lg">
+                </div>
+                <!-- Small Images -->
+                <div>
+                    <img src="images/about/ex-2.jpg" alt="Excellence 2" class="w-full h-[260px] object-cover rounded-lg">
+                </div>
+                <div>
+                    <img src="images/about/ex-3.jpg" alt="Excellence 3" class="w-full h-[260px] object-cover rounded-lg">
+                </div>
+                <!-- Bottom Image -->
+                <div class="col-span-2">
+                    <img src="images/about/ex-4.jpg" alt="Excellence 4" class="w-full h-60 object-cover rounded-lg">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Why Choose Us -->
+<?php include "componets/why.php"?>
+
+
+
+<!-- Subscribe -->
+<?php include "componets/subscribe.php"?>
+
+<!-- FAQ -->
+<!-- FAQ Section Header -->
+<section class="bg-white pt-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-2">
+        <h2 class="text-[#095763] text-[32px] sm:text-[40px] font-[600] mb-2">FAQ</h2>
+        <div class="flex justify-between items-center">
+            <p class="text-gray-500 text-[14px] sm:text-[20px] max-w-[80%]">Find answers for common questions to help plan your perfect tour.</p>
+            <a href="#" class="text-[#095763] text-[16px] hover:underline hover:text-[#309CAB]">Show all</a>
+        </div>
+    </div>
+</section>
+
+
+<?php include "componets/faq.php"?>
+
+
 
 <?php include "componets/footer.php"?>
 
