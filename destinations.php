@@ -38,14 +38,16 @@ $_primary_two = "#074C56";
 
         .btn-primary {
             background-color:
-                <?= $_primary ?>;
+                <?= $_primary ?>
+            ;
             color: white;
         }
 
         .btn-secondary {
             background-color: #E0EAEB;
             color:
-                <?= $_primary ?>;
+                <?= $_primary ?>
+            ;
 
         }
 
@@ -66,7 +68,9 @@ $_primary_two = "#074C56";
             position: absolute;
             bottom: -5px;
             left: 0;
-            background-color: <?= $_yellow ?>;
+            background-color:
+                <?= $_yellow ?>
+            ;
             content: '';
         }
 
@@ -81,7 +85,9 @@ $_primary_two = "#074C56";
 
         .swiper-pagination .swiper-pagination-bullet-active {
             width: 37px;
-            background-color: <?= $_primary ?> !important;
+            background-color:
+                <?= $_primary ?>
+                !important;
         }
 
         .swiper-button-prev,
@@ -106,7 +112,8 @@ $_primary_two = "#074C56";
         .swiper-button-prev:hover::after,
         .swiper-button-next:hover::after {
             color:
-                <?= $_primary ?>;
+                <?= $_primary ?>
+            ;
         }
 
         @media (max-width: 900px) {
@@ -157,7 +164,9 @@ $_primary_two = "#074C56";
 
         .blog-section .swiper-pagination-bullet-active,
         .what-are-saying-section .swiper-pagination-bullet-active {
-            background-color: <?= $_primary ?> !important;
+            background-color:
+                <?= $_primary ?>
+                !important;
         }
 
         /* end what are saying section styles */
@@ -214,7 +223,8 @@ $_primary_two = "#074C56";
                                     heritage of Islamic
                                     Cairo, the city immerses travelers in history and unforgettable experiences.
                                 </p>
-                                <a href="#" class="text-[<?= $_yellow ?>] font-semibold hover:underline">Discover Trips →</a>
+                                <a href="#" class="text-[<?= $_yellow ?>] font-semibold hover:underline">Discover Trips
+                                    →</a>
                             </div>
                             <div class="absolute bottom-[45px] right-4 flex gap-8 flex-col">
                                 <img src="images/swipe1.jpg" alt="swipe1.jpg"
@@ -245,7 +255,8 @@ $_primary_two = "#074C56";
                                     A stunning coastal city known for its Mediterranean charm, historic landmarks, and
                                     vibrant culture.
                                 </p>
-                                <a href="#" class="text-[<?= $_yellow ?>] font-semibold hover:underline">Discover Trips →</a>
+                                <a href="#" class="text-[<?= $_yellow ?>] font-semibold hover:underline">Discover Trips
+                                    →</a>
                             </div>
                             <div class="absolute bottom-[45px] right-4 flex gap-8 flex-col">
                                 <img loading="lazy" src="images/swipe2.jpg" alt="swipe2.jpg"
@@ -276,7 +287,8 @@ $_primary_two = "#074C56";
                                     A treasure trove of ancient Egyptian monuments, including the Valley of the Kings
                                     and Karnak Temple.
                                 </p>
-                                <a href="#" class="text-[<?= $_yellow ?>] font-semibold hover:underline">Discover Trips →</a>
+                                <a href="#" class="text-[<?= $_yellow ?>] font-semibold hover:underline">Discover Trips
+                                    →</a>
                             </div>
                             <div class="absolute bottom-[45px] right-4 flex gap-8 flex-col">
                                 <img loading="lazy" src="images/swipe3.jpg" alt="swipe3.jpg"
@@ -440,8 +452,8 @@ $_primary_two = "#074C56";
                         <span class="text-[14px] md:text-[16px]">Discover Now</span>
                         <svg xmlns="http://www.w3.org/2000/svg" class="group-hover:translate-x-1 duration-300"
                             width="30" height="30" viewBox="0 0 33 32" fill="none">
-                            <path d="M26.7861 16H6.2147" stroke="<?= $_yellow ?>" stroke-width="3" stroke-linecap="round"
-                                stroke-linejoin="round" />
+                            <path d="M26.7861 16H6.2147" stroke="<?= $_yellow ?>" stroke-width="3"
+                                stroke-linecap="round" stroke-linejoin="round" />
                             <path d="M26.7861 16L19.513 22.7882" stroke="<?= $_yellow ?>" stroke-width="3"
                                 stroke-linecap="round" stroke-linejoin="round" />
                             <path d="M26.7861 16L19.513 9.21177" stroke="<?= $_yellow ?>" stroke-width="3"
@@ -827,7 +839,12 @@ $_primary_two = "#074C56";
     <!-- Start contact... Section -->
     <section class="contact-sections bg-[#276C76] py-6">
         <div class="max-w-7xl px-4 sm:px-6 lg:px-8 mx-auto relative my-16">
-            <h2 class="text-[<?= $_yellow ?>] text-[26px] md:text-[36px]">Not sure which tour is right for you? <br /> We’re
+            <div class="absolute top-0 right-10">
+                <img loading="lazy" src="images/icons/airplane.svg" alt="airplane icon" width="169" height="169" />
+            </div>
+
+            <h2 class="text-[<?= $_yellow ?>] text-[26px] md:text-[36px]">Not sure which tour is right for you? <br />
+                We’re
                 here to help.</h2>
             <div class="grid grid-cols-1 gap-4 md:grid-cols-3 mt-4">
                 <div class="card rounded-[20px] overflow-hidden relative bg-[#F4F8F3] p-6">
@@ -898,7 +915,8 @@ $_primary_two = "#074C56";
                                 class="w-full h-[250px] object-cover">
                         </div>
                         <div class="p-6">
-                            <span class="bg-[#DCFE83] text-[<?= $_primary ?>] px-3 py-1 rounded-full text-xs font-medium ">Travel
+                            <span
+                                class="bg-[#DCFE83] text-[<?= $_primary ?>] px-3 py-1 rounded-full text-xs font-medium ">Travel
                                 tips</span>
 
                             <h3 class="text-xl font-semibold my-2">The Ultimate Guide to Exploring the Land of Pharaohs
@@ -927,7 +945,8 @@ $_primary_two = "#074C56";
                                 class="w-full h-[250px] object-cover">
                         </div>
                         <div class="p-6">
-                            <span class="bg-[#DCFE83] text-[<?= $_primary ?>] px-3 py-1 rounded-full text-xs font-medium ">Travel
+                            <span
+                                class="bg-[#DCFE83] text-[<?= $_primary ?>] px-3 py-1 rounded-full text-xs font-medium ">Travel
                                 tips</span>
 
                             <h3 class="text-xl font-semibold my-2">The Ultimate Guide to Exploring the Land of Pharaohs
@@ -956,7 +975,8 @@ $_primary_two = "#074C56";
                                 class="w-full h-[250px] object-cover">
                         </div>
                         <div class="p-6">
-                            <span class="bg-[#DCFE83] text-[<?= $_primary ?>] px-3 py-1 rounded-full text-xs font-medium ">Travel
+                            <span
+                                class="bg-[#DCFE83] text-[<?= $_primary ?>] px-3 py-1 rounded-full text-xs font-medium ">Travel
                                 tips</span>
 
                             <h3 class="text-xl font-semibold my-2">The Ultimate Guide to Exploring the Land of Pharaohs
