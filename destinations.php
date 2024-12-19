@@ -1,5 +1,8 @@
 <?php
 // destinations.php
+$_yellow = "#C8EC1F";
+$_primary = "#095763";
+$_primary_two = "#074C56";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -18,20 +21,52 @@
     <link rel="stylesheet" href="styles/font-2.css">
     <style>
         .background-container {
-            background: linear-gradient(180deg, #276C76 0%, #BAD0B4 100%);
+            background: linear-gradient(180deg, #276C76 0%, #BAD0B4 70%, #FFFFFF 100%);
             min-height: 100vh;
             position: relative;
             overflow: hidden;
         }
 
         /* start common styles */
+        .btn {
+            /* width: 177px; */
+            height: 48px;
+            border-radius: 24px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .btn-primary {
+            background-color:
+                <?= $_primary ?>;
+            color: white;
+        }
+
+        .btn-secondary {
+            background-color: #E0EAEB;
+            color:
+                <?= $_primary ?>;
+
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: black;
+            opacity: 0.25;
+        }
+
+
         .view-all::after {
             width: 100%;
             height: 2px;
             position: absolute;
             bottom: -5px;
             left: 0;
-            background-color: #C1EA00;
+            background-color: <?= $_yellow ?>;
             content: '';
         }
 
@@ -46,7 +81,7 @@
 
         .swiper-pagination .swiper-pagination-bullet-active {
             width: 37px;
-            background-color: #095763 !important;
+            background-color: <?= $_primary ?> !important;
         }
 
         .swiper-button-prev,
@@ -70,10 +105,14 @@
 
         .swiper-button-prev:hover::after,
         .swiper-button-next:hover::after {
-            color: #095763;
+            color:
+                <?= $_primary ?>;
         }
 
         @media (max-width: 900px) {
+            .btn {
+                font-size: 12px;
+            }
 
             .swiper-pagination .swiper-pagination-bullet {
                 width: 12px;
@@ -95,7 +134,6 @@
             .swiper-button-next:after {
                 font-size: 18px !important;
             }
-
         }
 
         /* end common styles */
@@ -111,6 +149,18 @@
         }
 
         /* end top destination styles */
+        /* start what are saying section styles */
+        .blog-section .swiper-pagination-bullet,
+        .what-are-saying-section .swiper-pagination-bullet {
+            background-color: #C1D5D8 !important;
+        }
+
+        .blog-section .swiper-pagination-bullet-active,
+        .what-are-saying-section .swiper-pagination-bullet-active {
+            background-color: <?= $_primary ?> !important;
+        }
+
+        /* end what are saying section styles */
     </style>
 </head>
 
@@ -118,10 +168,10 @@
     <?php include "componets/navbar.php" ?>
     <div class="background-container">
         <!-- Start Hero Section -->
-        <section class="max-w-7xl px-4 sm:px-6 lg:px-8 mx-auto pt-24">
+        <section class="hero-section max-w-7xl px-4 sm:px-6 lg:px-8 mx-auto pt-24">
             <div class="mb-12">
                 <h1 style="font-family: 'Berkshire Swash', cursive;"
-                    class="text-[32px] md:text-[64px] font-semibold mb-4 text-[#C8E677]">
+                    class="text-[32px] md:text-[64px] font-semibold mb-4 text-[<?= $_yellow ?>]">
                     Destinations
                 </h1>
                 <p class="w-full  text-white leading-8 text-[14px] md:text-[24px]">
@@ -139,20 +189,22 @@
         <!-- Start Top Destinations Section -->
         <section class="top-destinations-section max-w-7xl px-4 sm:px-6 lg:px-8 mx-auto relative my-16">
             <div class="hidden md:flex justify-between items-center pb-6">
-                <h3 class="text-[#05363D] text-[36px]">Our Top Destinations</h3>
-                <a href="destinations.php" class=" text-[16px] text-[#C1EA00] relative view-all">View All</a>
+                <h3 class="text-[#05363D] text-[26px] md:text-[36px]">Our Top Destinations</h3>
+                <a href="destinations.php" class=" text-[16px] text-[<?= $_yellow ?>] relative view-all">View All</a>
             </div>
             <div class="swiper top-destinations-swiper pb-12 md:pb-20">
                 <div class="swiper-wrapper">
                     <!-- Cairo -->
                     <div class="swiper-slide">
                         <div class="rounded-[16px] overflow-hidden h-full relative">
-                            <img src="images/swipe1.jpg" alt="Cairo" class="w-full h-full object-cover">
+                            <img src="images/swipe1.jpg" alt="Cairo" class="main-image w-full h-full object-cover">
                             <div class="absolute inset-0 bg-gradient-to-b from-black/0 via-black/20 to-black/60"></div>
                             <div class="absolute bottom-0 left-0 right-0 p-8 text-white">
-                                <div class="flex gap-4">
+                                <div class="flex gap-4 items-center">
                                     <h3 class="text-3xl font-semibold mb-2">Cairo</h3>
-                                    <p class="text-sm bg-white text-[#0B5864] rounded-lg inline-block px-3 py-1 mb-3">8
+                                    <p
+                                        class="text-sm bg-gray-50 text-[#0B5864] rounded-lg inline-block px-3 h-6 flex items-center">
+                                        8
                                         Trips</p>
                                 </div>
                                 <p class="text-sm md:text-base mb-4 w-[80%]">
@@ -162,15 +214,15 @@
                                     heritage of Islamic
                                     Cairo, the city immerses travelers in history and unforgettable experiences.
                                 </p>
-                                <a href="#" class="text-yellow-400 font-semibold hover:underline">Discover Trips →</a>
+                                <a href="#" class="text-[<?= $_yellow ?>] font-semibold hover:underline">Discover Trips →</a>
                             </div>
                             <div class="absolute bottom-[45px] right-4 flex gap-8 flex-col">
                                 <img src="images/swipe1.jpg" alt="swipe1.jpg"
-                                    class="w-[45px] md:w-[109px] h-[45px] md:h-[109px] rounded-lg border-2 border-white">
+                                    class="img-option w-[45px] md:w-[109px] h-[45px] md:h-[109px] rounded-lg border-2 border-white">
                                 <img src="images/swipe2.jpg" alt="swipe2.jpg"
-                                    class="w-[45px] md:w-[109px] h-[45px] md:h-[109px] rounded-lg">
+                                    class="img-option w-[45px] md:w-[109px] h-[45px] md:h-[109px] rounded-lg">
                                 <img src="images/swipe3.jpg" alt="swipe3.jpg"
-                                    class="w-[45px] md:w-[109px] h-[45px] md:h-[109px] rounded-lg">
+                                    class="img-option w-[45px] md:w-[109px] h-[45px] md:h-[109px] rounded-lg">
                             </div>
                         </div>
                     </div>
@@ -179,27 +231,29 @@
                     <div class="swiper-slide">
                         <div class="rounded-[16px] overflow-hidden h-full relative">
                             <img loading="lazy" src="images/swipe2.jpg" alt="Alexandria"
-                                class="w-full h-full object-cover">
+                                class="w-full h-full object-cover main-image">
                             <div class="absolute inset-0 bg-gradient-to-b from-black/0 via-black/20 to-black/60"></div>
                             <div class="absolute bottom-0 left-0 right-0 p-8 text-white">
-                                <div class="flex gap-4">
+                                <div class="flex gap-4 items-center">
                                     <h3 class="text-3xl font-semibold mb-2">Alexandria</h3>
-                                    <p class="text-sm bg-white text-[#0B5864] rounded-lg inline-block px-3 py-1 mb-3">5
+                                    <p
+                                        class="text-sm bg-gray-50 text-[#0B5864] rounded-lg inline-block px-3 h-6 flex items-center">
+                                        5
                                         Trips</p>
                                 </div>
                                 <p class="text-sm md:text-base mb-4 w-[80%]">
                                     A stunning coastal city known for its Mediterranean charm, historic landmarks, and
                                     vibrant culture.
                                 </p>
-                                <a href="#" class="text-yellow-400 font-semibold hover:underline">Discover Trips →</a>
+                                <a href="#" class="text-[<?= $_yellow ?>] font-semibold hover:underline">Discover Trips →</a>
                             </div>
                             <div class="absolute bottom-[45px] right-4 flex gap-8 flex-col">
                                 <img loading="lazy" src="images/swipe2.jpg" alt="swipe2.jpg"
-                                    class="w-[45px] md:w-[109px] h-[45px] md:h-[109px] rounded-lg border-2 border-white">
+                                    class="img-option w-[45px] md:w-[109px] h-[45px] md:h-[109px] rounded-lg border-2 border-white">
                                 <img loading="lazy" src="images/swipe3.jpg" alt="swipe3.jpg"
-                                    class="w-[45px] md:w-[109px] h-[45px] md:h-[109px] rounded-lg">
+                                    class="img-option w-[45px] md:w-[109px] h-[45px] md:h-[109px] rounded-lg">
                                 <img loading="lazy" src="images/swipe1.jpg" alt="swipe1.jpg"
-                                    class="w-[45px] md:w-[109px] h-[45px] md:h-[109px] rounded-lg">
+                                    class="img-option w-[45px] md:w-[109px] h-[45px] md:h-[109px] rounded-lg">
                             </div>
                         </div>
                     </div>
@@ -207,27 +261,30 @@
                     <!-- Luxor -->
                     <div class="swiper-slide">
                         <div class="rounded-[16px] overflow-hidden h-full relative">
-                            <img loading="lazy" src="images/swipe3.jpg" alt="Luxor" class="w-full h-full object-cover">
+                            <img loading="lazy" src="images/swipe3.jpg" alt="Luxor"
+                                class="w-full h-full object-cover main-image">
                             <div class="absolute inset-0 bg-gradient-to-b from-black/0 via-black/20 to-black/60"></div>
                             <div class="absolute bottom-0 left-0 right-0 p-8 text-white">
-                                <div class="flex gap-4">
+                                <div class="flex gap-4 items-center">
                                     <h3 class="text-3xl font-semibold mb-2">Luxor</h3>
-                                    <p class="text-sm bg-white text-[#0B5864] rounded-lg inline-block px-3 py-1 mb-3">12
+                                    <p
+                                        class="text-sm bg-gray-50 text-[#0B5864] rounded-lg inline-block px-3 h-6 flex items-center">
+                                        12
                                         Trips</p>
                                 </div>
                                 <p class="text-sm md:text-base mb-4 w-[80%]">
                                     A treasure trove of ancient Egyptian monuments, including the Valley of the Kings
                                     and Karnak Temple.
                                 </p>
-                                <a href="#" class="text-yellow-400 font-semibold hover:underline">Discover Trips →</a>
+                                <a href="#" class="text-[<?= $_yellow ?>] font-semibold hover:underline">Discover Trips →</a>
                             </div>
                             <div class="absolute bottom-[45px] right-4 flex gap-8 flex-col">
                                 <img loading="lazy" src="images/swipe3.jpg" alt="swipe3.jpg"
-                                    class="w-[45px] md:w-[109px] h-[45px] md:h-[109px] rounded-lg border-2 border-white">
+                                    class="img-option w-[45px] md:w-[109px] h-[45px] md:h-[109px] rounded-lg border-2 border-white">
                                 <img loading="lazy" src="images/swipe1.jpg" alt="swipe1.jpg"
-                                    class="w-[45px] md:w-[109px] h-[45px] md:h-[109px] rounded-lg">
+                                    class="img-option w-[45px] md:w-[109px] h-[45px] md:h-[109px] rounded-lg">
                                 <img loading="lazy" src="images/swipe2.jpg" alt="swipe2.jpg"
-                                    class="w-[45px] md:w-[109px] h-[45px] md:h-[109px] rounded-lg">
+                                    class="img-option w-[45px] md:w-[109px] h-[45px] md:h-[109px] rounded-lg">
                             </div>
                         </div>
                     </div>
@@ -245,191 +302,149 @@
 
         <!-- Start Witch Side... Section -->
         <section class="witch-side max-w-7xl px-4 sm:px-6 lg:px-8 mx-auto relative my-16">
-            <h2 class="text-[#05363D] text-[36px]">Which side of Egypt are you most excited to explore ?</h2>
+            <h2 class="text-[#05363D] text-[26px] md:text-[36px]">Which side of Egypt are you most excited to explore ?
+            </h2>
 
             <div class="grid grid-cols-2 gap-4 md:grid-cols-3 mt-4">
                 <div class="card rounded-[20px] overflow-hidden relative ">
-                    <div class=" absolute top-0 left-0 right-0 bottom-0 bg-black opacity-25"></div>
+                    <div class="overlay"></div>
                     <img loading="lazy" src="images/destinations/historical-heart.jpg" alt="historical-heart"
                         class="w-full h-[150px] md:h-[300px] object-cover">
                     <div class="absolute top-4 left-4">
-                        <p class="text-white text-xs md:text-base">Historical Heart</p>
-                        <p class="text-white text-xs md:text-base">(Cairo and Giza)</p>
+                        <p class="text-white text-sm md:text-base">Historical Heart</p>
+                        <p class="text-white text-sm md:text-base">(Cairo and Giza)</p>
                     </div>
                     <!-- Image counter -->
                     <div class="absolute bottom-4 right-4">
-                        <div class=" w-20 py-1 rounded-xl bg-gray-100 opacity-75 flex items-center justify-around">
+                        <div
+                            class="w-16 md:w-20 py-1 rounded-xl bg-gray-100 opacity-75 flex items-center justify-around">
                             <button class="prev hover:-translate-x-1 duration-300">
-                                <svg xmlns="http://www.w3.org/2000/svg" class=" w-[14px] md:w-[18px]"
-                                    viewBox="0 0 14 14" fill="none">
-                                    <path d="M3.4834 6.5L7.84726 10.3184" stroke="#074C56" stroke-linecap="round"
-                                        stroke-linejoin="round" />
-                                    <path d="M3.4834 6.5L7.84726 2.68162" stroke="#074C56" stroke-linecap="round"
-                                        stroke-linejoin="round" />
-                                </svg>
+                                <img loading="lazy" src="images/icons/arrow-left-w.svg" alt="Arrow Left icon"
+                                    class="group-hover:translate-x-1 duration-300 w-[14px] md:w-[18px]" />
                             </button>
-                            <span class="text-[#074C56] text-sm md:text-base">1/4</span>
+                            <span class="text-[<?= $_primary_two ?>] text-xs md:text-base">1/4</span>
                             <button class="next hover:translate-x-1 duration-300">
-                                <svg xmlns="http://www.w3.org/2000/svg" class=" w-[14px] md:w-[18px]"
-                                    viewBox="0 0 14 14" fill="none">
-                                    <path d="M10.5166 6.5L6.15274 10.3184" stroke="#074C56" stroke-linecap="round"
-                                        stroke-linejoin="round" />
-                                    <path d="M10.5166 6.5L6.15274 2.68162" stroke="#074C56" stroke-linecap="round"
-                                        stroke-linejoin="round" />
-                                </svg>
+                                <img loading="lazy" src="images/icons/arrow-right-w.svg" alt="Arrow right icon"
+                                    class="group-hover:translate-x-1 duration-300 w-[14px] md:w-[18px]" />
                             </button>
                         </div>
                     </div>
                 </div>
                 <div class="card rounded-[20px] overflow-hidden relative ">
-                    <div class=" absolute top-0 left-0 right-0 bottom-0 bg-black opacity-25"></div>
+                    <div class="overlay"></div>
                     <img loading="lazy" src="images/destinations/mediterranean-coast.jpg" alt="mediterranean-coast"
                         class="w-full h-[150px] md:h-[300px] object-cover">
                     <div class="absolute top-4 left-4">
-                        <p class="text-white text-xs md:text-base">Mediterranean Coast</p>
-                        <p class="text-white text-xs md:text-base">(Alexandria and Marsa Matruh)</p>
+                        <p class="text-white text-sm md:text-base">Mediterranean Coast</p>
+                        <p class="text-white text-sm md:text-base">(Alexandria and Marsa Matruh)</p>
                     </div>
                     <!-- Image counter -->
                     <div class="absolute bottom-4 right-4">
-                        <div class=" w-20 py-1 rounded-xl bg-gray-100 opacity-75 flex items-center justify-around">
+                        <div
+                            class="w-16 md:w-20 py-1 rounded-xl bg-gray-100 opacity-75 flex items-center justify-around">
                             <button class="prev hover:-translate-x-1 duration-300">
-                                <svg xmlns="http://www.w3.org/2000/svg" class=" w-[14px] md:w-[18px]"
-                                    viewBox="0 0 14 14" fill="none">
-                                    <path d="M3.4834 6.5L7.84726 10.3184" stroke="#074C56" stroke-linecap="round"
-                                        stroke-linejoin="round" />
-                                    <path d="M3.4834 6.5L7.84726 2.68162" stroke="#074C56" stroke-linecap="round"
-                                        stroke-linejoin="round" />
-                                </svg>
+                                <img loading="lazy" src="images/icons/arrow-left-w.svg" alt="Arrow Left icon"
+                                    class="group-hover:translate-x-1 duration-300 w-[14px] md:w-[18px]" />
                             </button>
-                            <span class="text-[#074C56] text-sm md:text-base">1/4</span>
+                            <span class="text-[<?= $_primary_two ?>] text-xs md:text-base">1/4</span>
                             <button class="next hover:translate-x-1 duration-300">
-                                <svg xmlns="http://www.w3.org/2000/svg" class=" w-[14px] md:w-[18px]"
-                                    viewBox="0 0 14 14" fill="none">
-                                    <path d="M10.5166 6.5L6.15274 10.3184" stroke="#074C56" stroke-linecap="round"
-                                        stroke-linejoin="round" />
-                                    <path d="M10.5166 6.5L6.15274 2.68162" stroke="#074C56" stroke-linecap="round"
-                                        stroke-linejoin="round" />
-                                </svg>
+                                <img loading="lazy" src="images/icons/arrow-right-w.svg" alt="Arrow right icon"
+                                    class="group-hover:translate-x-1 duration-300 w-[14px] md:w-[18px]" />
                             </button>
                         </div>
                     </div>
                 </div>
                 <div class="card rounded-[20px] overflow-hidden relative ">
-                    <div class=" absolute top-0 left-0 right-0 bottom-0 bg-black opacity-25"></div>
+                    <div class="overlay"></div>
                     <img loading="lazy" src="images/destinations/nile-valley.jpg" alt="nile-valley"
                         class="w-full h-[150px] md:h-[300px] object-cover">
                     <div class="absolute top-4 left-4">
-                        <p class="text-white text-xs md:text-base">Nile Valley</p>
-                        <p class="text-white text-xs md:text-base">(Luxor and Aswan)</p>
+                        <p class="text-white text-sm md:text-base">Nile Valley</p>
+                        <p class="text-white text-sm md:text-base">(Luxor and Aswan)</p>
                     </div>
                     <!-- Image counter -->
                     <div class="absolute bottom-4 right-4">
-                        <div class=" w-20 py-1 rounded-xl bg-gray-100 opacity-75 flex items-center justify-around">
+                        <div
+                            class="w-16 md:w-20 py-1 rounded-xl bg-gray-100 opacity-75 flex items-center justify-around">
                             <button class="prev hover:-translate-x-1 duration-300">
-                                <svg xmlns="http://www.w3.org/2000/svg" class=" w-[14px] md:w-[18px]"
-                                    viewBox="0 0 14 14" fill="none">
-                                    <path d="M3.4834 6.5L7.84726 10.3184" stroke="#074C56" stroke-linecap="round"
-                                        stroke-linejoin="round" />
-                                    <path d="M3.4834 6.5L7.84726 2.68162" stroke="#074C56" stroke-linecap="round"
-                                        stroke-linejoin="round" />
-                                </svg>
+                                <img loading="lazy" src="images/icons/arrow-left-w.svg" alt="Arrow Left icon"
+                                    class="group-hover:translate-x-1 duration-300 w-[14px] md:w-[18px]" />
                             </button>
-                            <span class="text-[#074C56] text-sm md:text-base">1/4</span>
+                            <span class="text-[<?= $_primary_two ?>] text-xs md:text-base">1/4</span>
                             <button class="next hover:translate-x-1 duration-300">
-                                <svg xmlns="http://www.w3.org/2000/svg" class=" w-[14px] md:w-[18px]"
-                                    viewBox="0 0 14 14" fill="none">
-                                    <path d="M10.5166 6.5L6.15274 10.3184" stroke="#074C56" stroke-linecap="round"
-                                        stroke-linejoin="round" />
-                                    <path d="M10.5166 6.5L6.15274 2.68162" stroke="#074C56" stroke-linecap="round"
-                                        stroke-linejoin="round" />
-                                </svg>
+                                <img loading="lazy" src="images/icons/arrow-right-w.svg" alt="Arrow right icon"
+                                    class="group-hover:translate-x-1 duration-300 w-[14px] md:w-[18px]" />
                             </button>
                         </div>
                     </div>
                 </div>
                 <div class="card rounded-[20px] overflow-hidden relative ">
-                    <div class=" absolute top-0 left-0 right-0 bottom-0 bg-black opacity-25"></div>
+                    <div class="overlay"></div>
                     <img loading="lazy" src="images/destinations/red-sea-coast.jpg" alt="red-sea-coast"
                         class="w-full h-[150px] md:h-[300px] object-cover">
                     <div class="absolute top-4 left-4">
-                        <p class="text-white text-xs md:text-base">Red Sea Coast</p>
-                        <p class="text-white text-xs md:text-base">(Hurghada , Taba and Sharm El-Sheikh)</p>
+                        <p class="text-white text-sm md:text-base">Red Sea Coast</p>
+                        <p class="text-white text-sm md:text-base">(Hurghada , Taba and Sharm El-Sheikh)</p>
                     </div>
                     <!-- Image counter -->
                     <div class="absolute bottom-4 right-4">
-                        <div class=" w-20 py-1 rounded-xl bg-gray-100 opacity-75 flex items-center justify-around">
+                        <div
+                            class="w-16 md:w-20 py-1 rounded-xl bg-gray-100 opacity-75 flex items-center justify-around">
                             <button class="prev hover:-translate-x-1 duration-300">
-                                <svg xmlns="http://www.w3.org/2000/svg" class=" w-[14px] md:w-[18px]"
-                                    viewBox="0 0 14 14" fill="none">
-                                    <path d="M3.4834 6.5L7.84726 10.3184" stroke="#074C56" stroke-linecap="round"
-                                        stroke-linejoin="round" />
-                                    <path d="M3.4834 6.5L7.84726 2.68162" stroke="#074C56" stroke-linecap="round"
-                                        stroke-linejoin="round" />
-                                </svg>
+                                <img loading="lazy" src="images/icons/arrow-left-w.svg" alt="Arrow Left icon"
+                                    class="group-hover:translate-x-1 duration-300 w-[14px] md:w-[18px]" />
                             </button>
-                            <span class="text-[#074C56] text-sm md:text-base">1/4</span>
+                            <span class="text-[<?= $_primary_two ?>] text-xs md:text-base">1/4</span>
                             <button class="next hover:translate-x-1 duration-300">
-                                <svg xmlns="http://www.w3.org/2000/svg" class=" w-[14px] md:w-[18px]"
-                                    viewBox="0 0 14 14" fill="none">
-                                    <path d="M10.5166 6.5L6.15274 10.3184" stroke="#074C56" stroke-linecap="round"
-                                        stroke-linejoin="round" />
-                                    <path d="M10.5166 6.5L6.15274 2.68162" stroke="#074C56" stroke-linecap="round"
-                                        stroke-linejoin="round" />
-                                </svg>
+                                <img loading="lazy" src="images/icons/arrow-right-w.svg" alt="Arrow right icon"
+                                    class="group-hover:translate-x-1 duration-300 w-[14px] md:w-[18px]" />
                             </button>
                         </div>
                     </div>
                 </div>
                 <div class="card rounded-[20px] overflow-hidden relative ">
-                    <div class=" absolute top-0 left-0 right-0 bottom-0 bg-black opacity-25"></div>
+                    <div class="overlay"></div>
                     <img loading="lazy" src="images/destinations/western-desert.jpg" alt="western-desert"
                         class="w-full h-[150px] md:h-[300px] object-cover">
                     <div class="absolute top-4 left-4">
-                        <p class="text-white text-xs md:text-base">Western Desert</p>
-                        <p class="text-white text-xs md:text-base">(Siwa Oasis, Bahariya, and White Desert)</p>
+                        <p class="text-white text-sm md:text-base">Western Desert</p>
+                        <p class="text-white text-sm md:text-base">(Siwa Oasis, Bahariya, and White Desert)</p>
                     </div>
                     <!-- Image counter -->
                     <div class="absolute bottom-4 right-4">
-                        <div class=" w-20 py-1 rounded-xl bg-gray-100 opacity-75 flex items-center justify-around">
+                        <div
+                            class="w-16 md:w-20 py-1 rounded-xl bg-gray-100 opacity-75 flex items-center justify-around">
                             <button class="prev hover:-translate-x-1 duration-300">
-                                <svg xmlns="http://www.w3.org/2000/svg" class=" w-[14px] md:w-[18px]"
-                                    viewBox="0 0 14 14" fill="none">
-                                    <path d="M3.4834 6.5L7.84726 10.3184" stroke="#074C56" stroke-linecap="round"
-                                        stroke-linejoin="round" />
-                                    <path d="M3.4834 6.5L7.84726 2.68162" stroke="#074C56" stroke-linecap="round"
-                                        stroke-linejoin="round" />
-                                </svg>
+                                <img loading="lazy" src="images/icons/arrow-left-w.svg" alt="Arrow Left icon"
+                                    class="group-hover:translate-x-1 duration-300 w-[14px] md:w-[18px]" />
                             </button>
-                            <span class="text-[#074C56] text-sm md:text-base">1/4</span>
+                            <span class="text-[<?= $_primary_two ?>] text-xs md:text-base">1/4</span>
                             <button class="next hover:translate-x-1 duration-300">
-                                <svg xmlns="http://www.w3.org/2000/svg" class=" w-[14px] md:w-[18px]"
-                                    viewBox="0 0 14 14" fill="none">
-                                    <path d="M10.5166 6.5L6.15274 10.3184" stroke="#074C56" stroke-linecap="round"
-                                        stroke-linejoin="round" />
-                                    <path d="M10.5166 6.5L6.15274 2.68162" stroke="#074C56" stroke-linecap="round"
-                                        stroke-linejoin="round" />
-                                </svg>
+                                <img loading="lazy" src="images/icons/arrow-right-w.svg" alt="Arrow right icon"
+                                    class="group-hover:translate-x-1 duration-300 w-[14px] md:w-[18px]" />
                             </button>
                         </div>
                     </div>
                 </div>
 
 
-                <div class="overflow-hidden bg-[#095763] rounded-[20px] p-2 md:p-8 text-center h-[150px] md:h-[300px]">
-                    <h3 class="font-['Berkshire_Swash'] text-[#C8EC1F] text-[16px] md:text-[30px] my-2 md:mt-6 md:mb-8">
+                <div
+                    class="overflow-hidden bg-[<?= $_primary ?>] rounded-[20px] p-2 md:p-8 text-center h-[150px] md:h-[300px]">
+                    <h3
+                        class="font-['Berkshire_Swash'] text-[<?= $_yellow ?>] text-[16px] md:text-[30px] my-2 md:mt-6 md:mb-8">
                         Black
                         friday offer</h3>
                     <p class="text-white text-[14px] md:text-[20px] font-medium mb-4 md:mb-8">100$ off on all trips
                         during November !</p>
-                    <a href="#" class="text-[#C8E677] flex items-center justify-center gap-2 md:gap-4 group">
+                    <a href="#" class="text-[<?= $_yellow ?>] flex items-center justify-center gap-2 md:gap-4 group">
                         <span class="text-[14px] md:text-[16px]">Discover Now</span>
                         <svg xmlns="http://www.w3.org/2000/svg" class="group-hover:translate-x-1 duration-300"
                             width="30" height="30" viewBox="0 0 33 32" fill="none">
-                            <path d="M26.7861 16H6.2147" stroke="#C8E677" stroke-width="3" stroke-linecap="round"
+                            <path d="M26.7861 16H6.2147" stroke="<?= $_yellow ?>" stroke-width="3" stroke-linecap="round"
                                 stroke-linejoin="round" />
-                            <path d="M26.7861 16L19.513 22.7882" stroke="#C8E677" stroke-width="3"
+                            <path d="M26.7861 16L19.513 22.7882" stroke="<?= $_yellow ?>" stroke-width="3"
                                 stroke-linecap="round" stroke-linejoin="round" />
-                            <path d="M26.7861 16L19.513 9.21177" stroke="#C8E677" stroke-width="3"
+                            <path d="M26.7861 16L19.513 9.21177" stroke="<?= $_yellow ?>" stroke-width="3"
                                 stroke-linecap="round" stroke-linejoin="round" />
                         </svg>
                     </a>
@@ -440,16 +455,16 @@
         <!-- End Witch Side... Section -->
 
         <!-- Start Single tours Section -->
-        <section class="single-tours-section max-w-7xl px-4 sm:px-6 lg:px-8 mx-auto relative my-16">
+        <section class="what-are-sayingtours-section max-w-7xl px-4 sm:px-6 lg:px-8 mx-auto relative my-16">
             <div class="hidden md:flex justify-between items-center pb-6">
-                <h3 class="text-[#05363D] text-[36px]">Single tours</h3>
-                <a href="destinations.php" class=" text-[16px] text-[#C1EA00] relative view-all">View All</a>
+                <h3 class="text-[#05363D] text-[26px] md:text-[36px]">Single tours</h3>
+                <a href="destinations.php" class=" text-[16px] text-[<?= $_yellow ?>] relative view-all">View All</a>
             </div>
             <div class="swiper single-tours-swiper pb-12 md:pb-20">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
-                        <div class="bg-[#095763] rounded-[20px] p-10 flex flex-col items-center">
-                            <h3 class="font-['Berkshire_Swash'] text-[#C8EC1F] text-[30px] mt-6 mb-8">
+                        <div class="bg-[<?= $_primary ?>] rounded-[20px] p-10 flex flex-col items-center">
+                            <h3 class="font-['Berkshire_Swash'] text-[<?= $_yellow ?>] text-[30px] mt-6 mb-8">
                                 Black friday offer</h3>
                             <p class="text-white text-[20px] font-medium mb-8">100$ off on all trips during November !
                             </p>
@@ -459,7 +474,7 @@
                                 known as the with an expert Egyptologist as the guide.</p>
                             <div class="flex-grow flex items-center justify-center">
                                 <button
-                                    class="bg-[#C8E677] text-[#06414A] py-3 px-6 md:px-20 w-full md:w-fit rounded-full hover:bg-opacity-90 transition-colors">
+                                    class="bg-[<?= $_yellow ?>] text-[<?= $_primary ?>] py-3 px-6 md:px-20 w-full md:w-fit rounded-full hover:bg-opacity-90 transition-colors">
                                     Book Trip
                                 </button>
                             </div>
@@ -468,47 +483,40 @@
                     <div class="swiper-slide">
                         <div class="bg-white rounded-[20px] shadow-[0_2px_8px_rgba(0,0,0,0.08)] overflow-hidden ">
                             <div class="relative">
+                                <div class="overlay"></div>
                                 <img loading="lazy" src="images/swipe1.jpg" alt="Luxor Temple"
                                     class="w-full h-[250px] object-cover">
                                 <!-- Card badges -->
                                 <div class="absolute top-4 left-4">
                                     <span
-                                        class="bg-[#C8EC1F] text-[#006778] px-3 py-1 rounded-full text-xs font-medium ">Best
+                                        class="bg-[<?= $_yellow ?>] text-[<?= $_primary ?>] px-3 py-1 rounded-full text-xs font-medium ">Best
                                         seller</span>
 
                                 </div>
                                 <div class="absolute top-4 right-4">
                                     <span
                                         class="bg-white/80 backdrop-blur-[2px] px-2 py-0.5 rounded-full flex items-center gap-1">
-                                        <svg width="14" height="14" viewBox="0 0 20 20" fill="#FFD700">
-                                            <path
-                                                d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
-                                        </svg>
+                                        <img loading="lazy" src="images/icons/star.svg" alt="Star icon"
+                                            class="w-[14px] md:w-[18px]" />
+
                                         <span class="text-xs">4.8</span>
                                     </span>
                                 </div>
                                 <!-- Image counter -->
                                 <div class="absolute bottom-4 right-4">
                                     <div
-                                        class=" w-20 py-1 rounded-xl bg-gray-100 opacity-75 flex items-center justify-around">
+                                        class="w-16 md:w-20 py-1 rounded-xl bg-gray-100 opacity-75 flex items-center justify-around">
                                         <button class="prev hover:-translate-x-1 duration-300">
-                                            <svg xmlns="http://www.w3.org/2000/svg" class=" w-[14px] md:w-[18px]"
-                                                viewBox="0 0 14 14" fill="none">
-                                                <path d="M3.4834 6.5L7.84726 10.3184" stroke="#074C56"
-                                                    stroke-linecap="round" stroke-linejoin="round" />
-                                                <path d="M3.4834 6.5L7.84726 2.68162" stroke="#074C56"
-                                                    stroke-linecap="round" stroke-linejoin="round" />
-                                            </svg>
+                                            <img loading="lazy" src="images/icons/arrow-left-w.svg"
+                                                alt="Arrow left icon"
+                                                class="group-hover:translate-x-1 duration-300 w-[14px] md:w-[18px]" />
                                         </button>
-                                        <span class="text-[#074C56] text-sm md:text-base">1/4</span>
+                                        <span class="text-[<?= $_primary_two ?>] text-xs md:text-base">1/4</span>
                                         <button class="next hover:translate-x-1 duration-300">
-                                            <svg xmlns="http://www.w3.org/2000/svg" class=" w-[14px] md:w-[18px]"
-                                                viewBox="0 0 14 14" fill="none">
-                                                <path d="M10.5166 6.5L6.15274 10.3184" stroke="#074C56"
-                                                    stroke-linecap="round" stroke-linejoin="round" />
-                                                <path d="M10.5166 6.5L6.15274 2.68162" stroke="#074C56"
-                                                    stroke-linecap="round" stroke-linejoin="round" />
-                                            </svg>
+                                            <img loading="lazy" src="images/icons/arrow-right-w.svg"
+                                                alt="Arrow right icon"
+                                                class="group-hover:translate-x-1 duration-300 w-[14px] md:w-[18px]" />
+
                                         </button>
                                     </div>
                                 </div>
@@ -533,12 +541,11 @@
                                                 class="font-medium">100$</span></span>
                                     </div>
                                 </div>
-                                <a href="#" class="text-[#006778] font-medium flex justify-end items-center group">
-                                    <span>Book now</span>
-                                    <svg class="w-6 h-6 group-hover:translate-x-1 duration-300" viewBox="0 0 24 24"
-                                        fill="none">
-                                        <path d="M5 12h14m-7-7l7 7-7 7" stroke="currentColor" stroke-width="2" />
-                                    </svg>
+                                <a href="#"
+                                    class="text-[<?= $_primary ?>] font-medium flex justify-end items-center group gap-2">
+                                    <span class="text-sm md:text-base">Book now</span>
+                                    <img loading="lazy" src="images/icons/arrow-right.svg" alt="Arrow right icon"
+                                        class="group-hover:translate-x-1 duration-300" width="30" height="30" />
                                 </a>
                             </div>
                         </div>
@@ -546,46 +553,39 @@
                     <div class="swiper-slide">
                         <div class="bg-white rounded-[20px] shadow-[0_2px_8px_rgba(0,0,0,0.08)] overflow-hidden ">
                             <div class="relative">
+                                <div class="overlay"></div>
                                 <img loading="lazy" src="images/swipe1.jpg" alt="Luxor Temple"
                                     class="w-full h-[250px] object-cover">
                                 <!-- Card badges -->
                                 <div class="absolute top-4 left-4">
                                     <span
-                                        class="bg-[#C8EC1F] text-[#006778] px-3 py-1 rounded-full text-xs font-medium">NEW</span>
+                                        class="bg-[<?= $_yellow ?>] text-[<?= $_primary ?>] px-3 py-1 rounded-full text-xs font-medium">NEW</span>
 
                                 </div>
                                 <div class="absolute top-4 right-4">
                                     <span
                                         class="bg-white/80 backdrop-blur-[2px] px-2 py-0.5 rounded-full flex items-center gap-1">
-                                        <svg width="14" height="14" viewBox="0 0 20 20" fill="#FFD700">
-                                            <path
-                                                d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
-                                        </svg>
+                                        <img loading="lazy" src="images/icons/star.svg" alt="Star icon"
+                                            class="w-[14px] md:w-[18px]" />
+
                                         <span class="text-xs">4.8</span>
                                     </span>
                                 </div>
                                 <!-- Image counter -->
                                 <div class="absolute bottom-4 right-4">
                                     <div
-                                        class=" w-20 py-1 rounded-xl bg-gray-100 opacity-75 flex items-center justify-around">
+                                        class="w-16 md:w-20 py-1 rounded-xl bg-gray-100 opacity-75 flex items-center justify-around">
                                         <button class="prev hover:-translate-x-1 duration-300">
-                                            <svg xmlns="http://www.w3.org/2000/svg" class=" w-[14px] md:w-[18px]"
-                                                viewBox="0 0 14 14" fill="none">
-                                                <path d="M3.4834 6.5L7.84726 10.3184" stroke="#074C56"
-                                                    stroke-linecap="round" stroke-linejoin="round" />
-                                                <path d="M3.4834 6.5L7.84726 2.68162" stroke="#074C56"
-                                                    stroke-linecap="round" stroke-linejoin="round" />
-                                            </svg>
+                                            <img loading="lazy" src="images/icons/arrow-left-w.svg"
+                                                alt="Arrow left icon"
+                                                class="group-hover:translate-x-1 duration-300 w-[14px] md:w-[18px]" />
                                         </button>
-                                        <span class="text-[#074C56] text-sm md:text-base">1/4</span>
+                                        <span class="text-[<?= $_primary_two ?>] text-xs md:text-base">1/4</span>
                                         <button class="next hover:translate-x-1 duration-300">
-                                            <svg xmlns="http://www.w3.org/2000/svg" class=" w-[14px] md:w-[18px]"
-                                                viewBox="0 0 14 14" fill="none">
-                                                <path d="M10.5166 6.5L6.15274 10.3184" stroke="#074C56"
-                                                    stroke-linecap="round" stroke-linejoin="round" />
-                                                <path d="M10.5166 6.5L6.15274 2.68162" stroke="#074C56"
-                                                    stroke-linecap="round" stroke-linejoin="round" />
-                                            </svg>
+                                            <img loading="lazy" src="images/icons/arrow-right-w.svg"
+                                                alt="Arrow right icon"
+                                                class="group-hover:translate-x-1 duration-300 w-[14px] md:w-[18px]" />
+
                                         </button>
                                     </div>
                                 </div>
@@ -610,12 +610,11 @@
                                                 class="font-medium">100$</span></span>
                                     </div>
                                 </div>
-                                <a href="#" class="text-[#006778] font-medium flex justify-end items-center group">
-                                    <span>Book now</span>
-                                    <svg class="w-6 h-6 group-hover:translate-x-1 duration-300" viewBox="0 0 24 24"
-                                        fill="none">
-                                        <path d="M5 12h14m-7-7l7 7-7 7" stroke="currentColor" stroke-width="2" />
-                                    </svg>
+                                <a href="#"
+                                    class="text-[<?= $_primary ?>] font-medium flex justify-end items-center group gap-2">
+                                    <span class="text-sm md:text-base">Book now</span>
+                                    <img loading="lazy" src="images/icons/arrow-right.svg" alt="Arrow right icon"
+                                        class="group-hover:translate-x-1 duration-300" width="30" height="30" />
                                 </a>
                             </div>
                         </div>
@@ -623,47 +622,40 @@
                     <div class="swiper-slide">
                         <div class="bg-white rounded-[20px] shadow-[0_2px_8px_rgba(0,0,0,0.08)] overflow-hidden ">
                             <div class="relative">
+                                <div class="overlay"></div>
                                 <img loading="lazy" src="images/swipe1.jpg" alt="Luxor Temple"
                                     class="w-full h-[250px] object-cover">
                                 <!-- Card badges -->
                                 <div class="absolute top-4 left-4">
                                     <span
-                                        class="bg-[#C8EC1F] text-[#006778] px-3 py-1 rounded-full text-xs font-medium ">Best
+                                        class="bg-[<?= $_yellow ?>] text-[<?= $_primary ?>] px-3 py-1 rounded-full text-xs font-medium ">Best
                                         seller</span>
 
                                 </div>
                                 <div class="absolute top-4 right-4">
                                     <span
                                         class="bg-white/80 backdrop-blur-[2px] px-2 py-0.5 rounded-full flex items-center gap-1">
-                                        <svg width="14" height="14" viewBox="0 0 20 20" fill="#FFD700">
-                                            <path
-                                                d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
-                                        </svg>
+                                        <img loading="lazy" src="images/icons/star.svg" alt="Star icon"
+                                            class="w-[14px] md:w-[18px]" />
+
                                         <span class="text-xs">4.8</span>
                                     </span>
                                 </div>
                                 <!-- Image counter -->
                                 <div class="absolute bottom-4 right-4">
                                     <div
-                                        class=" w-20 py-1 rounded-xl bg-gray-100 opacity-75 flex items-center justify-around">
+                                        class="w-16 md:w-20 py-1 rounded-xl bg-gray-100 opacity-75 flex items-center justify-around">
                                         <button class="prev hover:-translate-x-1 duration-300">
-                                            <svg xmlns="http://www.w3.org/2000/svg" class=" w-[14px] md:w-[18px]"
-                                                viewBox="0 0 14 14" fill="none">
-                                                <path d="M3.4834 6.5L7.84726 10.3184" stroke="#074C56"
-                                                    stroke-linecap="round" stroke-linejoin="round" />
-                                                <path d="M3.4834 6.5L7.84726 2.68162" stroke="#074C56"
-                                                    stroke-linecap="round" stroke-linejoin="round" />
-                                            </svg>
+                                            <img loading="lazy" src="images/icons/arrow-left-w.svg"
+                                                alt="Arrow left icon"
+                                                class="group-hover:translate-x-1 duration-300 w-[14px] md:w-[18px]" />
                                         </button>
-                                        <span class="text-[#074C56] text-sm md:text-base">1/4</span>
+                                        <span class="text-[<?= $_primary_two ?>] text-xs md:text-base">1/4</span>
                                         <button class="next hover:translate-x-1 duration-300">
-                                            <svg xmlns="http://www.w3.org/2000/svg" class=" w-[14px] md:w-[18px]"
-                                                viewBox="0 0 14 14" fill="none">
-                                                <path d="M10.5166 6.5L6.15274 10.3184" stroke="#074C56"
-                                                    stroke-linecap="round" stroke-linejoin="round" />
-                                                <path d="M10.5166 6.5L6.15274 2.68162" stroke="#074C56"
-                                                    stroke-linecap="round" stroke-linejoin="round" />
-                                            </svg>
+                                            <img loading="lazy" src="images/icons/arrow-right-w.svg"
+                                                alt="Arrow right icon"
+                                                class="group-hover:translate-x-1 duration-300 w-[14px] md:w-[18px]" />
+
                                         </button>
                                     </div>
                                 </div>
@@ -688,12 +680,11 @@
                                                 class="font-medium">100$</span></span>
                                     </div>
                                 </div>
-                                <a href="#" class="text-[#006778] font-medium flex justify-end items-center group">
-                                    <span>Book now</span>
-                                    <svg class="w-6 h-6 group-hover:translate-x-1 duration-300" viewBox="0 0 24 24"
-                                        fill="none">
-                                        <path d="M5 12h14m-7-7l7 7-7 7" stroke="currentColor" stroke-width="2" />
-                                    </svg>
+                                <a href="#"
+                                    class="text-[<?= $_primary ?>] font-medium flex justify-end items-center group gap-2">
+                                    <span class="text-sm md:text-base">Book now</span>
+                                    <img loading="lazy" src="images/icons/arrow-right.svg" alt="Arrow right icon"
+                                        class="group-hover:translate-x-1 duration-300" width="30" height="30" />
                                 </a>
                             </div>
                         </div>
@@ -701,47 +692,40 @@
                     <div class="swiper-slide">
                         <div class="bg-white rounded-[20px] shadow-[0_2px_8px_rgba(0,0,0,0.08)] overflow-hidden ">
                             <div class="relative">
+                                <div class="overlay"></div>
                                 <img loading="lazy" src="images/swipe1.jpg" alt="Luxor Temple"
                                     class="w-full h-[250px] object-cover">
                                 <!-- Card badges -->
                                 <div class="absolute top-4 left-4">
                                     <span
-                                        class="bg-[#C8EC1F] text-[#006778] px-3 py-1 rounded-full text-xs font-medium ">Best
+                                        class="bg-[<?= $_yellow ?>] text-[<?= $_primary ?>] px-3 py-1 rounded-full text-xs font-medium ">Best
                                         seller</span>
 
                                 </div>
                                 <div class="absolute top-4 right-4">
                                     <span
                                         class="bg-white/80 backdrop-blur-[2px] px-2 py-0.5 rounded-full flex items-center gap-1">
-                                        <svg width="14" height="14" viewBox="0 0 20 20" fill="#FFD700">
-                                            <path
-                                                d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
-                                        </svg>
+                                        <img loading="lazy" src="images/icons/star.svg" alt="Star icon"
+                                            class="w-[14px] md:w-[18px]" />
+
                                         <span class="text-xs">4.8</span>
                                     </span>
                                 </div>
                                 <!-- Image counter -->
                                 <div class="absolute bottom-4 right-4">
                                     <div
-                                        class=" w-20 py-1 rounded-xl bg-gray-100 opacity-75 flex items-center justify-around">
+                                        class="w-16 md:w-20 py-1 rounded-xl bg-gray-100 opacity-75 flex items-center justify-around">
                                         <button class="prev hover:-translate-x-1 duration-300">
-                                            <svg xmlns="http://www.w3.org/2000/svg" class=" w-[14px] md:w-[18px]"
-                                                viewBox="0 0 14 14" fill="none">
-                                                <path d="M3.4834 6.5L7.84726 10.3184" stroke="#074C56"
-                                                    stroke-linecap="round" stroke-linejoin="round" />
-                                                <path d="M3.4834 6.5L7.84726 2.68162" stroke="#074C56"
-                                                    stroke-linecap="round" stroke-linejoin="round" />
-                                            </svg>
+                                            <img loading="lazy" src="images/icons/arrow-left-w.svg"
+                                                alt="Arrow left icon"
+                                                class="group-hover:translate-x-1 duration-300 w-[14px] md:w-[18px]" />
                                         </button>
-                                        <span class="text-[#074C56] text-sm md:text-base">1/4</span>
+                                        <span class="text-[<?= $_primary_two ?>] text-xs md:text-base">1/4</span>
                                         <button class="next hover:translate-x-1 duration-300">
-                                            <svg xmlns="http://www.w3.org/2000/svg" class=" w-[14px] md:w-[18px]"
-                                                viewBox="0 0 14 14" fill="none">
-                                                <path d="M10.5166 6.5L6.15274 10.3184" stroke="#074C56"
-                                                    stroke-linecap="round" stroke-linejoin="round" />
-                                                <path d="M10.5166 6.5L6.15274 2.68162" stroke="#074C56"
-                                                    stroke-linecap="round" stroke-linejoin="round" />
-                                            </svg>
+                                            <img loading="lazy" src="images/icons/arrow-right-w.svg"
+                                                alt="Arrow right icon"
+                                                class="group-hover:translate-x-1 duration-300 w-[14px] md:w-[18px]" />
+
                                         </button>
                                     </div>
                                 </div>
@@ -766,19 +750,15 @@
                                                 class="font-medium">100$</span></span>
                                     </div>
                                 </div>
-                                <a href="#" class="text-[#006778] font-medium flex justify-end items-center group">
-                                    <span>Book now</span>
-                                    <svg class="w-6 h-6 group-hover:translate-x-1 duration-300" viewBox="0 0 24 24"
-                                        fill="none">
-                                        <path d="M5 12h14m-7-7l7 7-7 7" stroke="currentColor" stroke-width="2" />
-                                    </svg>
+                                <a href="#"
+                                    class="text-[<?= $_primary ?>] font-medium flex justify-end items-center group gap-2">
+                                    <span class="text-sm md:text-base">Book now</span>
+                                    <img loading="lazy" src="images/icons/arrow-right.svg" alt="Arrow right icon"
+                                        class="group-hover:translate-x-1 duration-300" width="30" height="30" />
                                 </a>
                             </div>
                         </div>
                     </div>
-
-
-
                 </div>
                 <!-- Navigation buttons -->
                 <div class="swiper-button-prev"></div>
@@ -789,10 +769,245 @@
             </div>
         </section>
         <!-- End Single tours Section -->
+        <!-- Start Egypt’s Unmissable Landmarks -->
+        <section class="nmissable-landmarks max-w-7xl px-4 sm:px-6 lg:px-8 mx-auto relative my-16">
+            <h2 class="text-[#05363D] text-[26px] md:text-[36px]">Egypt’s Unmissable Landmarks</h2>
+            <div class=" grid grid-cols-2 sm:grid-cols-3 md:grid-cols-8 gap-2 mt-8">
+                <button class="btn btn-primary">Cairo</button>
+                <button class="btn btn-secondary">Alexandria</button>
+                <button class="btn btn-secondary">Luxor</button>
+                <button class="btn btn-secondary">Aswan</button>
+                <button class="btn btn-secondary">Hurghada</button>
+                <button class="btn btn-secondary">Sharm El-Sheikh</button>
+            </div>
+            <div class="grid grid-cols-2 gap-4 md:grid-cols-4 mt-4">
+                <div class="card rounded-[20px] overflow-hidden relative ">
+                    <div class="overlay"></div>
+                    <img loading="lazy" src="images/destinations/great-pyramids-of-giza.jpg"
+                        alt="great-pyramids-of-giza" class="w-full h-[150px] md:h-[300px] object-cover">
+                    <div class="absolute bottom-4 left-[50%] transform -translate-x-1/2">
+                        <p class="text-white text-sm md:text-base">Great Pyramids of Giza</p>
+                    </div>
+                </div>
+                <div class="card rounded-[20px] overflow-hidden relative ">
+                    <div class="overlay"></div>
+                    <img loading="lazy" src="images/destinations/sphinx.jpg" alt="sphinx"
+                        class="w-full h-[150px] md:h-[300px] object-cover">
+                    <div class="absolute bottom-4 left-0 w-full text-center">
+                        <p class="text-white text-sm md:text-base">Sphinx</p>
+                    </div>
+                </div>
+                <div class="card rounded-[20px] overflow-hidden relative ">
+                    <div class="overlay"></div>
+                    <img loading="lazy" src="images/destinations/egyptian-museum.jpg" alt="egyptian-museum"
+                        class="w-full h-[150px] md:h-[300px] object-cover">
+                    <div class="absolute bottom-4 left-0 w-full text-center">
+                        <p class="text-white text-sm md:text-base">Egyptian Museum</p>
+                    </div>
+                </div>
+                <div class="card rounded-[20px] overflow-hidden relative ">
+                    <div class="overlay"></div>
+                    <img loading="lazy" src="images/destinations/khan-el-khalili.jpg" alt="khan-el-khalili"
+                        class="w-full h-[150px] md:h-[300px] object-cover">
+                    <div class="absolute bottom-4 left-0 w-full text-center">
+                        <p class="text-white text-sm md:text-base">Khan El Khalili</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End Egypt’s Unmissable Landmarks -->
     </div>
+    <!-- Start What are saying  -->
+    <section class="what-are-saying-section max-w-7xl px-4 sm:px-6 lg:px-8 mx-auto relative my-16">
+        <h3 class="text-[#05363D] text-[26px] md:text-[36px]">What travelers are saying about our guided trips ?</h3>
+        <?php include "componets/reviews.php" ?>
+    </section>
+    <!-- End What are saying  -->
+
+    <!-- Start contact... Section -->
+    <section class="contact-sections bg-[#276C76] py-6">
+        <div class="max-w-7xl px-4 sm:px-6 lg:px-8 mx-auto relative my-16">
+            <h2 class="text-[<?= $_yellow ?>] text-[26px] md:text-[36px]">Not sure which tour is right for you? <br /> We’re
+                here to help.</h2>
+            <div class="grid grid-cols-1 gap-4 md:grid-cols-3 mt-4">
+                <div class="card rounded-[20px] overflow-hidden relative bg-[#F4F8F3] p-6">
+                    <h3 class="text-[#05363D] text-3xl mb-4 flex items-center gap-2">
+                        <img loading="lazy" src="images/icons/call.svg" alt="call icon" width="40" height="41" />
+                        <span>Call Us</span>
+                    </h3>
+                    <p class="text-gray-500 text-base mb-4 leading-7">We’re available every day from our offices in
+                        Boston and Denver at <br />1-855-590-1161</p>
+                    <a href="#" class="text-[<?= $_primary ?>] font-medium flex justify-end items-center gap-2 group">
+                        <span>Call now</span>
+                        <img loading="lazy" src="images/icons/arrow-right.svg" alt="Arrow right icon"
+                            class="group-hover:translate-x-1 duration-300" width="30" height="41" />
+
+                    </a>
+                </div>
+                <div class="card rounded-[20px] overflow-hidden relative bg-[#F4F8F3] p-6">
+                    <h3 class="text-[#05363D] text-3xl mb-4 flex items-center gap-2">
+                        <img loading="lazy" src="images/icons/schedule.svg" alt="schedule icon" width="30"
+                            height="30" />
+                        <span>Schedule a call</span>
+                    </h3>
+                    <p class="text-gray-500 text-base mb-4 leading-7">
+                        We’re available every day from our offices in Boston and Denver at <br />1-855-590-1161</p>
+                    <a href="#" class="text-[<?= $_primary ?>] font-medium flex justify-end items-center gap-2 group">
+                        <span>Schedule a call now</span>
+                        <img loading="lazy" src="images/icons/arrow-right.svg" alt="Arrow right icon"
+                            class="group-hover:translate-x-1 duration-300" width="30" height="30" />
+
+                    </a>
+                </div>
+                <div class="card rounded-[20px] overflow-hidden relative bg-[#F4F8F3] p-6">
+                    <h3 class="text-[#05363D] text-3xl mb-4 flex items-center gap-2">
+                        <img loading="lazy" src="images/icons/chat-online.svg" alt="chat online icon" width="40"
+                            height="30" />
+                        <span>Chat online</span>
+                    </h3>
+                    <p class="text-gray-500 text-base mb-4 leading-7">
+                        We’re available every day from our offices in Boston and Denver at <br />1-855-590-1161</p>
+                    <a href="#" class="text-[<?= $_primary ?>] font-medium flex justify-end items-center gap-2 group">
+                        <span>Start Chat</span>
+                        <img loading="lazy" src="images/icons/arrow-right.svg" alt="Arrow right icon"
+                            class="group-hover:translate-x-1 duration-300" width="30" height="30" />
+
+                    </a>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+    <!-- End contact... Section -->
+
+
+    <!-- Start blog Section -->
+    <section class="blog-section max-w-7xl px-4 sm:px-6 lg:px-8 mx-auto relative mt-16">
+        <div class="flex justify-between items-center pb-6">
+            <h3 class="text-[#05363D] text-[26px] md:text-[36px]">blog</h3>
+            <a href="destinations.php" class=" text-[16px] text-[#05363D] relative view-all">View All</a>
+        </div>
+        <div class="swiper blog-swiper">
+            <div class="swiper-wrapper">
+
+                <div class="swiper-slide">
+                    <div class="bg-[#F4F8F3] rounded-[20px] shadow-[0_2px_8px_rgba(0,0,0,0.08)] overflow-hidden ">
+                        <div class="relative">
+                            <img loading="lazy" src="images/destinations/blog.jpg" alt="Luxor Temple"
+                                class="w-full h-[250px] object-cover">
+                        </div>
+                        <div class="p-6">
+                            <span class="bg-[#DCFE83] text-[<?= $_primary ?>] px-3 py-1 rounded-full text-xs font-medium ">Travel
+                                tips</span>
+
+                            <h3 class="text-xl font-semibold my-2">The Ultimate Guide to Exploring the Land of Pharaohs
+                            </h3>
+                            <p class="text-gray-600 text-sm font-weight-300">
+                                <span>26 August 2024</span>
+                                <span>15:30 AM</span>
+                            </p>
+                            <p class="text-gray-600 text-sm leading-7 mb-6 mt-2">Welcome to Egypt, a land where ancient
+                                history,
+                                breathtaking landscapes, and vibrant culture come
+
+                                <a href="#" class="text-[<?= $_primary ?>] text-sm underline">
+                                    Read more
+                                </a>
+                            </p>
+
+
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="bg-[#F4F8F3] rounded-[20px] shadow-[0_2px_8px_rgba(0,0,0,0.08)] overflow-hidden ">
+                        <div class="relative">
+                            <img loading="lazy" src="images/destinations/blog.jpg" alt="Luxor Temple"
+                                class="w-full h-[250px] object-cover">
+                        </div>
+                        <div class="p-6">
+                            <span class="bg-[#DCFE83] text-[<?= $_primary ?>] px-3 py-1 rounded-full text-xs font-medium ">Travel
+                                tips</span>
+
+                            <h3 class="text-xl font-semibold my-2">The Ultimate Guide to Exploring the Land of Pharaohs
+                            </h3>
+                            <p class="text-gray-600 text-sm font-weight-300">
+                                <span>26 August 2024</span>
+                                <span>15:30 AM</span>
+                            </p>
+                            <p class="text-gray-600 text-sm leading-7 mb-6 mt-2">Welcome to Egypt, a land where ancient
+                                history,
+                                breathtaking landscapes, and vibrant culture come
+
+                                <a href="#" class="text-[<?= $_primary ?>] text-sm underline">
+                                    Read more
+                                </a>
+                            </p>
+
+
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="bg-[#F4F8F3] rounded-[20px] shadow-[0_2px_8px_rgba(0,0,0,0.08)] overflow-hidden ">
+                        <div class="relative">
+                            <img loading="lazy" src="images/destinations/blog.jpg" alt="Luxor Temple"
+                                class="w-full h-[250px] object-cover">
+                        </div>
+                        <div class="p-6">
+                            <span class="bg-[#DCFE83] text-[<?= $_primary ?>] px-3 py-1 rounded-full text-xs font-medium ">Travel
+                                tips</span>
+
+                            <h3 class="text-xl font-semibold my-2">The Ultimate Guide to Exploring the Land of Pharaohs
+                            </h3>
+                            <p class="text-gray-600 text-sm font-weight-300">
+                                <span>26 August 2024</span>
+                                <span>15:30 AM</span>
+                            </p>
+                            <p class="text-gray-600 text-sm leading-7 mb-6 mt-2">Welcome to Egypt, a land where ancient
+                                history,
+                                breathtaking landscapes, and vibrant culture come
+
+                                <a href="#" class="text-[<?= $_primary ?>] text-sm underline">
+                                    Read more
+                                </a>
+                            </p>
+
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- Navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+
+            <!-- Pagination -->
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+    <!-- End bold Section -->
+
+
+    <?php include "componets/why.php" ?>
     <?php include "componets/footer.php" ?>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
+            // handle Our Top Destinations slides
+            const swiperSlides = document.querySelectorAll(".top-destinations-swiper .swiper-slide");
+            swiperSlides.forEach(slide => {
+                const thumbnails = slide.querySelectorAll(".img-option");
+                const mainImage = slide.querySelector(".main-image");
+                thumbnails.forEach(thumbnail => {
+                    thumbnail.addEventListener("click", () => {
+                        mainImage.src = thumbnail.src;
+                        thumbnails.forEach(img => img.classList.remove("border-2"));
+                        thumbnail.classList.add("border-2");
+                    });
+                });
+            });
             // Reusable function to initialize Swiper instances
             const initializeSwiper = (selector, config) => {
                 return new Swiper(selector, {
@@ -833,7 +1048,18 @@
                     },
                 }
             });
+            initializeSwiper('.what-are-saying-swiper', {
+                breakpoints: {
+                    768: {
+                        slidesPerView: 1,
+                    },
+                    1024: {
+                        slidesPerView: 1.6,
+                    },
+                }
+            });
             initializeSwiper('.single-tours-swiper');
+            initializeSwiper('.blog-swiper');
         });
     </script>
 </body>
