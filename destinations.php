@@ -182,8 +182,8 @@ $_primary_two = "#074C56";
     <?php include "componets/navbar.php" ?>
     <div class="background-container">
         <!-- Start Hero Section -->
-        <section class="hero-section max-w-7xl px-4 sm:px-6 lg:px-8 mx-auto pt-24">
-            <div class="mb-12">
+        <section class="hero-section max-w-7xl px-4 sm:px-6 lg:px-8 mx-auto pt-8">
+            <div class="mb-8">
                 <h1 style="font-family: 'Berkshire Swash', cursive;"
                     class="text-[32px] md:text-[64px] font-semibold mb-4 text-[<?= $_yellow ?>]">
                     Destinations
