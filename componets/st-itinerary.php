@@ -28,7 +28,7 @@
 					<div class="rounded-lg p-6 pt-0 w-full">
 						<div onclick="toggleContent(this)"
 							class="header flex cursor-pointer justify-between items-center bg-[#F4F8F3] px-2 py-3 rounded-lg text-[<?= $_primary ?>] mb-2">
-							<h2 class="text-xl  font-semibold ">
+							<h2 class="text-base md:text-xl  font-semibold ">
 								Day 1: Arrival
 								and Giza Highlights - 1 Night
 							</h2>
@@ -121,12 +121,12 @@
 											<span>Activities :</span>
 										</div>
 										<div class="mt-2 flex flex-col gap-2">
-											<div class="w-full bg-[#F9FBF9] rounded-lg shadow-lg overflow-hidden flex relative">
+											<div class="w-full bg-[#F9FBF9] rounded-lg shadow-lg overflow-hidden flex relative flex-col md:flex-row">
 												<img src="images/single-tour/nile-city.jpg" alt="Nile River Cruise"
-													class="w-1/3 h-auto object-cover">
+													class="w-full md:w-1/3 h-auto object-cover">
 
 
-												<div class="p-6 w-2/3">
+												<div class="p-6 w-full md:w-2/3">
 													<div
 														class="absolute top-2 right-2 bg-[<?= $_yellow ?>] text-[<?= $_primary ?>] text-sm px-3 py-1 rounded-xl">
 														Included</div>
@@ -142,12 +142,12 @@
 													</div>
 												</div>
 											</div>
-											<div class="w-full bg-[#F9FBF9] rounded-lg shadow-lg overflow-hidden flex relative">
+											<div class="w-full bg-[#F9FBF9] rounded-lg shadow-lg overflow-hidden flex relative flex-col md:flex-row">
 												<img src="images/single-tour/nile-city.jpg" alt="Nile River Cruise"
-													class="w-1/3 h-auto object-cover">
+													class="w-full md:w-1/3 h-auto object-cover">
 
 
-												<div class="p-6 w-2/3">
+												<div class="p-6 w-full md:w-2/3">
 													<div
 														class="absolute top-2 right-2 bg-[<?= $_yellow ?>] text-[<?= $_primary ?>] text-sm px-3 py-1 rounded-xl">
 														Included</div>
@@ -183,7 +183,7 @@
 					<div class="rounded-lg p-6 pt-0 w-full">
 						<div onclick="toggleContent(this)"
 							class="header flex cursor-pointer justify-between items-center bg-[#F4F8F3] px-2 py-3 rounded-lg text-[<?= $_primary ?>] mb-2">
-							<h2 class="text-xl  font-semibold ">
+							<h2 class="text-base md:text-xl  font-semibold ">
 								Day 1: Arrival
 								and Giza Highlights - 1 Night
 							</h2>
@@ -275,12 +275,12 @@
 											<span>Activities :</span>
 										</div>
 										<div class="mt-2 flex flex-col gap-2">
-											<div class="w-full bg-[#F9FBF9] rounded-lg shadow-lg overflow-hidden flex relative">
+											<div class="w-full bg-[#F9FBF9] rounded-lg shadow-lg overflow-hidden flex relative flex-col md:flex-row">
 												<img src="images/single-tour/nile-city.jpg" alt="Nile River Cruise"
-													class="w-1/3 h-auto object-cover">
+													class="w-full md:w-1/3 h-auto object-cover">
 
 
-												<div class="p-6 w-2/3">
+												<div class="p-6 w-full md:w-2/3">
 													<div
 														class="absolute top-2 right-2 bg-[<?= $_yellow ?>] text-[<?= $_primary ?>] text-sm px-3 py-1 rounded-xl">
 														Included</div>
@@ -296,12 +296,12 @@
 													</div>
 												</div>
 											</div>
-											<div class="w-full bg-[#F9FBF9] rounded-lg shadow-lg overflow-hidden flex relative">
+											<div class="w-full bg-[#F9FBF9] rounded-lg shadow-lg overflow-hidden flex relative flex-col md:flex-row">
 												<img src="images/single-tour/nile-city.jpg" alt="Nile River Cruise"
-													class="w-1/3 h-auto object-cover">
+													class="w-full md:w-1/3 h-auto object-cover">
 
 
-												<div class="p-6 w-2/3">
+												<div class="p-6 w-full md:w-2/3">
 													<div
 														class="absolute top-2 right-2 bg-[<?= $_yellow ?>] text-[<?= $_primary ?>] text-sm px-3 py-1 rounded-xl">
 														Included</div>
