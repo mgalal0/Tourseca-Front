@@ -57,8 +57,13 @@ $_primary_two = "#074C56";
             left: 0;
             right: 0;
             bottom: 0;
-            background-color: black;
-            opacity: 0.25;
+            background-color: hwb(0deg 0% 100% / 30%);
+
+        }
+
+        .overlay:hover {
+            background-color: hwb(0deg 0% 100% / 0%);
+            animation: fadeIn 0.8s;
         }
 
 
