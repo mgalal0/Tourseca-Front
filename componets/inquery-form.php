@@ -62,36 +62,48 @@
 				class="w-full border border-gray-300 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
 				placeholder="+20 3746739200" required>
 		</div>
+		<div class="mb-4 flex justify-between items-start">
+			<label class="flex justify-start gap-1 items-start text-sm mb-1" for="children">
+				<img loading="lazy" src="images/icons/children.svg" alt="children icon" />
+				<p class="flex flex-col">
+					<span>Number of Children</span>
+					<span class="text-gray-500">( 2 - 11 years )</span>
+				</p>
+			</label>
+			<div class="flex items-center bg-white rounded-lg p-2 shadow-md border-gray-100 border-2">
+				<button type="button" class="rounded-l-lg px-3" onclick="changeQuantity('children', -1)">-</button>
+				<input type="number" id="children" class="w-16 text-center" value="0" readonly>
+				<button type="button" class="rounded-r-lg px-3" onclick="changeQuantity('children', 1)">+</button>
+			</div>
+		</div>
+		<div class="mb-4 flex justify-between items-start">
+			<label class="flex justify-start gap-1 items-start text-sm mb-1" for="adults">
+				<img loading="lazy" src="images/icons/adults.svg" alt="adults icon" />
+				<p class="flex flex-col">
+					<span>Number of Adults</span>
+					<span class="text-gray-500">( +12 years )</span>
+				</p>
+			</label>
 
-		<div class="mb-4">
-			<label class="block text-sm mb-1" for="children">Number of Children (2 - 11 years)</label>
-			<div class="flex items-center">
-				<button type="button" class="bg-gray-200 rounded-l-lg px-3" onclick="changeQuantity('children', -1)">-</button>
-				<input type="number" id="children"
-					class="w-16 text-center border-t border-b rounded-none border border-gray-300" value="0" readonly>
-				<button type="button" class="bg-gray-200 rounded-r-lg px-3" onclick="changeQuantity('children', 1)">+</button>
+			<div class="flex items-center bg-white rounded-lg p-2 shadow-md border-gray-100 border-2">
+				<button type="button" class="rounded-l-lg px-3" onclick="changeQuantity('adults', -1)">-</button>
+				<input type="number" id="adults" class="w-16 text-center" value="0" readonly>
+				<button type="button" class="rounded-r-lg px-3" onclick="changeQuantity('adults', 1)">+</button>
 			</div>
 		</div>
 
 		<div class="mb-4">
-			<label class="block text-sm mb-1" for="adults">Number of Adults</label>
-			<div class="flex items-center">
-				<button type="button" class="bg-gray-200 rounded-l-lg px-3" onclick="changeQuantity('adults', -1)">-</button>
-				<input type="number" id="adults" class="w-16 text-center border-t border-b rounded-none border border-gray-300"
-					value="0" readonly>
-				<button type="button" class="bg-gray-200 rounded-r-lg px-3" onclick="changeQuantity('adults', 1)">+</button>
-			</div>
-		</div>
-
-		<div class="mb-4">
-			<label class="block text-sm mb-1" for="message">Message</label>
+			<label class="flex justify-start gap-1 items-center text-sm mb-1" for="message">
+				<img loading="lazy" src="images/icons/message.svg" alt="message icon" />
+				<span>Message</span>
+			</label>
 			<textarea id="message"
 				class="w-full border border-gray-300 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
 				rows="4" placeholder="Tell us about your requirements about the trip"></textarea>
 		</div>
 
 		<button type="submit"
-			class="w-full bg-blue-600 text-white rounded-lg py-2 hover:bg-blue-700 transition duration-200">Submit
+			class="w-full bg-[<?= $_yellow ?>] text-[<?= $_primary ?>] font-semibold rounded-2xl py-2 transition duration-200">Submit
 			Inquiry</button>
 	</form>
 </div>

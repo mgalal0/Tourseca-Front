@@ -54,7 +54,12 @@ $_primary_two = "#074C56";
             left: 0;
             right: 0;
             bottom: 0;
-            background-color: hwb(0deg 0% 100% / 40%);
+            background-color: hwb(0deg 0% 100% / 30%);
+        }
+
+        .overlay:hover {
+            background-color: hwb(0deg 0% 100% / 0%);
+            animation: fadeIn 0.8s;
         }
 
 
@@ -305,8 +310,11 @@ $_primary_two = "#074C56";
 
     </section>
     <!-- End tab-link -->
+
     <div class="max-w-7xl mx-auto grid grid-cols-3 gap-8">
+        <!-- start tab link content -->
         <div id="content" class=" col-span-3 md:col-span-2">
+            <!-- overview -->
             <div class="tab-content" data-tab="overview">
                 <section class="max-w-7xl px-4 sm:px-6 lg:px-8 mx-auto relative mb-16">
                     <h3 class="text-[<?= $_primary ?>] text-[26px] md:text-[36px] font-semibold mb-6">Overview</h3>
@@ -376,289 +384,12 @@ $_primary_two = "#074C56";
                     </div>
                 </section>
             </div>
-            <div class="tab-content" data-tab="reviews" style="display: none;">
-                <section class="reviews-section max-w-7xl px-4 sm:px-6 lg:px-8 mx-auto relative mb-16">
-                    <h3 class="text-[<?= $_primary ?>] text-[26px] md:text-[36px] font-semibold mb-6">Reviews</h3>
-                    <?php include "componets/reviews.php" ?>
-                </section>
+
+            <!-- itinerary -->
+            <div class="tab-content" data-tab="itinerary" style="display: none;">
+                <?php include "componets/st-itinerary.php" ?>
             </div>
-            <div class="tab-content" data-tab="prices" style="display: none;">
-                <section class="max-w-7xl px-4 sm:px-6 lg:px-8 mx-auto relative mb-16">
-                    <h3 class="text-[<?= $_primary ?>] text-[26px] md:text-[36px] font-semibold mb-6">Prices</h3>
-                    <div class="overflow-x-auto">
-                        <!-- desktop table -->
-                        <table class="hidden md:block  min-w-full border-collapse border border-[#E0EBDD] text-center">
-                            <thead>
-                                <tr class="bg-[#F4F8F3] text-gray-500">
-                                    <th class="border border-[#E0EBDD] px-4 py-6 font-weight-300">No</th>
-                                    <th class="border border-[#E0EBDD] px-4 py-6 font-weight-300">Standard
-                                        Accommodations</th>
-                                    <th class="border border-[#E0EBDD] px-4 py-6 font-weight-300">Deluxe Accommodations
-                                    </th>
-                                    <th class="border border-[#E0EBDD] px-4 py-6 font-weight-300">Ultra Deluxe
-                                        Accommodations</th>
-                                    <th class="border border-[#E0EBDD] px-4 py-6 font-weight-300">Luxury Accommodations
-                                    </th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr class="hover:bg-[#E0EBDD] text-black">
-                                    <td class="border border-[#E0EBDD] px-6 py-4">1 Adult</td>
-                                    <td class="border border-[#E0EBDD] px-6 py-4">
-                                        <span>Start from:</span>
-                                        <strong>$100</strong>
-                                    </td>
-                                    <td class="border border-[#E0EBDD] px-6 py-4">
-                                        <span>Start from:</span>
-                                        <strong>$100</strong>
-                                    </td>
-                                    <td class="border border-[#E0EBDD] px-6 py-4">
-                                        <span>Start from:</span>
-                                        <strong>$100</strong>
-                                    </td>
-                                    <td class="border border-[#E0EBDD] px-6 py-4">
-                                        <span>Start from:</span>
-                                        <strong>$100</strong>
-                                    </td>
-                                </tr>
-                                <tr class="hover:bg-[#E0EBDD] text-black">
-                                    <td class="border border-[#E0EBDD] px-6 py-4">2 Adults</td>
-                                    <td class="border border-[#E0EBDD] px-6 py-4">
-                                        <span>Start from:</span>
-                                        <del class="text-gray-500">$200</del>
-                                        <strong>$180</strong>
-                                    </td>
-                                    <td class="border border-[#E0EBDD] px-6 py-4">
-                                        <span>Start from:</span>
-                                        <del class="text-gray-500">$200</del>
-                                        <strong>$180</strong>
-                                    </td>
-                                    <td class="border border-[#E0EBDD] px-6 py-4">
-                                        <span>Start from:</span>
-                                        <del class="text-gray-500">$200</del>
-                                        <strong>$180</strong>
-                                    </td>
-                                    <td class="border border-[#E0EBDD] px-6 py-4">
-                                        <span>Start from:</span>
-                                        <del class="text-gray-500">$200</del>
-                                        <strong>$180</strong>
-                                    </td>
-                                </tr>
-                                <tr class="hover:bg-[#E0EBDD] text-black">
-                                    <td class="border border-[#E0EBDD] px-6 py-4">3 Adults</td>
-                                    <td class="border border-[#E0EBDD] px-6 py-4">
-                                        <span>Start from:</span>
-                                        <del class="text-gray-500">$300</del>
-                                        <strong>$280</strong>
-                                    </td>
-                                    <td class="border border-[#E0EBDD] px-6 py-4">
-                                        <span>Start from:</span>
-                                        <del class="text-gray-500">$300</del>
-                                        <strong>$280</strong>
-                                    </td>
-                                    <td class="border border-[#E0EBDD] px-6 py-4">
-                                        <span>Start from:</span>
-                                        <del class="text-gray-500">$300</del>
-                                        <strong>$280</strong>
-                                    </td>
-                                    <td class="border border-[#E0EBDD] px-6 py-4">
-                                        <span>Start from:</span>
-                                        <del class="text-gray-500">$300</del>
-                                        <strong>$280</strong>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <!-- mobile tables -->
-                        <div class="md:hidden">
-                            <p class="mb-4">Prices are quoted in US Dollars per person per trip except during Christmas,
-                                New
-                                Year & Easter holidays.</p>
-                            <table class="mb-4 min-w-full border-collapse border border-[#E0EBDD] text-center">
-                                <h3 class="text-[<?= $_primary ?>] mb-2">Deluxe Accommodations</h3>
-                                <thead>
-                                    <tr class="bg-[#F4F8F3] text-gray-500">
-                                        <th class="border border-[#E0EBDD] px-4 py-6 font-weight-300">No</th>
-                                        <th class="border border-[#E0EBDD] px-4 py-6 font-weight-300">Prices</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr class="hover:bg-[#E0EBDD] text-black">
-                                        <td class="border border-[#E0EBDD] px-6 py-4">1 Adult</td>
-                                        <td class="text-[<?= $_primary ?>] border border-[#E0EBDD] px-6 py-4">
-                                            <span>Start from:</span>
-                                            <strong>$100</strong>
-                                        </td>
-                                    </tr>
-                                    <tr class="hover:bg-[#E0EBDD] text-black">
-                                        <td class="border border-[#E0EBDD] px-6 py-4">2 Adults</td>
-                                        <td class="text-[<?= $_primary ?>] border border-[#E0EBDD] px-6 py-4">
-                                            <span>Start from:</span>
-                                            <del class="text-gray-500">$200</del>
-                                            <strong>$180</strong>
-                                        </td>
-                                    </tr>
-                                    <tr class="hover:bg-[#E0EBDD] text-black">
-                                        <td class="border border-[#E0EBDD] px-6 py-4">3 Adults</td>
-                                        <td class="text-[<?= $_primary ?>] border border-[#E0EBDD] px-6 py-4">
-                                            <span>Start from:</span>
-                                            <del class="text-gray-500">$300</del>
-                                            <strong>$280</strong>
-                                        </td>
-                                    </tr>
-                                <tbody>
-                            </table>
-                            <table class="mb-4 min-w-full border-collapse border border-[#E0EBDD] text-center">
-                                <h3 class="text-[<?= $_primary ?>] mb-2">Ultra Deluxe Accommodations</h3>
-                                <thead>
-                                    <tr class="bg-[#F4F8F3] text-gray-500">
-                                        <th class="border border-[#E0EBDD] px-4 py-6 font-weight-300">No</th>
-                                        <th class="border border-[#E0EBDD] px-4 py-6 font-weight-300">Prices</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr class="hover:bg-[#E0EBDD] text-black">
-                                        <td class="border border-[#E0EBDD] px-6 py-4">1 Adult</td>
-                                        <td class="text-[<?= $_primary ?>] border border-[#E0EBDD] px-6 py-4">
-                                            <span>Start from:</span>
-                                            <strong>$100</strong>
-                                        </td>
-                                    </tr>
-                                    <tr class="hover:bg-[#E0EBDD] text-black">
-                                        <td class="border border-[#E0EBDD] px-6 py-4">2 Adults</td>
-                                        <td class="text-[<?= $_primary ?>] border border-[#E0EBDD] px-6 py-4">
-                                            <span>Start from:</span>
-                                            <del class="text-gray-500">$200</del>
-                                            <strong>$180</strong>
-                                        </td>
-                                    </tr>
-                                    <tr class="hover:bg-[#E0EBDD] text-black">
-                                        <td class="border border-[#E0EBDD] px-6 py-4">3 Adults</td>
-                                        <td class="text-[<?= $_primary ?>] border border-[#E0EBDD] px-6 py-4">
-                                            <span>Start from:</span>
-                                            <del class="text-gray-500">$300</del>
-                                            <strong>$280</strong>
-                                        </td>
-                                    </tr>
-                                <tbody>
-                            </table>
-                            <table class="mb-4 min-w-full border-collapse border border-[#E0EBDD] text-center">
-                                <h3 class="text-[<?= $_primary ?>] mb-2">Luxury Accommodations</h3>
-                                <thead>
-                                    <tr class="bg-[#F4F8F3] text-gray-500">
-                                        <th class="border border-[#E0EBDD] px-4 py-6 font-weight-300">No</th>
-                                        <th class="border border-[#E0EBDD] px-4 py-6 font-weight-300">Prices</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr class="hover:bg-[#E0EBDD] text-black">
-                                        <td class="border border-[#E0EBDD] px-6 py-4">1 Adult</td>
-                                        <td class="text-[<?= $_primary ?>] border border-[#E0EBDD] px-6 py-4">
-                                            <span>Start from:</span>
-                                            <strong>$100</strong>
-                                        </td>
-                                    </tr>
-                                    <tr class="hover:bg-[#E0EBDD] text-black">
-                                        <td class="border border-[#E0EBDD] px-6 py-4">2 Adults</td>
-                                        <td class="text-[<?= $_primary ?>] border border-[#E0EBDD] px-6 py-4">
-                                            <span>Start from:</span>
-                                            <del class="text-gray-500">$200</del>
-                                            <strong>$180</strong>
-                                        </td>
-                                    </tr>
-                                    <tr class="hover:bg-[#E0EBDD] text-black">
-                                        <td class="border border-[#E0EBDD] px-6 py-4">3 Adults</td>
-                                        <td class="text-[<?= $_primary ?>] border border-[#E0EBDD] px-6 py-4">
-                                            <span>Start from:</span>
-                                            <del class="text-gray-500">$300</del>
-                                            <strong>$280</strong>
-                                        </td>
-                                    </tr>
-                                <tbody>
-                            </table>
-                            <table class="min-w-full border-collapse border border-[#E0EBDD] text-center">
-                                <h3 class="text-[<?= $_primary ?>] mb-2">Standard Accommodations</h3>
-                                <thead>
-                                    <tr class="bg-[#F4F8F3] text-gray-500">
-                                        <th class="border border-[#E0EBDD] px-4 py-6 font-weight-300">No</th>
-                                        <th class="border border-[#E0EBDD] px-4 py-6 font-weight-300">Prices</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr class="hover:bg-[#E0EBDD] text-black">
-                                        <td class="border border-[#E0EBDD] px-6 py-4">1 Adult</td>
-                                        <td class="text-[<?= $_primary ?>] border border-[#E0EBDD] px-6 py-4">
-                                            <span>Start from:</span>
-                                            <strong>$100</strong>
-                                        </td>
-                                    </tr>
-                                    <tr class="hover:bg-[#E0EBDD] text-black">
-                                        <td class="border border-[#E0EBDD] px-6 py-4">2 Adults</td>
-                                        <td class="text-[<?= $_primary ?>] border border-[#E0EBDD] px-6 py-4">
-                                            <span>Start from:</span>
-                                            <del class="text-gray-500">$200</del>
-                                            <strong>$180</strong>
-                                        </td>
-                                    </tr>
-                                    <tr class="hover:bg-[#E0EBDD] text-black">
-                                        <td class="border border-[#E0EBDD] px-6 py-4">3 Adults</td>
-                                        <td class="text-[<?= $_primary ?>] border border-[#E0EBDD] px-6 py-4">
-                                            <span>Start from:</span>
-                                            <del class="text-gray-500">$300</del>
-                                            <strong>$280</strong>
-                                        </td>
-                                    </tr>
-                                <tbody>
-                            </table>
-                        </div>
-                    </div>
-                    <div>
-                        <h3 class="text-lg text-gray-700 font-semibold mt-6">Prices:</h3>
-                        <p class="mb-2">Prices are quoted in US Dollars per person per trip except during Christmas, New
-                            Year & Easter holidays.</p>
-
-                        <h4 class="text-lg text-gray-700 font-semibold mt-4">Standard Accommodations :</h4>
-                        <ul class="mt-2 mb-4">
-                            <li>
-                                Basic, clean, and budget-friendly rooms with essential amenities like a bed, bathroom,
-                                and
-                                Wi-Fi.</li>
-                        </ul>
-
-                        <h4 class="text-lg text-gray-700 font-semibold mt-4">Deluxe Accommodations :</h4>
-                        <ul class="mt-2 mb-4">
-                            <li>Upgraded rooms with stylish decor, more space, and added comforts such as better
-                                furnishings
-                                and on-site facilities.</li>
-                        </ul>
-
-                        <h4 class="text-lg text-gray-700 font-semibold mt-4">Ultra Deluxe Accommodations :</h4>
-                        <ul class="mt-2 mb-4">
-                            <li>High-end accommodations featuring premium amenities, exclusive perks, and personalized
-                                services for a lavish stay.</li>
-                        </ul>
-
-                        <h4 class="text-lg text-gray-700 font-semibold mt-4">Luxury Accommodations :</h4>
-                        <ul class="mt-2 mb-4">
-                            <li>The ultimate in opulence, offering world-class services, exquisite designs, and top-tier
-                                facilities like spas and fine dining.</li>
-                        </ul>
-
-                        <h4 class="text-lg text-gray-700 font-semibold mt-4">Children Policy :</h4>
-                        <ul class="list-disc list-inside mb-2">
-                            <li>0 - 01.99 Free of Charge</li>
-                            <li>2 - 05.99 pay 25% of tour price</li>
-                            <li>6 - 11.99 pay 50% of tour price</li>
-                            <li>12+ pay full tour price as per adult person.</li>
-                        </ul>
-
-                        <h4 class="text-lg text-gray-700 font-semibold mt-4">Notes:</h4>
-                        <p>Child pricing applies to children who share rooms with their parents (Max 2 Children in one
-                            Room)
-                        </p>
-                    </div>
-                </section>
-            </div>
+            <!-- flights -->
             <div class="tab-content" data-tab="flights" style="display: none;">
                 <section class="max-w-7xl px-4 sm:px-6 lg:px-8 mx-auto relative mb-16">
                     <h3 class="text-[<?= $_primary ?>] text-[26px] md:text-[36px] font-semibold mb-6">Flights</h3>
@@ -697,22 +428,179 @@ $_primary_two = "#074C56";
                     <?php include "componets/sale.php" ?>
                 </section>
             </div>
+
+            <!-- prices -->
+            <div class="tab-content" data-tab="prices" style="display: none;">
+                <?php include "componets/st-prices.php" ?>
+            </div>
+            <!-- reviews -->
+            <div class="tab-content" data-tab="reviews" style="display: none;">
+                <section class="reviews-section max-w-7xl px-4 sm:px-6 lg:px-8 mx-auto relative mb-16">
+                    <h3 class="text-[<?= $_primary ?>] text-[26px] md:text-[36px] font-semibold mb-6">Reviews</h3>
+                    <?php include "componets/reviews.php" ?>
+                </section>
+            </div>
+
+            <!-- faq -->
             <div class="tab-content" data-tab="faq" style="display: none;">
                 <section class="max-w-7xl px-4 sm:px-6 lg:px-8 mx-auto relative mb-16">
                     <h3 class="text-[<?= $_primary ?>] text-[26px] md:text-[36px] font-semibold">FAQ</h3>
                     <?php include "componets/faq.php" ?>
                 </section>
             </div>
+
         </div>
+        <!-- end tab link content -->
+
         <div class="hidden md:block col-span-1">
             <?php include "componets/inquery-form.php" ?>
-            <h3>More trips to discover</h3>
+
+            <!-- start More trips to discover -->
+            <div class="mt-8">
+                <h3 class="text-[<?= $_primary ?>] text-3xl text-center">More trips to discover</h3>
+                <div class="grid grid-cols-1 gap-4 my-6">
+                    <div class="bg-white rounded-[20px] shadow-[0_2px_8px_rgba(0,0,0,0.08)] overflow-hidden ">
+                        <div class="relative">
+                            <div class="overlay"></div>
+                            <img loading="lazy" src="images/swipe1.jpg" alt="Luxor Temple"
+                                class="w-full h-[250px] object-cover">
+                            <!-- Card badges -->
+                            <div class="absolute top-4 left-4">
+                                <span
+                                    class="bg-[<?= $_yellow ?>] text-[<?= $_primary ?>] px-3 py-1 rounded-full text-xs font-medium ">Best
+                                    seller</span>
+
+                            </div>
+                            <div class="absolute top-4 right-4">
+                                <span
+                                    class="bg-white/80 backdrop-blur-[2px] px-2 py-0.5 rounded-full flex items-center gap-1">
+                                    <img loading="lazy" src="images/icons/star.svg" alt="Star icon"
+                                        class="w-[14px] md:w-[18px]" />
+
+                                    <span class="text-xs">4.8</span>
+                                </span>
+                            </div>
+                            <!-- Image counter -->
+                            <div class="absolute bottom-4 right-4">
+                                <div
+                                    class="w-16 md:w-20 py-1 rounded-xl bg-gray-100 opacity-75 flex items-center justify-around">
+                                    <button class="prev hover:-translate-x-1 duration-300">
+                                        <img loading="lazy" src="images/icons/arrow-left-w.svg" alt="Arrow left icon"
+                                            class="group-hover:translate-x-1 duration-300 w-[14px] md:w-[18px]" />
+                                    </button>
+                                    <span class="text-[<?= $_primary_two ?>] text-xs md:text-base">1/4</span>
+                                    <button class="next hover:translate-x-1 duration-300">
+                                        <img loading="lazy" src="images/icons/arrow-right-w.svg" alt="Arrow right icon"
+                                            class="group-hover:translate-x-1 duration-300 w-[14px] md:w-[18px]" />
+
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2">Cairo Trips</h3>
+                            <p class="text-gray-600 text-sm mb-6">A private visit to Queen Nefertari’s Tomb, known as
+                                the
+                                with an expert Egyptologist as the guide.</p>
+
+                            <div class="flex items-center gap-2 mb-6">
+                                <img loading="lazy" src="images/icons/time.svg" alt="time icon" width="20" height="20">
+                                <span class="text-gray-600">3 Days , 2 Nights</span>
+                            </div>
+
+                            <div class="flex justify-between items-center">
+                                <div class="flex items-center gap-2">
+                                    <img loading="lazy" src="images/icons/dollar.svg" alt="dollar icon" width="20"
+                                        height="20">
+                                    <span class="text-gray-600">Start from : <span
+                                            class="font-medium">100$</span></span>
+                                </div>
+                            </div>
+                            <a href="single-tour.php"
+                                class="text-[<?= $_primary ?>] font-medium flex justify-end items-center group gap-2">
+                                <span class="text-sm md:text-base">Book now</span>
+                                <img loading="lazy" src="images/icons/arrow-right.svg" alt="Arrow right icon"
+                                    class="group-hover:translate-x-1 duration-300" width="30" height="30" />
+                            </a>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-[20px] shadow-[0_2px_8px_rgba(0,0,0,0.08)] overflow-hidden ">
+                        <div class="relative">
+                            <div class="overlay"></div>
+                            <img loading="lazy" src="images/swipe1.jpg" alt="Luxor Temple"
+                                class="w-full h-[250px] object-cover">
+                            <!-- Card badges -->
+                            <div class="absolute top-4 left-4">
+                                <span
+                                    class="bg-[<?= $_yellow ?>] text-[<?= $_primary ?>] px-3 py-1 rounded-full text-xs font-medium ">Best
+                                    seller</span>
+
+                            </div>
+                            <div class="absolute top-4 right-4">
+                                <span
+                                    class="bg-white/80 backdrop-blur-[2px] px-2 py-0.5 rounded-full flex items-center gap-1">
+                                    <img loading="lazy" src="images/icons/star.svg" alt="Star icon"
+                                        class="w-[14px] md:w-[18px]" />
+
+                                    <span class="text-xs">4.8</span>
+                                </span>
+                            </div>
+                            <!-- Image counter -->
+                            <div class="absolute bottom-4 right-4">
+                                <div
+                                    class="w-16 md:w-20 py-1 rounded-xl bg-gray-100 opacity-75 flex items-center justify-around">
+                                    <button class="prev hover:-translate-x-1 duration-300">
+                                        <img loading="lazy" src="images/icons/arrow-left-w.svg" alt="Arrow left icon"
+                                            class="group-hover:translate-x-1 duration-300 w-[14px] md:w-[18px]" />
+                                    </button>
+                                    <span class="text-[<?= $_primary_two ?>] text-xs md:text-base">1/4</span>
+                                    <button class="next hover:translate-x-1 duration-300">
+                                        <img loading="lazy" src="images/icons/arrow-right-w.svg" alt="Arrow right icon"
+                                            class="group-hover:translate-x-1 duration-300 w-[14px] md:w-[18px]" />
+
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2">Cairo Trips</h3>
+                            <p class="text-gray-600 text-sm mb-6">A private visit to Queen Nefertari’s Tomb, known as
+                                the
+                                with an expert Egyptologist as the guide.</p>
+
+                            <div class="flex items-center gap-2 mb-6">
+                                <img loading="lazy" src="images/icons/time.svg" alt="time icon" width="20" height="20">
+                                <span class="text-gray-600">3 Days , 2 Nights</span>
+                            </div>
+
+                            <div class="flex justify-between items-center">
+                                <div class="flex items-center gap-2">
+                                    <img loading="lazy" src="images/icons/dollar.svg" alt="dollar icon" width="20"
+                                        height="20">
+                                    <span class="text-gray-600">Start from : <span
+                                            class="font-medium">100$</span></span>
+                                </div>
+                            </div>
+                            <a href="single-tour.php"
+                                class="text-[<?= $_primary ?>] font-medium flex justify-end items-center group gap-2">
+                                <span class="text-sm md:text-base">Book now</span>
+                                <img loading="lazy" src="images/icons/arrow-right.svg" alt="Arrow right icon"
+                                    class="group-hover:translate-x-1 duration-300" width="30" height="30" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- end More trips to discover -->
         </div>
     </div>
-
+    <!-- start subscribe -->
     <div class="mb-16">
         <?php include "componets/subscribe.php" ?>
     </div>
+    <!-- end subscribe -->
     <?php include "componets/footer.php" ?>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
