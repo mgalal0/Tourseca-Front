@@ -1,4 +1,4 @@
-<div class="swiper what-are-saying-swiper pb-12 md:pb-20 mt-6">
+<div class="swiper what-are-saying-swiper pb-12 md:pb-20">
 	<div class="swiper-wrapper">
 
 		<div class="swiper-slide bg-[#F4F8F3] shadow-lg rounded-lg p-6 border border-gray-200">
@@ -48,7 +48,7 @@
 						class="scale-75 hover:scale-100 duration-300 w-16 h-16 md:w-28 md:h-28 rounded-lg object-cover shadow-md">
 					<img src="images/destinations/trip-2.jpg" alt="Trip photo 2"
 						class="scale-75 hover:scale-100 duration-300 w-16 h-16 md:w-28 md:h-28 rounded-lg object-cover shadow-md">
-					<img src="images/destinations/trip-3.jpg" alt="Trip photo 3"
+					<img src="images/swipe1.jpg" alt="Trip photo 3"
 						class="scale-75 hover:scale-100 duration-300 w-16 h-16 md:w-28 md:h-28 rounded-lg object-cover shadow-md">
 					<img src="images/destinations/trip-4.jpg" alt="Trip photo 4"
 						class="scale-75 hover:scale-100 duration-300 w-16 h-16 md:w-28 md:h-28 rounded-lg object-cover shadow-md">
@@ -114,7 +114,7 @@
 						class="scale-75 hover:scale-100 duration-300 w-16 h-16 md:w-28 md:h-28 rounded-lg object-cover shadow-md">
 					<img src="images/destinations/trip-2.jpg" alt="Trip photo 2"
 						class="scale-75 hover:scale-100 duration-300 w-16 h-16 md:w-28 md:h-28 rounded-lg object-cover shadow-md">
-					<img src="images/destinations/trip-3.jpg" alt="Trip photo 3"
+					<img src="images/swipe1.jpg" alt="Trip photo 3"
 						class="scale-75 hover:scale-100 duration-300 w-16 h-16 md:w-28 md:h-28 rounded-lg object-cover shadow-md">
 					<img src="images/destinations/trip-4.jpg" alt="Trip photo 4"
 						class="scale-75 hover:scale-100 duration-300 w-16 h-16 md:w-28 md:h-28 rounded-lg object-cover shadow-md">
@@ -180,7 +180,7 @@
 						class="scale-75 hover:scale-100 duration-300 w-16 h-16 md:w-28 md:h-28 rounded-lg object-cover shadow-md">
 					<img src="images/destinations/trip-2.jpg" alt="Trip photo 2"
 						class="scale-75 hover:scale-100 duration-300 w-16 h-16 md:w-28 md:h-28 rounded-lg object-cover shadow-md">
-					<img src="images/destinations/trip-3.jpg" alt="Trip photo 3"
+					<img src="images/swipe1.jpg" alt="Trip photo 3"
 						class="scale-75 hover:scale-100 duration-300 w-16 h-16 md:w-28 md:h-28 rounded-lg object-cover shadow-md">
 					<img src="images/destinations/trip-4.jpg" alt="Trip photo 4"
 						class="scale-75 hover:scale-100 duration-300 w-16 h-16 md:w-28 md:h-28 rounded-lg object-cover shadow-md">

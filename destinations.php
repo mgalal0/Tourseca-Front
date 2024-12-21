@@ -470,7 +470,7 @@ $_primary_two = "#074C56";
         <section class="what-are-sayingtours-section max-w-7xl px-4 sm:px-6 lg:px-8 mx-auto relative my-16">
             <div class="hidden md:flex justify-between items-center pb-6">
                 <h3 class="text-[#05363D] text-[26px] md:text-[36px]">Single tours</h3>
-                <a href="destinations.php" class=" text-[16px] text-[<?= $_yellow ?>] relative view-all">View All</a>
+                <a href="single-tour.php" class=" text-[16px] text-[<?= $_yellow ?>] relative view-all">View All</a>
             </div>
             <div class="swiper single-tours-swiper pb-12 md:pb-20">
                 <div class="swiper-wrapper">
@@ -553,7 +553,7 @@ $_primary_two = "#074C56";
                                                 class="font-medium">100$</span></span>
                                     </div>
                                 </div>
-                                <a href="#"
+                                <a href="single-tour.php"
                                     class="text-[<?= $_primary ?>] font-medium flex justify-end items-center group gap-2">
                                     <span class="text-sm md:text-base">Book now</span>
                                     <img loading="lazy" src="images/icons/arrow-right.svg" alt="Arrow right icon"
@@ -622,7 +622,7 @@ $_primary_two = "#074C56";
                                                 class="font-medium">100$</span></span>
                                     </div>
                                 </div>
-                                <a href="#"
+                                <a href="single-tour.php"
                                     class="text-[<?= $_primary ?>] font-medium flex justify-end items-center group gap-2">
                                     <span class="text-sm md:text-base">Book now</span>
                                     <img loading="lazy" src="images/icons/arrow-right.svg" alt="Arrow right icon"
@@ -692,7 +692,7 @@ $_primary_two = "#074C56";
                                                 class="font-medium">100$</span></span>
                                     </div>
                                 </div>
-                                <a href="#"
+                                <a href="single-tour.php"
                                     class="text-[<?= $_primary ?>] font-medium flex justify-end items-center group gap-2">
                                     <span class="text-sm md:text-base">Book now</span>
                                     <img loading="lazy" src="images/icons/arrow-right.svg" alt="Arrow right icon"
@@ -762,7 +762,7 @@ $_primary_two = "#074C56";
                                                 class="font-medium">100$</span></span>
                                     </div>
                                 </div>
-                                <a href="#"
+                                <a href="single-tour.php"
                                     class="text-[<?= $_primary ?>] font-medium flex justify-end items-center group gap-2">
                                     <span class="text-sm md:text-base">Book now</span>
                                     <img loading="lazy" src="images/icons/arrow-right.svg" alt="Arrow right icon"
@@ -831,7 +831,8 @@ $_primary_two = "#074C56";
     </div>
     <!-- Start What are saying  -->
     <section class="what-are-saying-section max-w-7xl px-4 sm:px-6 lg:px-8 mx-auto relative my-16">
-        <h3 class="text-[#05363D] text-[26px] md:text-[36px]">What travelers are saying about our guided trips ?</h3>
+        <h3 class="text-[#05363D] text-[26px] md:text-[36px] mb-6">What travelers are saying about our guided trips ?
+        </h3>
         <?php include "componets/reviews.php" ?>
     </section>
     <!-- End What are saying  -->
@@ -846,54 +847,8 @@ $_primary_two = "#074C56";
             <h2 class="text-[<?= $_yellow ?>] text-[26px] md:text-[36px]">Not sure which tour is right for you? <br />
                 We’re
                 here to help.</h2>
-            <div class="grid grid-cols-1 gap-4 md:grid-cols-3 mt-4">
-                <div class="card rounded-[20px] overflow-hidden relative bg-[#F4F8F3] p-6">
-                    <h3 class="text-[#05363D] text-3xl mb-4 flex items-center gap-2">
-                        <img loading="lazy" src="images/icons/call.svg" alt="call icon" width="40" height="41" />
-                        <span>Call Us</span>
-                    </h3>
-                    <p class="text-gray-500 text-base mb-4 leading-7">We’re available every day from our offices in
-                        Boston and Denver at <br />1-855-590-1161</p>
-                    <a href="#" class="text-[<?= $_primary ?>] font-medium flex justify-end items-center gap-2 group">
-                        <span>Call now</span>
-                        <img loading="lazy" src="images/icons/arrow-right.svg" alt="Arrow right icon"
-                            class="group-hover:translate-x-1 duration-300" width="30" height="41" />
+            <?php include "componets/get-help.php" ?>
 
-                    </a>
-                </div>
-                <div class="card rounded-[20px] overflow-hidden relative bg-[#F4F8F3] p-6">
-                    <h3 class="text-[#05363D] text-3xl mb-4 flex items-center gap-2">
-                        <img loading="lazy" src="images/icons/schedule.svg" alt="schedule icon" width="30"
-                            height="30" />
-                        <span>Schedule a call</span>
-                    </h3>
-                    <p class="text-gray-500 text-base mb-4 leading-7">
-                        We’re available every day from our offices in Boston and Denver at <br />1-855-590-1161</p>
-                    <a href="#" class="text-[<?= $_primary ?>] font-medium flex justify-end items-center gap-2 group">
-                        <span>Schedule a call now</span>
-                        <img loading="lazy" src="images/icons/arrow-right.svg" alt="Arrow right icon"
-                            class="group-hover:translate-x-1 duration-300" width="30" height="30" />
-
-                    </a>
-                </div>
-                <div class="card rounded-[20px] overflow-hidden relative bg-[#F4F8F3] p-6">
-                    <h3 class="text-[#05363D] text-3xl mb-4 flex items-center gap-2">
-                        <img loading="lazy" src="images/icons/chat-online.svg" alt="chat online icon" width="40"
-                            height="30" />
-                        <span>Chat online</span>
-                    </h3>
-                    <p class="text-gray-500 text-base mb-4 leading-7">
-                        We’re available every day from our offices in Boston and Denver at <br />1-855-590-1161</p>
-                    <a href="#" class="text-[<?= $_primary ?>] font-medium flex justify-end items-center gap-2 group">
-                        <span>Start Chat</span>
-                        <img loading="lazy" src="images/icons/arrow-right.svg" alt="Arrow right icon"
-                            class="group-hover:translate-x-1 duration-300" width="30" height="30" />
-
-                    </a>
-                </div>
-
-
-            </div>
         </div>
     </section>
     <!-- End contact... Section -->
@@ -903,7 +858,7 @@ $_primary_two = "#074C56";
     <section class="blog-section max-w-7xl px-4 sm:px-6 lg:px-8 mx-auto relative mt-16">
         <div class="flex justify-between items-center pb-6">
             <h3 class="text-[#05363D] text-[26px] md:text-[36px]">blog</h3>
-            <a href="destinations.php" class=" text-[16px] text-[#05363D] relative view-all">View All</a>
+            <a href="blog.php" class=" text-[16px] text-[#05363D] relative view-all">View All</a>
         </div>
         <div class="swiper blog-swiper">
             <div class="swiper-wrapper">
