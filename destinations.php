@@ -36,7 +36,8 @@ $_primary_two = "#074C56";
             font-size: 16px;
         }
 
-        .btn-primary {
+        .btn-primary,
+        .btn-secondary:hover {
             background-color:
                 <?= $_primary ?>
             ;
@@ -182,8 +183,8 @@ $_primary_two = "#074C56";
     <?php include "componets/navbar.php" ?>
     <div class="background-container">
         <!-- Start Hero Section -->
-        <section class="hero-section max-w-7xl px-4 sm:px-6 lg:px-8 mx-auto pt-24">
-            <div class="mb-12">
+        <section class="hero-section max-w-7xl px-4 sm:px-6 lg:px-8 mx-auto pt-8">
+            <div class="mb-8">
                 <h1 style="font-family: 'Berkshire Swash', cursive;"
                     class="text-[32px] md:text-[64px] font-semibold mb-4 text-[<?= $_yellow ?>]">
                     Destinations
@@ -472,7 +473,7 @@ $_primary_two = "#074C56";
         <!-- End Witch Side... Section -->
 
         <!-- Start Single tours Section -->
-        <section class="what-are-sayingtours-section max-w-7xl px-4 sm:px-6 lg:px-8 mx-auto relative my-16">
+        <section class="tours-section max-w-7xl px-4 sm:px-6 lg:px-8 mx-auto relative my-16">
             <div class="hidden md:flex justify-between items-center pb-6">
                 <h3 class="text-[#05363D] text-[26px] md:text-[36px]">Single tours</h3>
                 <a href="single-tour.php" class=" text-[16px] text-[<?= $_yellow ?>] relative view-all">View All</a>

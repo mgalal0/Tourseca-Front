@@ -3,12 +3,38 @@
 $_main = "#E0EBDD";
 
 ?>
+<style>
+	/* Custom Scrollbar Styling */
+	.table-container {
+		overflow-x: auto;
+		scrollbar-width: thin;
+		scrollbar-color: #E0EBDD #F4F8F3;
+	}
 
-<section class="max-w-7xl px-4 sm:px-6 lg:px-8 mx-auto relative mb-16">
+	.table-container::-webkit-scrollbar {
+		height: 10px;
+	}
+
+	.table-container::-webkit-scrollbar-track {
+		background: #F4F8F3;
+		border-radius: 5px;
+	}
+
+	.table-container::-webkit-scrollbar-thumb {
+		background: #E0EBDD;
+		border-radius: 5px;
+		border: 2px solid #F4F8F3;
+	}
+
+	.table-container::-webkit-scrollbar-thumb:hover {
+		background: #D4D9D1;
+	}
+</style>
+<section class="max-w-7xl px-4 sm:px-6 mx-auto relative mb-16">
 	<h3 class="text-[<?= $_primary ?>] text-[26px] md:text-[36px] font-semibold mb-6">Prices</h3>
-	<div class="overflow-x-auto">
+	<div class="table-container">
 		<!-- desktop table -->
-		<table class="hidden md:block  min-w-full border-collapse border border-[<?= $_main ?>] text-center">
+		<table class="hidden md:block  min-w-full text-center">
 			<thead>
 				<tr class="bg-[#F4F8F3] text-gray-500">
 					<th class="border border-[<?= $_main ?>] px-4 py-6 font-weight-300">No</th>
