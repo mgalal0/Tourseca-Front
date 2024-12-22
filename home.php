@@ -690,12 +690,13 @@
         </div>
         <div class="swiper popular-tours-swiper ">
             <div class="swiper-wrapper pb-12 md:pb-20">
-                <div class="swiper-slide">
+                <div class="swiper-slide card-images">
                     <div class="bg-white rounded-[20px] shadow-[0_2px_8px_rgba(0,0,0,0.08)] overflow-hidden ">
                         <div class="relative">
                             <div class="overlay"></div>
                             <img loading="lazy" src="images/swipe1.jpg" alt="Luxor Temple"
-                                class="w-full h-[250px] object-cover">
+                                class="w-full h-[250px] object-cover"
+                                data-images='["images/swipe1.jpg", "images/swipe2.jpg", "images/swipe3.jpg"]'>
                             <!-- Card badges -->
                             <div class="absolute top-4 left-4">
                                 <span
@@ -720,7 +721,8 @@
                                         <img loading="lazy" src="images/icons/arrow-left-w.svg" alt="Arrow left icon"
                                             class="group-hover:translate-x-1 duration-300 w-[14px] md:w-[18px]" />
                                     </button>
-                                    <span class="text-[<?= $_primary_two ?>] text-xs md:text-base">1/4</span>
+                                    <span
+                                        class="text-[<?= $_primary_two ?>] text-xs md:text-base counter-view">1/1</span>
                                     <button class="next hover:translate-x-1 duration-300">
                                         <img loading="lazy" src="images/icons/arrow-right-w.svg" alt="Arrow right icon"
                                             class="group-hover:translate-x-1 duration-300 w-[14px] md:w-[18px]" />
@@ -757,12 +759,13 @@
                         </div>
                     </div>
                 </div>
-                <div class="swiper-slide">
+                <div class="swiper-slide card-images">
                     <div class="bg-white rounded-[20px] shadow-[0_2px_8px_rgba(0,0,0,0.08)] overflow-hidden ">
                         <div class="relative">
                             <div class="overlay"></div>
                             <img loading="lazy" src="images/swipe1.jpg" alt="Luxor Temple"
-                                class="w-full h-[250px] object-cover">
+                                class="w-full h-[250px] object-cover"
+                                data-images='["images/swipe1.jpg", "images/swipe2.jpg", "images/swipe3.jpg"]'>
                             <!-- Card badges -->
                             <div class="absolute top-4 left-4">
                                 <span
@@ -786,7 +789,8 @@
                                         <img loading="lazy" src="images/icons/arrow-left-w.svg" alt="Arrow left icon"
                                             class="group-hover:translate-x-1 duration-300 w-[14px] md:w-[18px]" />
                                     </button>
-                                    <span class="text-[<?= $_primary_two ?>] text-xs md:text-base">1/4</span>
+                                    <span
+                                        class="text-[<?= $_primary_two ?>] text-xs md:text-base counter-view">1/1</span>
                                     <button class="next hover:translate-x-1 duration-300">
                                         <img loading="lazy" src="images/icons/arrow-right-w.svg" alt="Arrow right icon"
                                             class="group-hover:translate-x-1 duration-300 w-[14px] md:w-[18px]" />
@@ -823,12 +827,13 @@
                         </div>
                     </div>
                 </div>
-                <div class="swiper-slide">
+                <div class="swiper-slide card-images">
                     <div class="bg-white rounded-[20px] shadow-[0_2px_8px_rgba(0,0,0,0.08)] overflow-hidden ">
                         <div class="relative">
                             <div class="overlay"></div>
                             <img loading="lazy" src="images/swipe1.jpg" alt="Luxor Temple"
-                                class="w-full h-[250px] object-cover">
+                                class="w-full h-[250px] object-cover"
+                                data-images='["images/swipe1.jpg", "images/swipe2.jpg", "images/swipe3.jpg"]'>
                             <!-- Card badges -->
                             <div class="absolute top-4 left-4">
                                 <span
@@ -853,7 +858,8 @@
                                         <img loading="lazy" src="images/icons/arrow-left-w.svg" alt="Arrow left icon"
                                             class="group-hover:translate-x-1 duration-300 w-[14px] md:w-[18px]" />
                                     </button>
-                                    <span class="text-[<?= $_primary_two ?>] text-xs md:text-base">1/4</span>
+                                    <span
+                                        class="text-[<?= $_primary_two ?>] text-xs md:text-base counter-view">1/1</span>
                                     <button class="next hover:translate-x-1 duration-300">
                                         <img loading="lazy" src="images/icons/arrow-right-w.svg" alt="Arrow right icon"
                                             class="group-hover:translate-x-1 duration-300 w-[14px] md:w-[18px]" />
@@ -890,12 +896,13 @@
                         </div>
                     </div>
                 </div>
-                <div class="swiper-slide">
+                <div class="swiper-slide card-images">
                     <div class="bg-white rounded-[20px] shadow-[0_2px_8px_rgba(0,0,0,0.08)] overflow-hidden ">
                         <div class="relative">
                             <div class="overlay"></div>
                             <img loading="lazy" src="images/swipe1.jpg" alt="Luxor Temple"
-                                class="w-full h-[250px] object-cover">
+                                class="w-full h-[250px] object-cover"
+                                data-images='["images/swipe1.jpg", "images/swipe2.jpg", "images/swipe3.jpg"]'>
                             <!-- Card badges -->
                             <div class="absolute top-4 left-4">
                                 <span
@@ -920,7 +927,8 @@
                                         <img loading="lazy" src="images/icons/arrow-left-w.svg" alt="Arrow left icon"
                                             class="group-hover:translate-x-1 duration-300 w-[14px] md:w-[18px]" />
                                     </button>
-                                    <span class="text-[<?= $_primary_two ?>] text-xs md:text-base">1/4</span>
+                                    <span
+                                        class="text-[<?= $_primary_two ?>] text-xs md:text-base counter-view">1/1</span>
                                     <button class="next hover:translate-x-1 duration-300">
                                         <img loading="lazy" src="images/icons/arrow-right-w.svg" alt="Arrow right icon"
                                             class="group-hover:translate-x-1 duration-300 w-[14px] md:w-[18px]" />
@@ -1353,6 +1361,7 @@
             initializeSwiper('.popular-tours-swiper');
         });
     </script>
+    <script defer src="js/image-switcher.js"></script>
 
 </body>
 

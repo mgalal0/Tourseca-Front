@@ -324,10 +324,11 @@ $_primary_two = "#074C56";
             </h2>
 
             <div class="grid grid-cols-2 gap-4 md:grid-cols-3 mt-4">
-                <div class="card rounded-[20px] overflow-hidden relative ">
+                <div class="card-images rounded-[20px] overflow-hidden relative ">
                     <div class="overlay"></div>
-                    <img loading="lazy" src="images/destinations/historical-heart.jpg" alt="historical-heart"
-                        class="w-full h-[150px] md:h-[300px] object-cover">
+                    <img loading="lazy" alt="historical-heart" class="w-full h-[150px] md:h-[300px] object-cover"
+                        src="images/destinations/historical-heart.jpg"
+                        data-images='["images/destinations/historical-heart.jpg", "images/destinations/trip-2.jpg", "images/destinations/trip-4.jpg"]'>
                     <div class="absolute top-4 left-4">
                         <p class="text-white text-sm md:text-base">Historical Heart</p>
                         <p class="text-white text-sm md:text-base">(Cairo and Giza)</p>
@@ -340,7 +341,7 @@ $_primary_two = "#074C56";
                                 <img loading="lazy" src="images/icons/arrow-left-w.svg" alt="Arrow Left icon"
                                     class="group-hover:translate-x-1 duration-300 w-[14px] md:w-[18px]" />
                             </button>
-                            <span class="text-[<?= $_primary_two ?>] text-xs md:text-base">1/4</span>
+                            <span class="text-[<?= $_primary_two ?>] text-xs md:text-base counter-view">1/1</span>
                             <button class="next hover:translate-x-1 duration-300">
                                 <img loading="lazy" src="images/icons/arrow-right-w.svg" alt="Arrow right icon"
                                     class="group-hover:translate-x-1 duration-300 w-[14px] md:w-[18px]" />
@@ -348,10 +349,11 @@ $_primary_two = "#074C56";
                         </div>
                     </div>
                 </div>
-                <div class="card rounded-[20px] overflow-hidden relative ">
+                <div class="card-images rounded-[20px] overflow-hidden relative ">
                     <div class="overlay"></div>
                     <img loading="lazy" src="images/destinations/mediterranean-coast.jpg" alt="mediterranean-coast"
-                        class="w-full h-[150px] md:h-[300px] object-cover">
+                        class="w-full h-[150px] md:h-[300px] object-cover"
+                        data-images='["images/destinations/mediterranean-coast.jpg", "images/destinations/trip-2.jpg", "images/destinations/trip-4.jpg"]'>
                     <div class="absolute top-4 left-4">
                         <p class="text-white text-sm md:text-base">Mediterranean Coast</p>
                         <p class="text-white text-sm md:text-base">(Alexandria and Marsa Matruh)</p>
@@ -364,7 +366,7 @@ $_primary_two = "#074C56";
                                 <img loading="lazy" src="images/icons/arrow-left-w.svg" alt="Arrow Left icon"
                                     class="group-hover:translate-x-1 duration-300 w-[14px] md:w-[18px]" />
                             </button>
-                            <span class="text-[<?= $_primary_two ?>] text-xs md:text-base">1/4</span>
+                            <span class="text-[<?= $_primary_two ?>] text-xs md:text-base counter-view">1/1</span>
                             <button class="next hover:translate-x-1 duration-300">
                                 <img loading="lazy" src="images/icons/arrow-right-w.svg" alt="Arrow right icon"
                                     class="group-hover:translate-x-1 duration-300 w-[14px] md:w-[18px]" />
@@ -372,10 +374,11 @@ $_primary_two = "#074C56";
                         </div>
                     </div>
                 </div>
-                <div class="card rounded-[20px] overflow-hidden relative ">
+                <div class="card-images rounded-[20px] overflow-hidden relative ">
                     <div class="overlay"></div>
                     <img loading="lazy" src="images/destinations/nile-valley.jpg" alt="nile-valley"
-                        class="w-full h-[150px] md:h-[300px] object-cover">
+                        class="w-full h-[150px] md:h-[300px] object-cover"
+                        data-images='["images/destinations/nile-valley.jpg", "images/destinations/trip-2.jpg", "images/destinations/trip-4.jpg"]'>
                     <div class="absolute top-4 left-4">
                         <p class="text-white text-sm md:text-base">Nile Valley</p>
                         <p class="text-white text-sm md:text-base">(Luxor and Aswan)</p>
@@ -388,7 +391,7 @@ $_primary_two = "#074C56";
                                 <img loading="lazy" src="images/icons/arrow-left-w.svg" alt="Arrow Left icon"
                                     class="group-hover:translate-x-1 duration-300 w-[14px] md:w-[18px]" />
                             </button>
-                            <span class="text-[<?= $_primary_two ?>] text-xs md:text-base">1/4</span>
+                            <span class="text-[<?= $_primary_two ?>] text-xs md:text-base counter-view">1/1</span>
                             <button class="next hover:translate-x-1 duration-300">
                                 <img loading="lazy" src="images/icons/arrow-right-w.svg" alt="Arrow right icon"
                                     class="group-hover:translate-x-1 duration-300 w-[14px] md:w-[18px]" />
@@ -396,10 +399,11 @@ $_primary_two = "#074C56";
                         </div>
                     </div>
                 </div>
-                <div class="card rounded-[20px] overflow-hidden relative ">
+                <div class="card-images rounded-[20px] overflow-hidden relative ">
                     <div class="overlay"></div>
                     <img loading="lazy" src="images/destinations/red-sea-coast.jpg" alt="red-sea-coast"
-                        class="w-full h-[150px] md:h-[300px] object-cover">
+                        class="w-full h-[150px] md:h-[300px] object-cover"
+                        data-images='["images/destinations/red-sea-coast.jpg", "images/destinations/trip-2.jpg", "images/destinations/trip-4.jpg"]'>
                     <div class="absolute top-4 left-4">
                         <p class="text-white text-sm md:text-base">Red Sea Coast</p>
                         <p class="text-white text-sm md:text-base">(Hurghada , Taba and Sharm El-Sheikh)</p>
@@ -412,7 +416,7 @@ $_primary_two = "#074C56";
                                 <img loading="lazy" src="images/icons/arrow-left-w.svg" alt="Arrow Left icon"
                                     class="group-hover:translate-x-1 duration-300 w-[14px] md:w-[18px]" />
                             </button>
-                            <span class="text-[<?= $_primary_two ?>] text-xs md:text-base">1/4</span>
+                            <span class="text-[<?= $_primary_two ?>] text-xs md:text-base counter-view">1/1</span>
                             <button class="next hover:translate-x-1 duration-300">
                                 <img loading="lazy" src="images/icons/arrow-right-w.svg" alt="Arrow right icon"
                                     class="group-hover:translate-x-1 duration-300 w-[14px] md:w-[18px]" />
@@ -420,10 +424,11 @@ $_primary_two = "#074C56";
                         </div>
                     </div>
                 </div>
-                <div class="card rounded-[20px] overflow-hidden relative ">
+                <div class="card-images rounded-[20px] overflow-hidden relative ">
                     <div class="overlay"></div>
                     <img loading="lazy" src="images/destinations/western-desert.jpg" alt="western-desert"
-                        class="w-full h-[150px] md:h-[300px] object-cover">
+                        class="w-full h-[150px] md:h-[300px] object-cover"
+                        data-images='["images/destinations/western-desert.jpg", "images/destinations/trip-2.jpg", "images/destinations/trip-4.jpg"]'>
                     <div class="absolute top-4 left-4">
                         <p class="text-white text-sm md:text-base">Western Desert</p>
                         <p class="text-white text-sm md:text-base">(Siwa Oasis, Bahariya, and White Desert)</p>
@@ -436,7 +441,7 @@ $_primary_two = "#074C56";
                                 <img loading="lazy" src="images/icons/arrow-left-w.svg" alt="Arrow Left icon"
                                     class="group-hover:translate-x-1 duration-300 w-[14px] md:w-[18px]" />
                             </button>
-                            <span class="text-[<?= $_primary_two ?>] text-xs md:text-base">1/4</span>
+                            <span class="text-[<?= $_primary_two ?>] text-xs md:text-base counter-view">1/1</span>
                             <button class="next hover:translate-x-1 duration-300">
                                 <img loading="lazy" src="images/icons/arrow-right-w.svg" alt="Arrow right icon"
                                     class="group-hover:translate-x-1 duration-300 w-[14px] md:w-[18px]" />
@@ -498,12 +503,13 @@ $_primary_two = "#074C56";
                             </div>
                         </div>
                     </div>
-                    <div class="swiper-slide">
+                    <div class="swiper-slide card-images">
                         <div class="bg-white rounded-[20px] shadow-[0_2px_8px_rgba(0,0,0,0.08)] overflow-hidden ">
                             <div class="relative">
                                 <div class="overlay"></div>
                                 <img loading="lazy" src="images/swipe1.jpg" alt="Luxor Temple"
-                                    class="w-full h-[250px] object-cover">
+                                    class="w-full h-[250px] object-cover"
+                                    data-images='["images/swipe1.jpg", "images/swipe2.jpg", "images/swipe3.jpg"]'>
                                 <!-- Card badges -->
                                 <div class="absolute top-4 left-4">
                                     <span
@@ -529,7 +535,8 @@ $_primary_two = "#074C56";
                                                 alt="Arrow left icon"
                                                 class="group-hover:translate-x-1 duration-300 w-[14px] md:w-[18px]" />
                                         </button>
-                                        <span class="text-[<?= $_primary_two ?>] text-xs md:text-base">1/4</span>
+                                        <span
+                                            class="text-[<?= $_primary_two ?>] text-xs md:text-base counter-view">1/1</span>
                                         <button class="next hover:translate-x-1 duration-300">
                                             <img loading="lazy" src="images/icons/arrow-right-w.svg"
                                                 alt="Arrow right icon"
@@ -568,12 +575,13 @@ $_primary_two = "#074C56";
                             </div>
                         </div>
                     </div>
-                    <div class="swiper-slide">
+                    <div class="swiper-slide card-images">
                         <div class="bg-white rounded-[20px] shadow-[0_2px_8px_rgba(0,0,0,0.08)] overflow-hidden ">
                             <div class="relative">
                                 <div class="overlay"></div>
                                 <img loading="lazy" src="images/swipe1.jpg" alt="Luxor Temple"
-                                    class="w-full h-[250px] object-cover">
+                                    class="w-full h-[250px] object-cover"
+                                    data-images='["images/swipe1.jpg", "images/swipe2.jpg", "images/swipe3.jpg"]'>
                                 <!-- Card badges -->
                                 <div class="absolute top-4 left-4">
                                     <span
@@ -598,7 +606,8 @@ $_primary_two = "#074C56";
                                                 alt="Arrow left icon"
                                                 class="group-hover:translate-x-1 duration-300 w-[14px] md:w-[18px]" />
                                         </button>
-                                        <span class="text-[<?= $_primary_two ?>] text-xs md:text-base">1/4</span>
+                                        <span
+                                            class="text-[<?= $_primary_two ?>] text-xs md:text-base counter-view">1/1</span>
                                         <button class="next hover:translate-x-1 duration-300">
                                             <img loading="lazy" src="images/icons/arrow-right-w.svg"
                                                 alt="Arrow right icon"
@@ -637,12 +646,13 @@ $_primary_two = "#074C56";
                             </div>
                         </div>
                     </div>
-                    <div class="swiper-slide">
+                    <div class="swiper-slide card-images">
                         <div class="bg-white rounded-[20px] shadow-[0_2px_8px_rgba(0,0,0,0.08)] overflow-hidden ">
                             <div class="relative">
                                 <div class="overlay"></div>
                                 <img loading="lazy" src="images/swipe1.jpg" alt="Luxor Temple"
-                                    class="w-full h-[250px] object-cover">
+                                    class="w-full h-[250px] object-cover"
+                                    data-images='["images/swipe1.jpg", "images/swipe2.jpg", "images/swipe3.jpg"]'>
                                 <!-- Card badges -->
                                 <div class="absolute top-4 left-4">
                                     <span
@@ -668,7 +678,8 @@ $_primary_two = "#074C56";
                                                 alt="Arrow left icon"
                                                 class="group-hover:translate-x-1 duration-300 w-[14px] md:w-[18px]" />
                                         </button>
-                                        <span class="text-[<?= $_primary_two ?>] text-xs md:text-base">1/4</span>
+                                        <span
+                                            class="text-[<?= $_primary_two ?>] text-xs md:text-base counter-view">1/1</span>
                                         <button class="next hover:translate-x-1 duration-300">
                                             <img loading="lazy" src="images/icons/arrow-right-w.svg"
                                                 alt="Arrow right icon"
@@ -707,12 +718,13 @@ $_primary_two = "#074C56";
                             </div>
                         </div>
                     </div>
-                    <div class="swiper-slide">
+                    <div class="swiper-slide card-images">
                         <div class="bg-white rounded-[20px] shadow-[0_2px_8px_rgba(0,0,0,0.08)] overflow-hidden ">
                             <div class="relative">
                                 <div class="overlay"></div>
                                 <img loading="lazy" src="images/swipe1.jpg" alt="Luxor Temple"
-                                    class="w-full h-[250px] object-cover">
+                                    class="w-full h-[250px] object-cover"
+                                    data-images='["images/swipe1.jpg", "images/swipe2.jpg", "images/swipe3.jpg"]'>
                                 <!-- Card badges -->
                                 <div class="absolute top-4 left-4">
                                     <span
@@ -738,7 +750,8 @@ $_primary_two = "#074C56";
                                                 alt="Arrow left icon"
                                                 class="group-hover:translate-x-1 duration-300 w-[14px] md:w-[18px]" />
                                         </button>
-                                        <span class="text-[<?= $_primary_two ?>] text-xs md:text-base">1/4</span>
+                                        <span
+                                            class="text-[<?= $_primary_two ?>] text-xs md:text-base counter-view">1/1</span>
                                         <button class="next hover:translate-x-1 duration-300">
                                             <img loading="lazy" src="images/icons/arrow-right-w.svg"
                                                 alt="Arrow right icon"
@@ -974,75 +987,8 @@ $_primary_two = "#074C56";
 
     <?php include "componets/why.php" ?>
     <?php include "componets/footer.php" ?>
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            // handle Our Top Destinations slides
-            const swiperSlides = document.querySelectorAll(".top-destinations-swiper .swiper-slide");
-            swiperSlides.forEach(slide => {
-                const thumbnails = slide.querySelectorAll(".img-option");
-                const mainImage = slide.querySelector(".main-image");
-                thumbnails.forEach(thumbnail => {
-                    thumbnail.addEventListener("click", () => {
-                        mainImage.src = thumbnail.src;
-                        thumbnails.forEach(img => img.classList.remove("border-2"));
-                        thumbnail.classList.add("border-2");
-                    });
-                });
-            });
-            // Reusable function to initialize Swiper instances
-            const initializeSwiper = (selector, config) => {
-                return new Swiper(selector, {
-                    loop: true,
-                    slidesPerView: 1,
-                    spaceBetween: 20,
-                    navigation: {
-                        nextEl: '.swiper-button-next',
-                        prevEl: '.swiper-button-prev',
-                    },
-                    pagination: {
-                        el: '.swiper-pagination',
-                        clickable: true,
-                    },
-                    breakpoints: {
-                        768: { slidesPerView: 1 },
-                        1024: { slidesPerView: 3.2 },
-                    },
-                    autoplay: {
-                        delay: 5000,
-                        disableOnInteraction: false,
-                    },
-                    lazy: {
-                        loadPrevNext: true,
-                    },
-                    grabCursor: true,
-                    ...config,
-                });
-            };
-            // Initialize Swiper instances
-            initializeSwiper('.top-destinations-swiper', {
-                breakpoints: {
-                    768: {
-                        slidesPerView: 1,
-                    },
-                    1024: {
-                        slidesPerView: 1.4,
-                    },
-                }
-            });
-            initializeSwiper('.what-are-saying-swiper', {
-                breakpoints: {
-                    768: {
-                        slidesPerView: 1,
-                    },
-                    1024: {
-                        slidesPerView: 1.6,
-                    },
-                }
-            });
-            initializeSwiper('.single-tours-swiper');
-            initializeSwiper('.blog-swiper');
-        });
-    </script>
+    <script defer src="js/destinations.js"></script>
+    <script defer src="js/image-switcher.js"></script>
 </body>
 
 </html>
