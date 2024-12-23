@@ -88,5 +88,7 @@
             </div>
         </div>
     </footer>
+
+    <?php include "componets/scroll-to-top.php" ?>
 </body>
 </html>
