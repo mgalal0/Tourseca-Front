@@ -10,6 +10,8 @@
     <title>About-Us</title>
 </head>
 <body>
+<?php include "componets/loader.php" ?>
+
 <?php include "componets/navbar.php"?>
 
 

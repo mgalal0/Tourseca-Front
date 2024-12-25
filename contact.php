@@ -10,6 +10,8 @@
     <title>Contact Us</title>
 </head>
 <body>
+<?php include "componets/loader.php" ?>
+
 <?php include "componets/navbar.php"?>
 <!-- FAQ Hero Section -->
 <section class="bg-gradient-to-b from-[#105B66] to-[#BAD0B4] py-28">

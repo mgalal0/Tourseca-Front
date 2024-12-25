@@ -49,6 +49,10 @@
                         <i class="fas fa-chevron-right text-white text-xs"></i>
                         <a href="#" class="text-white hover:text-[#C5FF4A] transition-colors">FAQ</a>
                     </div>
+                    <div class="flex items-center space-x-2">
+                        <i class="fas fa-chevron-right text-white text-xs"></i>
+                        <a href="top.php" class="text-white hover:text-[#C5FF4A] transition-colors">TOP Destinations</a>
+                    </div>
                 </div>
 
                 <!-- Contact Section -->
