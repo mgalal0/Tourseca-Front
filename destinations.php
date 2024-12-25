@@ -180,6 +180,8 @@ $_primary_two = "#074C56";
 </head>
 
 <body>
+<?php include "componets/loader.php" ?>
+
     <?php include "componets/navbar.php" ?>
     <div class="background-container">
         <!-- Start Hero Section -->
