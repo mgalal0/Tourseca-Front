@@ -1,17 +1,41 @@
-<?php
-// subscribe.php
-?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="styles/general.css">
-    <link rel="stylesheet" href="styles/font-2.css">
+<section class="subscribe-section py-24">
+    <!-- Background Planes -->
+    <div class="plane-icon plane-left">
+        <img src="images/icons/subs.svg" alt="Decorative plane" width="200" height="120">
+    </div>
+    <div class="plane-icon plane-right">
+        <img src="images/icons/subs1.svg" alt="Decorative plane"  width="200" height="120">
+    </div>
 
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <style>
+    <div class="container mx-auto px-4 text-center">
+        <h2 class="subscribe-title text-4xl font-semibold mb-4">Subscribe Now</h2>
+        <p class="text-white text-lg mb-8">Enter your e-mail to Subscribe and get exclusive deals & offer</p>
+        
+        <!-- Subscribe Form -->
+        <div class="max-w-xl mx-auto subscribe-form">
+            <form class="relative flex" action="process_subscription.php" method="POST">
+                <div class="input-wrapper">
+                    <i class="fas fa-envelope email-icon"></i>
+                    <input 
+                        type="email" 
+                        name="email" 
+                        placeholder="E-mail" 
+                        class="subscribe-input text-gray-700 focus:outline-none"
+                        required
+                    >
+                </div>
+                <button 
+                    type="submit" 
+                    class="absolute right-0 bg-[#C8E677] text-[#06414A] font-medium px-8 py-2 rounded-full hover:bg-[#b3ff1a] transition-colors mr-2 mt-1"
+                >
+                    Subscribe
+                </button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<style>
     
     .subscribe-section {
             background-color: #276C76;
@@ -101,68 +125,22 @@ z-index: 3;
     }
 }
     </style>
-</head>
 
+<script>
+document.querySelector('.subscribe-form form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const email = this.email.value;
+    
+    if (validateEmail(email)) {
+        console.log('Email submitted:', email);
+        this.reset();
+    } else {
+        alert('Please enter a valid email address');
+    }
+});
 
-<body>
-    <section class="subscribe-section py-24">
-        <!-- Background Planes -->
-        <div class="plane-icon plane-left">
-            <img src="images/icons/subs.svg" alt="Decorative plane" width="200" height="120">
-        </div>
-        <div class="plane-icon plane-right">
-            <img src="images/icons/subs1.svg" alt="Decorative plane"  width="200" height="120">
-        </div>
-
-        <div class="container mx-auto px-4 text-center">
-            <h2 class="subscribe-title text-4xl font-semibold mb-4">Subscribe Now</h2>
-            <p class="text-white text-lg mb-8">Enter your e-mail to Subscribe and get exclusive deals & offer</p>
-            
-            <!-- Subscribe Form -->
-            <div class="max-w-xl mx-auto subscribe-form">
-                <form class="relative flex" action="process_subscription.php" method="POST">
-                    <div class="input-wrapper">
-                        <i class="fas fa-envelope email-icon"></i>
-                        <input 
-                            type="email" 
-                            name="email" 
-                            placeholder="E-mail" 
-                            class="subscribe-input text-gray-700 focus:outline-none"
-                            required
-                        >
-                    </div>
-                    <button 
-                        type="submit" 
-                        class="absolute right-0 bg-[#C8E677] text-[#06414A] font-medium px-8 py-2 rounded-full hover:bg-[#b3ff1a] transition-colors mr-2 mt-1"
-                    >
-                        Subscribe
-                    </button>
-                </form>
-            </div>
-        </div>
-    </section>
-
-
-    <script>
-        document.querySelector('form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            const email = this.email.value;
-            
-            // Here you can add your email validation and submission logic
-            // For example:
-            if (validateEmail(email)) {
-                // Submit the form or make an AJAX call
-                console.log('Email submitted:', email);
-                this.reset();
-            } else {
-                alert('Please enter a valid email address');
-            }
-        });
-
-        function validateEmail(email) {
-            const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            return re.test(email);
-        }
-    </script>
-</body>
-</html>
+function validateEmail(email) {
+    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return re.test(email);
+}
+</script>
