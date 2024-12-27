@@ -46,8 +46,8 @@ try {
     $mail->CharSet = 'UTF-8';
 
     // Recipients
-    $mail->setFrom('mahmoudgalal55555@gmail.com', 'Contact Form');
-    $mail->addAddress('mahmoudgalal55555@gmail.com');
+    $mail->setFrom('info@LuxorPrivateTour.com', 'Contact Form');
+    $mail->addAddress('info@LuxorPrivateTour.com');
     $mail->addReplyTo($email, $name);
 
     // Content
