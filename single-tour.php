@@ -20,6 +20,11 @@ $_primary_two = "#074C56";
     <link rel="stylesheet" href="styles/general.css">
     <link rel="stylesheet" href="styles/font-2.css">
     <style>
+        html,
+        body {
+            scroll-behavior: smooth;
+        }
+
         .background-container {
             background: linear-gradient(180deg, #276C76 0%, #BAD0B4 70%, #FFFFFF 100%);
             /* min-height: 100vh; */
@@ -163,7 +168,7 @@ $_primary_two = "#074C56";
 </head>
 
 <body>
-<?php include "componets/loader.php" ?>
+    <?php include "componets/loader.php" ?>
 
     <?php include "componets/navbar.php" ?>
     <!-- Start Hero Section -->
@@ -179,301 +184,318 @@ $_primary_two = "#074C56";
     <section class="tab-link shadow-[0_4px_8px_rgba(0,0,0,0.08)] ">
         <ul
             class="pb-4 max-w-7xl px-4 sm:px-6 lg:px-8 mx-auto relative my-12 md:my-16 grid grid-cols-3 md:grid-cols-8 gap-2">
-            <li><a href="#" data-content="overview" class="btn btn-secondary btn-primary">Overview</a></li>
-            <li><a href="#" data-content="itinerary" class="btn btn-secondary">Itinerary</a></li>
-            <li><a href="#" data-content="flights" class="btn btn-secondary">Flights</a></li>
-            <li><a href="#" data-content="prices" class="btn btn-secondary">Prices</a></li>
-            <li><a href="#" data-content="reviews" class="btn btn-secondary">Reviews</a></li>
-            <li><a href="#" data-content="faq" class="btn btn-secondary">FAQ</a></li>
+            <li><a href="#overview" data-content="overview" class="btn btn-secondary btn-primary">Overview</a></li>
+            <li><a href="#itinerary" data-content="itinerary" class="btn btn-secondary">Itinerary</a></li>
+            <li><a href="#flights" data-content="flights" class="btn btn-secondary">Flights</a></li>
+            <li><a href="#prices" data-content="prices" class="btn btn-secondary">Prices</a></li>
+            <li><a href="#reviews" data-content="reviews" class="btn btn-secondary">Reviews</a></li>
+            <li><a href="#faq" data-content="faq" class="btn btn-secondary">FAQ</a></li>
         </ul>
 
     </section>
     <!-- End tab-link -->
 
-    <div class="max-w-7xl mx-auto grid grid-cols-3 gap-8">
+    <div id="content" class="max-w-7xl mx-auto">
         <!-- start tab link content -->
-        <div id="content" class=" col-span-3 md:col-span-2">
-            <!-- overview -->
-            <div class="tab-content" data-tab="overview">
-                <section class="max-w-7xl px-4 sm:px-6 lg:px-8 mx-auto relative mb-16">
-                    <h3 class="text-[<?= $_primary ?>] text-[26px] md:text-[36px] font-semibold mb-6">Overview</h3>
-                    <h5 class="text-xl font-semibold mb-2">
-                        Immerse yourself in Egypt’s rich history and vibrant culture .
-                    </h5>
-                    <p class="text-gray-500 leading-8 mt-0 mb-6 text-sm md:text-base">
-                        Immerse yourself in Egypt’s rich history and vibrant culture on a grand journey through Cairo,
-                        from
-                        the ancient pyramids of Giza to the bustling bazaars of Khan El Khalili Immerse yourself in
-                        Egypt’s
-                        rich history and vibrant culture on a grand journey through Cairo, from the ancient pyramids of
-                        Giza
-                        to the bustling bazaars of Khan El Khalili.
-                    </p>
-                    <div class="flex justify-between items-start flex-wrap">
-                        <div>
-                            <h3 class="text-xl text-[<?= $_primary ?>] font-semibold">Your Trip include :</h3>
-                            <ul class="mt-4">
-                                <li class="flex items-center gap-2 mb-3">
-                                    <img loading="lazy" src="images/icons/mark.svg" alt="Mark icon" />
-                                    <span>All flights</span>
+        <div class="grid grid-cols-3 gap-8">
+            <div class="col-span-3 md:col-span-2">
+                <!-- overview -->
+                <div class="tab-content" id="overview" data-tab="overview">
+                    <section class="max-w-7xl px-4 sm:px-6 lg:px-8 mx-auto relative mb-16">
+                        <h3 class="text-[<?= $_primary ?>] text-[26px] md:text-[36px] font-semibold mb-6">Overview</h3>
+                        <h5 class="text-xl font-semibold mb-2">
+                            Immerse yourself in Egypt’s rich history and vibrant culture .
+                        </h5>
+                        <p class="text-gray-500 leading-8 mt-0 mb-6 text-sm md:text-base">
+                            Immerse yourself in Egypt’s rich history and vibrant culture on a grand journey through
+                            Cairo,
+                            from
+                            the ancient pyramids of Giza to the bustling bazaars of Khan El Khalili Immerse yourself in
+                            Egypt’s
+                            rich history and vibrant culture on a grand journey through Cairo, from the ancient pyramids
+                            of
+                            Giza
+                            to the bustling bazaars of Khan El Khalili.
+                        </p>
+                        <div class="flex justify-between items-start flex-wrap">
+                            <div>
+                                <h3 class="text-xl text-[<?= $_primary ?>] font-semibold">Your Trip include :</h3>
+                                <ul class="mt-4">
+                                    <li class="flex items-center gap-2 mb-3">
+                                        <img loading="lazy" src="images/icons/mark.svg" alt="Mark icon" />
+                                        <span>All flights</span>
+                                    </li>
+                                    <li class="flex items-center gap-2 mb-3">
+                                        <img loading="lazy" src="images/icons/mark.svg" alt="Mark icon" />
+                                        <span>Accommodation</span>
+                                    </li>
+                                    <li class="flex items-center gap-2 mb-3">
+                                        <img loading="lazy" src="images/icons/mark.svg" alt="Mark icon" />
+                                        <span>All transfers</span>
+                                    </li>
+                                    <li class="flex items-center gap-2 mb-3">
+                                        <img loading="lazy" src="images/icons/mark.svg" alt="Mark icon" />
+                                        <span>Activities</span>
+                                    </li>
+                                    <li class="flex items-center gap-2 mb-3">
+                                        <img loading="lazy" src="images/icons/mark.svg" alt="Mark icon" />
+                                        <span>Some meals</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h3 class="text-xl text-[<?= $_primary ?>] font-semibold">Trip Highlights :</h3>
+                                <ul class="mt-4">
+                                    <li class="flex items-center gap-2 mb-3">
+                                        <img loading="lazy" src="images/icons/location.svg" alt="Location icon" />
+                                        <span>The Pyramids of Giza</span>
+                                    </li>
+                                    <li class="flex items-center gap-2 mb-3">
+                                        <img loading="lazy" src="images/icons/location.svg" alt="Location icon" />
+                                        <span>Sphinx</span>
+                                    </li>
+                                    <li class="flex items-center gap-2 mb-3">
+                                        <img loading="lazy" src="images/icons/location.svg" alt="Location icon" />
+                                        <span>Egyptian Museum</span>
+                                    </li>
+                                    <li class="flex items-center gap-2 mb-3">
+                                        <img loading="lazy" src="images/icons/location.svg" alt="Location icon" />
+                                        <span>Khan El Khalili Bazaar</span>
+                                    </li>
+                                    <li class="flex items-center gap-2 mb-3">
+                                        <img loading="lazy" src="images/icons/location.svg" alt="Location icon" />
+                                        <span>Nile River Cruise</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                <!-- itinerary -->
+                <div class="tab-content" id="itinerary" data-tab="itinerary">
+                    <?php include "componets/st-itinerary.php" ?>
+                </div>
+                <!-- flights -->
+                <div class="tab-content" id="flights" data-tab="flights">
+                    <section class="max-w-7xl px-4 sm:px-6 lg:px-8 mx-auto relative mb-16">
+                        <h3 class="text-[<?= $_primary ?>] text-[26px] md:text-[36px] font-semibold mb-6">Flights</h3>
+                        <p class="text-gray-500 leading-8 mt-0 mb-4">
+                            Round-trip flights are one more thing we handle to make your journey as smooth as possible.
+                            Our
+                            team
+                            of travel experts will find the best flight itinerary for you at a competitive rate, thanks
+                            to
+                            our
+                            partnerships with top airlines.
+                        </p>
+                        <div class="bg-[#F9FBF9] p-6 rounded-lg mb-4">
+                            <h3 class="text-xl md:text-2xl font-bold mb-4">Add our airfare and you’ll get:</h3>
+
+                            <ul class="list-disc list-inside">
+                                <li class="mb-2 text-sm md:text-base">
+                                    Round-trip flight for your tour
                                 </li>
-                                <li class="flex items-center gap-2 mb-3">
-                                    <img loading="lazy" src="images/icons/mark.svg" alt="Mark icon" />
-                                    <span>Accommodation</span>
+                                <li class="mb-2 text-sm md:text-base">
+                                    Airport transfers at your destination
                                 </li>
-                                <li class="flex items-center gap-2 mb-3">
-                                    <img loading="lazy" src="images/icons/mark.svg" alt="Mark icon" />
-                                    <span>All transfers</span>
+                                <li class="mb-2 text-sm md:text-base">
+                                    A great price locked in today
                                 </li>
-                                <li class="flex items-center gap-2 mb-3">
-                                    <img loading="lazy" src="images/icons/mark.svg" alt="Mark icon" />
-                                    <span>Activities</span>
+                                <li class="mb-2 text-sm md:text-base">
+                                    24/7 support from our dedicated service team
                                 </li>
-                                <li class="flex items-center gap-2 mb-3">
-                                    <img loading="lazy" src="images/icons/mark.svg" alt="Mark icon" />
-                                    <span>Some meals</span>
+                                <li class="mb-2 text-sm md:text-base">
+                                    Options for arriving early, staying longer, or requesting an
+                                    upgrade
+                                </li>
+                                <li class="mb-2 text-sm md:text-base">
+                                    Flexible rebooking options if your tour itinerary changes
                                 </li>
                             </ul>
                         </div>
-                        <div>
-                            <h3 class="text-xl text-[<?= $_primary ?>] font-semibold">Trip Highlights :</h3>
-                            <ul class="mt-4">
-                                <li class="flex items-center gap-2 mb-3">
-                                    <img loading="lazy" src="images/icons/location.svg" alt="Location icon" />
-                                    <span>The Pyramids of Giza</span>
-                                </li>
-                                <li class="flex items-center gap-2 mb-3">
-                                    <img loading="lazy" src="images/icons/location.svg" alt="Location icon" />
-                                    <span>Sphinx</span>
-                                </li>
-                                <li class="flex items-center gap-2 mb-3">
-                                    <img loading="lazy" src="images/icons/location.svg" alt="Location icon" />
-                                    <span>Egyptian Museum</span>
-                                </li>
-                                <li class="flex items-center gap-2 mb-3">
-                                    <img loading="lazy" src="images/icons/location.svg" alt="Location icon" />
-                                    <span>Khan El Khalili Bazaar</span>
-                                </li>
-                                <li class="flex items-center gap-2 mb-3">
-                                    <img loading="lazy" src="images/icons/location.svg" alt="Location icon" />
-                                    <span>Nile River Cruise</span>
-                                </li>
-                            </ul>
+                    </section>
+                </div>
+            </div>
+            <div class="hidden md:block col-span-1">
+                <?php include "componets/inquery-form.php" ?>
+
+                <!-- start More trips to discover -->
+                <div class="mt-8">
+                    <h3 class="text-[<?= $_primary ?>] text-3xl text-center">More trips to discover</h3>
+                    <div class="grid grid-cols-1 gap-4 my-6">
+                        <div class="bg-white rounded-[20px] shadow-[0_2px_8px_rgba(0,0,0,0.08)] overflow-hidden ">
+                            <div class="relative">
+                                <div class="overlay"></div>
+                                <img loading="lazy" src="images/swipe1.jpg" alt="Luxor Temple"
+                                    class="w-full h-[250px] object-cover">
+                                <!-- Card badges -->
+                                <div class="absolute top-4 left-4">
+                                    <span
+                                        class="bg-[<?= $_yellow ?>] text-[<?= $_primary ?>] px-3 py-1 rounded-full text-xs font-medium ">Best
+                                        seller</span>
+
+                                </div>
+                                <div class="absolute top-4 right-4">
+                                    <span
+                                        class="bg-white/80 backdrop-blur-[2px] px-2 py-0.5 rounded-full flex items-center gap-1">
+                                        <img loading="lazy" src="images/icons/star.svg" alt="Star icon"
+                                            class="w-[14px] md:w-[18px]" />
+
+                                        <span class="text-xs">4.8</span>
+                                    </span>
+                                </div>
+                                <!-- Image counter -->
+                                <div class="absolute bottom-4 right-4">
+                                    <div
+                                        class="w-16 md:w-20 py-1 rounded-xl bg-gray-100 opacity-75 flex items-center justify-around">
+                                        <button class="prev hover:-translate-x-1 duration-300">
+                                            <img loading="lazy" src="images/icons/arrow-left-w.svg"
+                                                alt="Arrow left icon"
+                                                class="group-hover:translate-x-1 duration-300 w-[14px] md:w-[18px]" />
+                                        </button>
+                                        <span class="text-[<?= $_primary_two ?>] text-xs md:text-base">1/4</span>
+                                        <button class="next hover:translate-x-1 duration-300">
+                                            <img loading="lazy" src="images/icons/arrow-right-w.svg"
+                                                alt="Arrow right icon"
+                                                class="group-hover:translate-x-1 duration-300 w-[14px] md:w-[18px]" />
+
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="p-6">
+                                <h3 class="text-xl font-semibold mb-2">Cairo Trips</h3>
+                                <p class="text-gray-600 text-sm mb-6">A private visit to Queen Nefertari’s Tomb,
+                                    known as
+                                    the
+                                    with an expert Egyptologist as the guide.</p>
+
+                                <div class="flex items-center gap-2 mb-6">
+                                    <img loading="lazy" src="images/icons/time.svg" alt="time icon" width="20"
+                                        height="20">
+                                    <span class="text-gray-600">3 Days , 2 Nights</span>
+                                </div>
+
+                                <div class="flex justify-between items-center">
+                                    <div class="flex items-center gap-2">
+                                        <img loading="lazy" src="images/icons/dollar.svg" alt="dollar icon" width="20"
+                                            height="20">
+                                        <span class="text-gray-600">Start from : <span
+                                                class="font-medium">100$</span></span>
+                                    </div>
+                                </div>
+                                <a href="single-tour.php"
+                                    class="text-[<?= $_primary ?>] font-medium flex justify-end items-center group gap-2">
+                                    <span class="text-sm md:text-base">Book now</span>
+                                    <img loading="lazy" src="images/icons/arrow-right.svg" alt="Arrow right icon"
+                                        class="group-hover:translate-x-1 duration-300" width="30" height="30" />
+                                </a>
+                            </div>
+                        </div>
+                        <div class="bg-white rounded-[20px] shadow-[0_2px_8px_rgba(0,0,0,0.08)] overflow-hidden ">
+                            <div class="relative">
+                                <div class="overlay"></div>
+                                <img loading="lazy" src="images/swipe1.jpg" alt="Luxor Temple"
+                                    class="w-full h-[250px] object-cover">
+                                <!-- Card badges -->
+                                <div class="absolute top-4 left-4">
+                                    <span
+                                        class="bg-[<?= $_yellow ?>] text-[<?= $_primary ?>] px-3 py-1 rounded-full text-xs font-medium ">Best
+                                        seller</span>
+
+                                </div>
+                                <div class="absolute top-4 right-4">
+                                    <span
+                                        class="bg-white/80 backdrop-blur-[2px] px-2 py-0.5 rounded-full flex items-center gap-1">
+                                        <img loading="lazy" src="images/icons/star.svg" alt="Star icon"
+                                            class="w-[14px] md:w-[18px]" />
+
+                                        <span class="text-xs">4.8</span>
+                                    </span>
+                                </div>
+                                <!-- Image counter -->
+                                <div class="absolute bottom-4 right-4">
+                                    <div
+                                        class="w-16 md:w-20 py-1 rounded-xl bg-gray-100 opacity-75 flex items-center justify-around">
+                                        <button class="prev hover:-translate-x-1 duration-300">
+                                            <img loading="lazy" src="images/icons/arrow-left-w.svg"
+                                                alt="Arrow left icon"
+                                                class="group-hover:translate-x-1 duration-300 w-[14px] md:w-[18px]" />
+                                        </button>
+                                        <span class="text-[<?= $_primary_two ?>] text-xs md:text-base">1/4</span>
+                                        <button class="next hover:translate-x-1 duration-300">
+                                            <img loading="lazy" src="images/icons/arrow-right-w.svg"
+                                                alt="Arrow right icon"
+                                                class="group-hover:translate-x-1 duration-300 w-[14px] md:w-[18px]" />
+
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="p-6">
+                                <h3 class="text-xl font-semibold mb-2">Cairo Trips</h3>
+                                <p class="text-gray-600 text-sm mb-6">A private visit to Queen Nefertari’s Tomb,
+                                    known as
+                                    the
+                                    with an expert Egyptologist as the guide.</p>
+
+                                <div class="flex items-center gap-2 mb-6">
+                                    <img loading="lazy" src="images/icons/time.svg" alt="time icon" width="20"
+                                        height="20">
+                                    <span class="text-gray-600">3 Days , 2 Nights</span>
+                                </div>
+
+                                <div class="flex justify-between items-center">
+                                    <div class="flex items-center gap-2">
+                                        <img loading="lazy" src="images/icons/dollar.svg" alt="dollar icon" width="20"
+                                            height="20">
+                                        <span class="text-gray-600">Start from : <span
+                                                class="font-medium">100$</span></span>
+                                    </div>
+                                </div>
+                                <a href="single-tour.php"
+                                    class="text-[<?= $_primary ?>] font-medium flex justify-end items-center group gap-2">
+                                    <span class="text-sm md:text-base">Book now</span>
+                                    <img loading="lazy" src="images/icons/arrow-right.svg" alt="Arrow right icon"
+                                        class="group-hover:translate-x-1 duration-300" width="30" height="30" />
+                                </a>
+                            </div>
                         </div>
                     </div>
-                </section>
+                </div>
+                <!-- end More trips to discover -->
             </div>
 
-            <!-- itinerary -->
-            <div class="tab-content" data-tab="itinerary" style="display: none;">
-                <?php include "componets/st-itinerary.php" ?>
-            </div>
-            <!-- flights -->
-            <div class="tab-content" data-tab="flights" style="display: none;">
-                <section class="max-w-7xl px-4 sm:px-6 lg:px-8 mx-auto relative mb-16">
-                    <h3 class="text-[<?= $_primary ?>] text-[26px] md:text-[36px] font-semibold mb-6">Flights</h3>
-                    <p class="text-gray-500 leading-8 mt-0 mb-4">
-                        Round-trip flights are one more thing we handle to make your journey as smooth as possible. Our
-                        team
-                        of travel experts will find the best flight itinerary for you at a competitive rate, thanks to
-                        our
-                        partnerships with top airlines.
-                    </p>
-                    <div class="bg-[#F9FBF9] p-6 rounded-lg mb-4">
-                        <h3 class="text-xl md:text-2xl font-bold mb-4">Add our airfare and you’ll get:</h3>
+            <div class="col-span-3">
 
-                        <ul class="list-disc list-inside">
-                            <li class="mb-2 text-sm md:text-base">
-                                Round-trip flight for your tour
-                            </li>
-                            <li class="mb-2 text-sm md:text-base">
-                                Airport transfers at your destination
-                            </li>
-                            <li class="mb-2 text-sm md:text-base">
-                                A great price locked in today
-                            </li>
-                            <li class="mb-2 text-sm md:text-base">
-                                24/7 support from our dedicated service team
-                            </li>
-                            <li class="mb-2 text-sm md:text-base">
-                                Options for arriving early, staying longer, or requesting an
-                                upgrade
-                            </li>
-                            <li class="mb-2 text-sm md:text-base">
-                                Flexible rebooking options if your tour itinerary changes
-                            </li>
-                        </ul>
-                    </div>
-                    <?php include "componets/sale.php" ?>
-                </section>
-            </div>
+                <?php include "componets/sale.php" ?>
 
-            <!-- prices -->
-            <div class="tab-content" data-tab="prices" style="display: none;">
-                <?php include "componets/st-prices.php" ?>
-            </div>
-            <!-- reviews -->
-            <div class="tab-content" data-tab="reviews" style="display: none;">
-                <section class="reviews-section max-w-7xl px-4 sm:px-6 lg:px-8 mx-auto relative mb-16">
-                    <h3 class="text-[<?= $_primary ?>] text-[26px] md:text-[36px] font-semibold mb-6">Reviews</h3>
-                    <?php include "componets/reviews.php" ?>
-                </section>
-            </div>
+                <!-- prices -->
+                <div class="tab-content" id="prices" data-tab="prices">
+                    <?php include "componets/st-prices.php" ?>
+                </div>
+                <!-- reviews -->
+                <div class="tab-content" id="reviews" data-tab="reviews">
+                    <section class="reviews-section max-w-7xl px-4 sm:px-6 lg:px-8 mx-auto relative mb-16">
+                        <h3 class="text-[<?= $_primary ?>] text-[26px] md:text-[36px] font-semibold mb-6">Reviews</h3>
+                        <?php include "componets/reviews.php" ?>
+                    </section>
+                </div>
 
-            <!-- faq -->
-            <div class="tab-content" data-tab="faq" style="display: none;">
-                <section class="max-w-7xl px-4 sm:px-6 lg:px-8 mx-auto relative mb-16">
-                    <h3 class="text-[<?= $_primary ?>] text-[26px] md:text-[36px] font-semibold">FAQ</h3>
-                    <?php include "componets/faq.php" ?>
-                </section>
+                <!-- faq -->
+                <div class="tab-content" id="faq" data-tab="faq">
+                    <section class="max-w-7xl px-4 sm:px-6 lg:px-8 mx-auto relative mb-16">
+                        <h3 class="text-[<?= $_primary ?>] text-[26px] md:text-[36px] font-semibold">FAQ</h3>
+                        <?php include "componets/faq.php" ?>
+                    </section>
+                </div>
             </div>
 
         </div>
         <!-- end tab link content -->
-
-        <div class="hidden md:block col-span-1">
-            <?php include "componets/inquery-form.php" ?>
-
-            <!-- start More trips to discover -->
-            <div class="mt-8">
-                <h3 class="text-[<?= $_primary ?>] text-3xl text-center">More trips to discover</h3>
-                <div class="grid grid-cols-1 gap-4 my-6">
-                    <div class="bg-white rounded-[20px] shadow-[0_2px_8px_rgba(0,0,0,0.08)] overflow-hidden ">
-                        <div class="relative">
-                            <div class="overlay"></div>
-                            <img loading="lazy" src="images/swipe1.jpg" alt="Luxor Temple"
-                                class="w-full h-[250px] object-cover">
-                            <!-- Card badges -->
-                            <div class="absolute top-4 left-4">
-                                <span
-                                    class="bg-[<?= $_yellow ?>] text-[<?= $_primary ?>] px-3 py-1 rounded-full text-xs font-medium ">Best
-                                    seller</span>
-
-                            </div>
-                            <div class="absolute top-4 right-4">
-                                <span
-                                    class="bg-white/80 backdrop-blur-[2px] px-2 py-0.5 rounded-full flex items-center gap-1">
-                                    <img loading="lazy" src="images/icons/star.svg" alt="Star icon"
-                                        class="w-[14px] md:w-[18px]" />
-
-                                    <span class="text-xs">4.8</span>
-                                </span>
-                            </div>
-                            <!-- Image counter -->
-                            <div class="absolute bottom-4 right-4">
-                                <div
-                                    class="w-16 md:w-20 py-1 rounded-xl bg-gray-100 opacity-75 flex items-center justify-around">
-                                    <button class="prev hover:-translate-x-1 duration-300">
-                                        <img loading="lazy" src="images/icons/arrow-left-w.svg" alt="Arrow left icon"
-                                            class="group-hover:translate-x-1 duration-300 w-[14px] md:w-[18px]" />
-                                    </button>
-                                    <span class="text-[<?= $_primary_two ?>] text-xs md:text-base">1/4</span>
-                                    <button class="next hover:translate-x-1 duration-300">
-                                        <img loading="lazy" src="images/icons/arrow-right-w.svg" alt="Arrow right icon"
-                                            class="group-hover:translate-x-1 duration-300 w-[14px] md:w-[18px]" />
-
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="p-6">
-                            <h3 class="text-xl font-semibold mb-2">Cairo Trips</h3>
-                            <p class="text-gray-600 text-sm mb-6">A private visit to Queen Nefertari’s Tomb, known as
-                                the
-                                with an expert Egyptologist as the guide.</p>
-
-                            <div class="flex items-center gap-2 mb-6">
-                                <img loading="lazy" src="images/icons/time.svg" alt="time icon" width="20" height="20">
-                                <span class="text-gray-600">3 Days , 2 Nights</span>
-                            </div>
-
-                            <div class="flex justify-between items-center">
-                                <div class="flex items-center gap-2">
-                                    <img loading="lazy" src="images/icons/dollar.svg" alt="dollar icon" width="20"
-                                        height="20">
-                                    <span class="text-gray-600">Start from : <span
-                                            class="font-medium">100$</span></span>
-                                </div>
-                            </div>
-                            <a href="single-tour.php"
-                                class="text-[<?= $_primary ?>] font-medium flex justify-end items-center group gap-2">
-                                <span class="text-sm md:text-base">Book now</span>
-                                <img loading="lazy" src="images/icons/arrow-right.svg" alt="Arrow right icon"
-                                    class="group-hover:translate-x-1 duration-300" width="30" height="30" />
-                            </a>
-                        </div>
-                    </div>
-                    <div class="bg-white rounded-[20px] shadow-[0_2px_8px_rgba(0,0,0,0.08)] overflow-hidden ">
-                        <div class="relative">
-                            <div class="overlay"></div>
-                            <img loading="lazy" src="images/swipe1.jpg" alt="Luxor Temple"
-                                class="w-full h-[250px] object-cover">
-                            <!-- Card badges -->
-                            <div class="absolute top-4 left-4">
-                                <span
-                                    class="bg-[<?= $_yellow ?>] text-[<?= $_primary ?>] px-3 py-1 rounded-full text-xs font-medium ">Best
-                                    seller</span>
-
-                            </div>
-                            <div class="absolute top-4 right-4">
-                                <span
-                                    class="bg-white/80 backdrop-blur-[2px] px-2 py-0.5 rounded-full flex items-center gap-1">
-                                    <img loading="lazy" src="images/icons/star.svg" alt="Star icon"
-                                        class="w-[14px] md:w-[18px]" />
-
-                                    <span class="text-xs">4.8</span>
-                                </span>
-                            </div>
-                            <!-- Image counter -->
-                            <div class="absolute bottom-4 right-4">
-                                <div
-                                    class="w-16 md:w-20 py-1 rounded-xl bg-gray-100 opacity-75 flex items-center justify-around">
-                                    <button class="prev hover:-translate-x-1 duration-300">
-                                        <img loading="lazy" src="images/icons/arrow-left-w.svg" alt="Arrow left icon"
-                                            class="group-hover:translate-x-1 duration-300 w-[14px] md:w-[18px]" />
-                                    </button>
-                                    <span class="text-[<?= $_primary_two ?>] text-xs md:text-base">1/4</span>
-                                    <button class="next hover:translate-x-1 duration-300">
-                                        <img loading="lazy" src="images/icons/arrow-right-w.svg" alt="Arrow right icon"
-                                            class="group-hover:translate-x-1 duration-300 w-[14px] md:w-[18px]" />
-
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="p-6">
-                            <h3 class="text-xl font-semibold mb-2">Cairo Trips</h3>
-                            <p class="text-gray-600 text-sm mb-6">A private visit to Queen Nefertari’s Tomb, known as
-                                the
-                                with an expert Egyptologist as the guide.</p>
-
-                            <div class="flex items-center gap-2 mb-6">
-                                <img loading="lazy" src="images/icons/time.svg" alt="time icon" width="20" height="20">
-                                <span class="text-gray-600">3 Days , 2 Nights</span>
-                            </div>
-
-                            <div class="flex justify-between items-center">
-                                <div class="flex items-center gap-2">
-                                    <img loading="lazy" src="images/icons/dollar.svg" alt="dollar icon" width="20"
-                                        height="20">
-                                    <span class="text-gray-600">Start from : <span
-                                            class="font-medium">100$</span></span>
-                                </div>
-                            </div>
-                            <a href="single-tour.php"
-                                class="text-[<?= $_primary ?>] font-medium flex justify-end items-center group gap-2">
-                                <span class="text-sm md:text-base">Book now</span>
-                                <img loading="lazy" src="images/icons/arrow-right.svg" alt="Arrow right icon"
-                                    class="group-hover:translate-x-1 duration-300" width="30" height="30" />
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- end More trips to discover -->
-        </div>
     </div>
     <!-- start subscribe -->
     <div class="mb-16">
@@ -484,32 +506,32 @@ $_primary_two = "#074C56";
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             // Handle buttons with ".tab-link button"
-            document.querySelectorAll('.tab-link a').forEach(link => {
-                link.addEventListener('click', function (e) {
-                    e.preventDefault();
-                    // Hide all tab contents
-                    document.querySelectorAll('.tab-content').forEach(content => {
-                        content.style.display = 'none';
-                    });
+            // document.querySelectorAll('.tab-link a').forEach(link => {
+            //     link.addEventListener('click', function (e) {
+            //         e.preventDefault();
+            //         // Hide all tab contents
+            //         document.querySelectorAll('.tab-content').forEach(content => {
+            //             content.style.display = 'none';
+            //         });
 
-                    // Remove 'btn-primary' class from all links
-                    document.querySelectorAll('.tab-link a').forEach(link => {
-                        link.classList.remove('btn-primary');
-                    });
+            //         // Remove 'btn-primary' class from all links
+            //         document.querySelectorAll('.tab-link a').forEach(link => {
+            //             link.classList.remove('btn-primary');
+            //         });
 
-                    // Get the content to display
-                    const contentId = this.getAttribute('data-content');
-                    const activeContent = document.querySelector(`.tab-content[data-tab="${contentId}"]`);
+            //         // Get the content to display
+            //         const contentId = this.getAttribute('data-content');
+            //         const activeContent = document.querySelector(`.tab-content[data-tab="${contentId}"]`);
 
-                    // Show the related content
-                    if (activeContent) {
-                        activeContent.style.display = 'block';
-                    }
+            //         // Show the related content
+            //         if (activeContent) {
+            //             activeContent.style.display = 'block';
+            //         }
 
-                    // Add 'btn-primary' class to the clicked link
-                    this.classList.add('btn-primary');
-                });
-            });
+            //         // Add 'btn-primary' class to the clicked link
+            //         this.classList.add('btn-primary');
+            //     });
+            // });
 
             // Reusable function to initialize Swiper instances
             const initializeSwiper = (selector, config = {}) => {
