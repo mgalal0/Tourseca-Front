@@ -16,7 +16,6 @@ ini_set('display_errors', 1);
     <title>Contact Us</title>
 </head>
 <body>
-<?php include "componets/loader.php" ?>
 <?php include "componets/navbar.php"?>
 
 <!-- Hero Section -->
