@@ -500,122 +500,89 @@ $_primary_two = "#074C56";
     </div>
     <!-- end subscribe -->
     <?php include "componets/footer.php" ?>
+
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
-             // Tab link functionality
+    document.addEventListener('DOMContentLoaded', () => {
+    // Tab link functionality
     const tabLinks = document.querySelectorAll('.tab-link a');
-    const tabContents = document.querySelectorAll('.tab-content');
-    // Function to show active tab content and update active link
-    function showTabContent(contentId) {
-        // Hide all tab contents
-        tabContents.forEach(content => {
-            content.style.display = 'none';
-        });
-
-        // Remove 'btn-primary' class from all links
-        tabLinks.forEach(link => {
-            link.classList.remove('btn-primary');
-        });
-
-        // Show the related content
-        const activeContent = document.querySelector(`.tab-content[data-tab="${contentId}"]`);
-        if (activeContent) {
-            activeContent.style.display = 'block';
-        }
-
-        // Add 'btn-primary' class to the clicked link
-        const activeLink = document.querySelector(`a[data-content="${contentId}"]`);
-        if (activeLink) {
-            activeLink.classList.add('btn-primary');
-        }
-    }
 
     // Add click event listeners to tab links
     tabLinks.forEach(link => {
         link.addEventListener('click', function(e) {
             e.preventDefault();
             const contentId = this.getAttribute('data-content');
-            showTabContent(contentId);
+            const targetSection = document.getElementById(contentId);
+            
+            // Remove 'btn-primary' class from all links
+            tabLinks.forEach(link => {
+                link.classList.remove('btn-primary');
+            });
+
+            // Add 'btn-primary' class to the clicked link
+            this.classList.add('btn-primary');
+            
+            // Scroll to the section
+            if (targetSection) {
+                // Adjust for sticky header if needed
+                const headerOffset = 100; // Adjust this value based on your sticky header height
+                const elementPosition = targetSection.getBoundingClientRect().top;
+                const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: "smooth"
+                });
+            }
         });
     });
-    showTabContent('overview');
 
-            // Handle buttons with ".tab-link button"
-            // document.querySelectorAll('.tab-link a').forEach(link => {
-            //     link.addEventListener('click', function (e) {
-            //         e.preventDefault();
-            //         // Hide all tab contents
-            //         document.querySelectorAll('.tab-content').forEach(content => {
-            //             content.style.display = 'none';
-            //         });
-
-            //         // Remove 'btn-primary' class from all links
-            //         document.querySelectorAll('.tab-link a').forEach(link => {
-            //             link.classList.remove('btn-primary');
-            //         });
-
-            //         // Get the content to display
-            //         const contentId = this.getAttribute('data-content');
-            //         const activeContent = document.querySelector(`.tab-content[data-tab="${contentId}"]`);
-
-            //         // Show the related content
-            //         if (activeContent) {
-            //             activeContent.style.display = 'block';
-            //         }
-
-            //         // Add 'btn-primary' class to the clicked link
-            //         this.classList.add('btn-primary');
-            //     });
-            // });
-
-
-            // Reusable function to initialize Swiper instances
-            const initializeSwiper = (selector, config = {}) => {
-                const swiperElement = document.querySelector(selector);
-                if (swiperElement) {
-                    return new Swiper(selector, {
-                        loop: true,
-                        slidesPerView: 1,
-                        spaceBetween: 20,
-                        navigation: {
-                            nextEl: '.swiper-button-next',
-                            prevEl: '.swiper-button-prev',
-                        },
-                        pagination: {
-                            el: '.swiper-pagination',
-                            clickable: true,
-                        },
-                        breakpoints: {
-                            768: { slidesPerView: 1 },
-                            1024: { slidesPerView: 3.2 },
-                        },
-                        autoplay: {
-                            delay: 5000,
-                            disableOnInteraction: false,
-                        },
-                        lazy: {
-                            loadPrevNext: true,
-                        },
-                        grabCursor: true,
-                        ...config,
-                    });
-                }
-            };
-
-            // Initialize Swiper instances
-            initializeSwiper('.what-are-saying-swiper', {
+    // Reusable function to initialize Swiper instances
+    const initializeSwiper = (selector, config = {}) => {
+        const swiperElement = document.querySelector(selector);
+        if (swiperElement) {
+            return new Swiper(selector, {
+                loop: true,
+                slidesPerView: 1,
+                spaceBetween: 20,
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
                 breakpoints: {
-                    768: {
-                        slidesPerView: 1,
-                    },
-                    1024: {
-                        slidesPerView: 1.6,
-                    },
-                }
+                    768: { slidesPerView: 1 },
+                    1024: { slidesPerView: 3.2 },
+                },
+                autoplay: {
+                    delay: 5000,
+                    disableOnInteraction: false,
+                },
+                lazy: {
+                    loadPrevNext: true,
+                },
+                grabCursor: true,
+                ...config,
             });
-            initializeSwiper('.single-tours-swiper');
-            initializeSwiper('.blog-swiper');
-        });
+        }
+    };
+
+    // Initialize Swiper instances
+    initializeSwiper('.what-are-saying-swiper', {
+        breakpoints: {
+            768: {
+                slidesPerView: 1,
+            },
+            1024: {
+                slidesPerView: 1.6,
+            },
+        }
+    });
+    initializeSwiper('.single-tours-swiper');
+    initializeSwiper('.blog-swiper');
+});
     </script>
 
 </body>
