@@ -9,36 +9,6 @@
 				<li class="flex items-center justify-start gap-2">
 					<p class="w-[32px] h-[32px] rounded-full bg-[#FDFDFDB2] flex items-center justify-center">
 						<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<g clip-path="url(#clip0_243_2329)">
-								<path fill-rule="evenodd" clip-rule="evenodd"
-									d="M2.18619 2.17406H4.37753V0.96875C4.37753 0.796625 4.51791 0.65625 4.69003 0.65625H5.39441C5.56653 0.65625 5.70691 0.796625 5.70691 0.96875V2.17406H10.2931V0.96875C10.2931 0.796625 10.4335 0.65625 10.6056 0.65625H11.31C11.4821 0.65625 11.6225 0.796625 11.6225 0.96875V2.17406H13.8138C14.6565 2.17406 15.3438 2.86134 15.3438 3.704V4.68428H0.65625V3.704C0.65625 2.86134 1.34353 2.17406 2.18619 2.17406ZM15.3438 5.43431V13.8138C15.3438 14.6565 14.6565 15.3438 13.8138 15.3438H2.18619C1.34353 15.3438 0.65625 14.6565 0.65625 13.8138V5.43431H15.3438ZM3.10241 7.26297V9.16081H5.00022V7.26297H3.10241ZM3.10241 11.2423V13.1401H5.00022V11.2423H3.10241ZM10.9998 11.2423V13.1401H12.8976V11.2423H10.9998ZM7.05109 11.2423V13.1401H8.94891V11.2423H7.05109ZM10.9998 7.26297V9.16081H12.8976V7.26297H10.9998ZM7.05109 7.26297V9.16081H8.94891V7.26297H7.05109Z"
-									fill="<?= $_primary ?>" />
-							</g>
-							<defs>
-								<clipPath id="clip0_243_2329">
-									<rect width="16" height="16" fill="white" />
-								</clipPath>
-							</defs>
-						</svg>
-					</p>
-					<p class="text-gray-100 text-sm font-light md:font-medium md:text-base">Every <strong>Sunday
-							,Thursday</strong></p>
-				</li>
-				<li class="flex items-center justify-start gap-2">
-					<p class="w-[32px] h-[32px] rounded-full bg-[#FDFDFDB2] flex items-center justify-center">
-						<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<path
-								d="M15 2.5V13.5C15 13.7652 14.8946 14.0196 14.7071 14.2071C14.5196 14.3946 14.2652 14.5 14 14.5H12C11.7348 14.5 11.4804 14.3946 11.2929 14.2071C11.1054 14.0196 11 13.7652 11 13.5V2.5C11 2.23478 11.1054 1.98043 11.2929 1.79289C11.4804 1.60536 11.7348 1.5 12 1.5H14C14.2652 1.5 14.5196 1.60536 14.7071 1.79289C14.8946 1.98043 15 2.23478 15 2.5ZM9 5H7C6.73478 5 6.48043 5.10536 6.29289 5.29289C6.10536 5.48043 6 5.73478 6 6V13.5C6 13.7652 6.10536 14.0196 6.29289 14.2071C6.48043 14.3946 6.73478 14.5 7 14.5H9C9.26522 14.5 9.51957 14.3946 9.70711 14.2071C9.89464 14.0196 10 13.7652 10 13.5V6C10 5.73478 9.89464 5.48043 9.70711 5.29289C9.51957 5.10536 9.26522 5 9 5ZM4 8.5H2C1.73478 8.5 1.48043 8.60536 1.29289 8.79289C1.10536 8.98043 1 9.23478 1 9.5V13.5C1 13.7652 1.10536 14.0196 1.29289 14.2071C1.48043 14.3946 1.73478 14.5 2 14.5H4C4.26522 14.5 4.51957 14.3946 4.70711 14.2071C4.89464 14.0196 5 13.7652 5 13.5V9.5C5 9.23478 4.89464 8.98043 4.70711 8.79289C4.51957 8.60536 4.26522 8.5 4 8.5Z"
-								fill="<?= $_primary ?>" />
-						</svg>
-					</p>
-					<p class="text-gray-100 text-sm font-light md:font-medium md:text-base">Activity level :
-						<strong>High</strong>
-					</p>
-				</li>
-				<li class="flex items-center justify-start gap-2">
-					<p class="w-[32px] h-[32px] rounded-full bg-[#FDFDFDB2] flex items-center justify-center">
-						<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<g clip-path="url(#clip0_243_2335)">
 								<path
 									d="M8 13C10.7614 13 13 10.7614 13 8C13 5.23858 10.7614 3 8 3C5.23858 3 3 5.23858 3 8C3 10.7614 5.23858 13 8 13Z"
@@ -76,20 +46,9 @@
 						<strong>4.8</strong>
 					</p>
 				</li>
-				<li class="flex items-center justify-start gap-2">
-					<p class="w-[32px] h-[32px] rounded-full bg-[#FDFDFDB2] flex items-center justify-center">
-						<svg width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<path
-								d="M4.26441 6.15771C4.31364 6.08348 4.36435 6.01059 4.41846 5.9395L4.52875 5.79462L4.39954 5.71927C3.95693 5.46121 3.44784 5.32486 2.92686 5.32486C1.34103 5.32473 0.0507812 6.58154 0.0507812 8.12616V8.98696C0.0507812 9.1461 0.184248 9.27569 0.348389 9.27569H3.56643V8.46184C3.56643 8.36806 3.57067 8.26889 3.57958 8.14984L3.58394 8.0926C3.59305 7.98879 3.60599 7.88535 3.62275 7.78249L3.62528 7.76884C3.64385 7.65896 3.66678 7.54986 3.694 7.4418C3.72112 7.33561 3.7524 7.23052 3.78779 7.12679L3.66109 7.08496L3.79542 7.10435C3.86562 6.902 3.95121 6.70531 4.05145 6.51603L4.07338 6.47459C4.1203 6.38804 4.17034 6.30322 4.22338 6.22028L4.26441 6.15771ZM2.92686 4.60945C3.76551 4.60945 4.44775 3.94522 4.44775 3.12875C4.44775 2.3123 3.76551 1.64808 2.92686 1.64808C2.08823 1.64808 1.406 2.3123 1.406 3.12891C1.406 3.94522 2.08823 4.60941 2.92689 4.60941L2.92686 4.60945ZM12.0225 8.20334C12.0201 8.16313 12.017 8.12297 12.013 8.08289C12.0104 8.05609 12.0066 8.02955 12.0034 8.00288C11.9994 7.96728 11.9947 7.93175 11.9895 7.89631C11.9853 7.8689 11.9802 7.8415 11.9755 7.81406C11.9695 7.77964 11.9634 7.74521 11.9565 7.71101C11.9512 7.68447 11.945 7.65806 11.939 7.63152C11.9313 7.59668 11.9231 7.56195 11.9143 7.52735C11.9081 7.50267 11.9012 7.47812 11.8945 7.45373C11.8843 7.41719 11.8738 7.38071 11.8625 7.34465C11.8558 7.32302 11.8486 7.30135 11.8416 7.27981C11.8287 7.24074 11.8152 7.20192 11.8012 7.16336C11.7944 7.14535 11.7878 7.12746 11.7809 7.10942C11.7647 7.06723 11.7476 7.02536 11.7298 6.98384C11.7239 6.96993 11.718 6.95608 11.7119 6.94226C11.6917 6.89658 11.6706 6.85128 11.6487 6.80639C11.644 6.79703 11.6395 6.78764 11.6349 6.77835C11.6104 6.72927 11.5849 6.68073 11.5583 6.63276C11.5555 6.62764 11.5527 6.62251 11.5499 6.61735C11.5206 6.56518 11.4902 6.51371 11.4585 6.46298L11.4567 6.4601C10.7603 5.34576 9.50116 4.60015 8.06642 4.60015C6.84054 4.60015 5.743 5.14482 5.01492 5.99835L4.99864 6.01761C4.96529 6.05732 4.93273 6.09768 4.90098 6.13867C4.89386 6.14784 4.88658 6.15723 4.87944 6.16662C4.85076 6.20439 4.82276 6.24267 4.79546 6.28144C4.78616 6.29458 4.7769 6.30759 4.76789 6.32099C4.74425 6.3557 4.72113 6.39076 4.69853 6.42615C4.68725 6.44394 4.67574 6.46148 4.66488 6.47936C4.64632 6.50943 4.62866 6.53997 4.61103 6.57039C4.59737 6.59405 4.58333 6.61748 4.57032 6.64139C4.55792 6.66382 4.54641 6.68671 4.53439 6.70963C4.51759 6.74168 4.50057 6.77348 4.48468 6.80604C4.48355 6.80816 4.48269 6.8104 4.48153 6.81268C4.3854 7.01082 4.30665 7.21693 4.24617 7.42869C4.24403 7.43619 4.24178 7.44357 4.23963 7.45097C4.22737 7.49558 4.21589 7.54041 4.20521 7.58543C4.20184 7.59934 4.19848 7.61322 4.19534 7.627C4.18602 7.66813 4.17738 7.70941 4.16941 7.75082C4.16566 7.76999 4.16226 7.78916 4.15889 7.80829C4.15224 7.84597 4.14614 7.88374 4.14062 7.9216C4.137 7.94686 4.1337 7.97216 4.13072 7.9975C4.12659 8.03067 4.12245 8.06372 4.11918 8.09702C4.11582 8.13109 4.11357 8.16526 4.11107 8.19943C4.10931 8.22523 4.1069 8.25103 4.10569 8.27693C4.10267 8.33815 4.10078 8.39976 4.10078 8.46162V9.67237C4.10078 9.85315 4.25316 10.0001 4.44022 10.0001H11.693C11.8801 10.0001 12.0324 9.85315 12.0324 9.67237V8.46188C12.0324 8.39803 12.0307 8.3344 12.0274 8.27132C12.0263 8.24866 12.024 8.226 12.0225 8.20334ZM7.97366 3.76592C9.04079 3.76592 9.90883 2.92117 9.90883 1.88296C9.90883 0.844745 9.04079 0 7.97366 0C6.90654 0 6.03849 0.844745 6.03849 1.88296C6.03849 2.92117 6.90666 3.76592 7.97366 3.76592ZM13.0728 5.12565C12.5085 5.12565 11.9607 5.28579 11.4891 5.58891L11.3642 5.66904L11.4586 5.78251C11.6705 6.0371 11.8519 6.31561 11.999 6.61235L12.0055 6.62575C12.0327 6.68107 12.0587 6.73716 12.0841 6.79476L12.0935 6.8163C12.1173 6.87175 12.14 6.92762 12.1654 6.99397L12.1703 7.00637C12.218 7.13388 12.2594 7.26367 12.2943 7.39526L12.3022 7.42732C12.3158 7.47966 12.3283 7.5323 12.3397 7.58517L12.3533 7.65345C12.3669 7.72096 12.3786 7.78883 12.3885 7.85698C12.3945 7.89794 12.4001 7.93887 12.4047 7.98045C12.4076 8.00625 12.4107 8.03192 12.4132 8.05769C12.4176 8.10215 12.4207 8.14686 12.4234 8.19167L12.4279 8.25905C12.4312 8.32626 12.4333 8.39376 12.4333 8.46149V9.07626H15.6514C15.8155 9.07626 15.949 8.94667 15.949 8.7874V7.92663C15.9489 6.38234 14.6586 5.12565 13.0728 5.12565H13.0728ZM13.0728 4.47947C13.9114 4.47947 14.5936 3.81525 14.5936 2.99877C14.5936 2.1823 13.9114 1.51811 13.0727 1.51811C12.2341 1.51811 11.5519 2.18233 11.5519 2.99881C11.5519 3.81528 12.2341 4.47947 13.0728 4.47947Z"
-								fill="<?= $_primary ?>" />
-						</svg>
-					</p>
-					<p class="text-gray-100 text-sm font-light md:font-medium md:text-base">Group size :
-						<strong>15-24 person</strong>
-					</p>
-				</li>
 			</ul>
 		</div>
+
 		<div class="hidden md:block pt-4">
 			<strong class="w-[95px] h-[38px] font-semibold flex justify-center items-center rounded-[32px] bg-[#DFFE8E]">
 				-45 %</strong>
@@ -103,39 +62,26 @@
 			</button>
 		</div>
 	</div>
-	<div class="grid grid-cols-2 gap-4 max-h-[680px]">
-		<!-- Large Image -->
-		<div class="col-span-2 md:col-span-1">
-			<img src="images/single-tour/abou-elholl.jpg" alt="Cairo" class="rounded-lg w-full h-full object-cover">
-		</div>
-		<!-- Smaller Images desktop -->
-		<div class="hidden md:grid col-span-1 gap-4">
-			<div class="">
-				<img src="images/single-tour/cairo.jpg" alt="Cairo" class="rounded-lg object-cover">
-			</div>
-			<div class="grid grid-cols-2 gap-4">
-				<img src="images/destinations/khan-el-khalili.jpg" alt="Cairo" class="rounded-lg h-auto object-cover">
-				<div class="relative modal-btn cursor-pointer">
-					<div class="overlay hover flex justify-center items-center text-white text-2xl">+7 Photos</div>
-					<img src="images/single-tour/cairo.jpg" alt="Cairo" class="rounded-lg h-full object-cover">
-				</div>
-			</div>
-		</div>
-		<!-- Smaller Images mobile -->
-		<div class="grid md:hidden col-span-2 gap-4">
-			<div class="grid grid-cols-3 gap-4">
-				<img src="images/single-tour/cairo.jpg" alt="Cairo" class="rounded-lg object-cover">
-				<img src="images/destinations/khan-el-khalili.jpg" alt="Cairo" class="rounded-lg h-auto object-cover">
-				<div class="relative modal-btn cursor-pointer">
-					<div class="overlay hover flex justify-center items-center text-white">+7 Photos</div>
-					<img src="images/single-tour/cairo.jpg" alt="Cairo" class="rounded-lg h-full object-cover">
-				</div>
-			</div>
-		</div>
-</section>
+
+
+	<div class="grid grid-cols-2 gap-4 max-h-[680px] md:max-h-[680px] max-h-[320px]">
+    <div class="col-span-1">
+        <img src="images/single-tour/abou-elholl.jpg" alt="Cairo" class="rounded-lg w-full h-full object-cover">
+    </div>
+    <div class="grid col-span-1 gap-4 h-full">
+        <img src="images/single-tour/cairo.jpg" alt="Cairo" class="rounded-lg w-full h-[155px] md:h-[330px] object-cover">
+        <div class="relative modal-btn cursor-pointer h-[155px] md:h-[330px]">
+            <div class="absolute inset-0 bg-black/30 rounded-lg flex items-center justify-center">
+                <span class="text-white text-lg md:text-2xl">+7 Photos</span>
+            </div>
+            <img src="images/destinations/khan-el-khalili.jpg" alt="Cairo" class="rounded-lg w-full h-full object-cover">
+        </div>
+    </div>
+</div>
+	</section>
 
 <!-- Modal -->
-<div id="image-modal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
+<div id="image-modal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center" style="z-index: 9999;">
 	<div class="bg-white p-6 rounded-md w-11/12 sm:w-8/12 md:w-6/12">
 		<button id="close-modal" class="mb-4 text-gray-500 hover:text-gray-700">
 			<i class="fas fa-close fa-2x text-[<?= $_primary ?>]"></i>

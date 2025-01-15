@@ -180,18 +180,16 @@ $_primary_two = "#074C56";
 
 
     <!-- Start tab-link -->
-    <section class="tab-link shadow-[0_4px_8px_rgba(0,0,0,0.08)] ">
-        <ul
-            class="pb-4 max-w-7xl px-4 sm:px-6 lg:px-8 mx-auto relative my-12 md:my-16 grid grid-cols-3 md:grid-cols-8 gap-2">
-            <li><a href="#overview" data-content="overview" class="btn btn-secondary btn-primary">Overview</a></li>
-            <li><a href="#itinerary" data-content="itinerary" class="btn btn-secondary">Itinerary</a></li>
-            <li><a href="#flights" data-content="flights" class="btn btn-secondary">Flights</a></li>
-            <li><a href="#prices" data-content="prices" class="btn btn-secondary">Prices</a></li>
-            <li><a href="#reviews" data-content="reviews" class="btn btn-secondary">Reviews</a></li>
-            <li><a href="#faq" data-content="faq" class="btn btn-secondary">FAQ</a></li>
-        </ul>
-
-    </section>
+    <section class="tab-link shadow-[0_4px_8px_rgba(0,0,0,0.08)] sticky top-0 bg-white z-50">
+    <ul class="p-4 max-w-7xl px-4 sm:px-6 lg:px-8 mx-auto relative my-12 md:my-16 grid grid-cols-3 md:grid-cols-8 gap-2">
+        <li><a href="#overview" data-content="overview" class="btn btn-secondary btn-primary">Overview</a></li>
+        <li><a href="#itinerary" data-content="itinerary" class="btn btn-secondary">Itinerary</a></li>
+        <li><a href="#flights" data-content="flights" class="btn btn-secondary">Flights</a></li>
+        <li><a href="#prices" data-content="prices" class="btn btn-secondary">Prices</a></li>
+        <li><a href="#reviews" data-content="reviews" class="btn btn-secondary">Reviews</a></li>
+        <li><a href="#faq" data-content="faq" class="btn btn-secondary">FAQ</a></li>
+    </ul>
+</section>
     <!-- End tab-link -->
 
     <div id="content" class="max-w-7xl mx-auto">
