@@ -502,6 +502,44 @@ $_primary_two = "#074C56";
     <?php include "componets/footer.php" ?>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
+             // Tab link functionality
+    const tabLinks = document.querySelectorAll('.tab-link a');
+    const tabContents = document.querySelectorAll('.tab-content');
+    // Function to show active tab content and update active link
+    function showTabContent(contentId) {
+        // Hide all tab contents
+        tabContents.forEach(content => {
+            content.style.display = 'none';
+        });
+
+        // Remove 'btn-primary' class from all links
+        tabLinks.forEach(link => {
+            link.classList.remove('btn-primary');
+        });
+
+        // Show the related content
+        const activeContent = document.querySelector(`.tab-content[data-tab="${contentId}"]`);
+        if (activeContent) {
+            activeContent.style.display = 'block';
+        }
+
+        // Add 'btn-primary' class to the clicked link
+        const activeLink = document.querySelector(`a[data-content="${contentId}"]`);
+        if (activeLink) {
+            activeLink.classList.add('btn-primary');
+        }
+    }
+
+    // Add click event listeners to tab links
+    tabLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const contentId = this.getAttribute('data-content');
+            showTabContent(contentId);
+        });
+    });
+    showTabContent('overview');
+
             // Handle buttons with ".tab-link button"
             // document.querySelectorAll('.tab-link a').forEach(link => {
             //     link.addEventListener('click', function (e) {
@@ -529,6 +567,7 @@ $_primary_two = "#074C56";
             //         this.classList.add('btn-primary');
             //     });
             // });
+
 
             // Reusable function to initialize Swiper instances
             const initializeSwiper = (selector, config = {}) => {
