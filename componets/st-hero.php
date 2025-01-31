@@ -1,14 +1,36 @@
+<?php
+$_yellow = "#C8EC1F";
+$_primary = "#095763";
+$_primary_two = "#074C56";
+?>
+
 <section class="hero-section max-w-7xl px-4 sm:px-6 lg:px-8 mx-auto pt-8">
-	<div class="mb-12 flex justify-between items-start">
-		<div>
-			<h1 style="font-family: 'Berkshire Swash', cursive;"
-				class="text-[32px] md:text-[64px] font-semibold mb-4 text-[<?= $_yellow ?>]">
-				Grand tour of Cairo
-			</h1>
-			<ul class="grid grid-cols-2 gap-2 md:gap-6">
-				<li class="flex items-center justify-start gap-2">
-					<p class="w-[32px] h-[32px] rounded-full bg-[#FDFDFDB2] flex items-center justify-center">
-						<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <!-- Desktop -->
+    <div class="hidden md:grid grid-cols-2 gap-8 h-[800px]">
+        <!-- Left side - Main Image -->
+        <div class="relative h-full">
+            <div class="absolute top-4 left-4 z-10">
+                <span class="bg-[#FFB800] px-3 py-1 rounded-full text-sm font-medium">NEW</span>
+            </div>
+            <img src="images/single-tour/abou-elholl.jpg" 
+                 alt="Cairo" 
+                 class="w-full h-full object-cover rounded-lg">
+        </div>
+
+        <!-- Right side content -->
+        <div class="flex flex-col justify-between h-full">
+            <!-- Header Content -->
+            <div>
+                <h1 style="font-family: 'Berkshire Swash', cursive;"
+                    class="text-[32px] md:text-[64px] font-semibold mb-4 text-[<?= $_yellow ?>]">
+                    Grand tour of Cairo
+                </h1>
+                <ul class="grid grid-cols-2 gap-2 md:gap-6 mb-8">
+                    <li class="flex items-center justify-start gap-2">
+                        <p class="w-[32px] h-[32px] rounded-full bg-[#FDFDFDB2] flex items-center justify-center">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_243_2335)">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<g clip-path="url(#clip0_243_2335)">
 								<path
 									d="M8 13C10.7614 13 13 10.7614 13 8C13 5.23858 10.7614 3 8 3C5.23858 3 3 5.23858 3 8C3 10.7614 5.23858 13 8 13Z"
@@ -28,116 +50,176 @@
 									<rect width="16" height="16" fill="white" />
 								</clipPath>
 							</defs>
-						</svg>
-					</p>
-					<p class="text-gray-100 text-sm font-light md:font-medium md:text-base">Duration :<strong>3
-							Days , 2 Nights</strong>
-					</p>
-				</li>
-				<li class="flex items-center justify-start gap-2">
-					<p class="w-[32px] h-[32px] rounded-full bg-[#FDFDFDB2] flex items-center justify-center">
-						<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+						</svg>                                </g>
+                            </svg>
+                        </p>
+                        <p class="text-gray-100 text-sm font-light md:font-medium md:text-base">Duration :<strong>3
+                                Days , 2 Nights</strong>
+                        </p>
+                    </li>
+                    <li class="flex items-center justify-start gap-2">
+                        <p class="w-[32px] h-[32px] rounded-full bg-[#FDFDFDB2] flex items-center justify-center">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<path
 								d="M9.67077 3.40012L10.6127 2.48181C10.6798 2.41644 10.7272 2.33358 10.7497 2.24262C10.7721 2.15167 10.7687 2.05624 10.7397 1.96715C10.7107 1.87806 10.6573 1.79887 10.5857 1.73853C10.514 1.67819 10.4269 1.63911 10.3342 1.62573L9.03197 1.43655L8.44987 0.256804C8.40363 0.178575 8.3378 0.113749 8.25887 0.0687163C8.17993 0.0236838 8.09063 0 7.99975 0C7.90888 0 7.81957 0.0236838 7.74064 0.0687163C7.66171 0.113749 7.59588 0.178575 7.54963 0.256804L6.96754 1.43655L5.66535 1.62573C5.57267 1.63919 5.4856 1.67832 5.414 1.73869C5.3424 1.79906 5.28912 1.87827 5.26019 1.96734C5.23127 2.05642 5.22784 2.15181 5.25032 2.24273C5.27279 2.33365 5.32025 2.41647 5.38735 2.48181L6.32924 3.40012L6.10694 4.69729C6.09119 4.7895 6.10154 4.88429 6.13681 4.97093C6.17208 5.05758 6.23087 5.13264 6.30654 5.18765C6.38221 5.24265 6.47175 5.27541 6.56505 5.28222C6.65835 5.28903 6.7517 5.26963 6.83456 5.22619L7.99975 4.61399L9.16444 5.22619C9.24732 5.26976 9.34073 5.28928 9.43411 5.28254C9.5275 5.27579 9.61713 5.24306 9.69288 5.18803C9.76863 5.13301 9.82748 5.05789 9.86277 4.97116C9.89806 4.88444 9.90838 4.78957 9.89257 4.69729L9.67077 3.40012ZM16.0041 3.4508C15.9751 3.36182 15.9218 3.28272 15.8503 3.22242C15.7787 3.16212 15.6917 3.12304 15.5991 3.10957L14.2969 2.91989L13.7143 1.74014C13.6682 1.66179 13.6024 1.59684 13.5234 1.55172C13.4445 1.50659 13.3551 1.48285 13.2642 1.48285C13.1733 1.48285 13.0839 1.50659 13.005 1.55172C12.926 1.59684 12.8602 1.66179 12.8141 1.74014L12.232 2.91989L10.9298 3.10907C10.8371 3.12253 10.7501 3.16166 10.6784 3.22203C10.6068 3.2824 10.5536 3.36161 10.5246 3.45068C10.4957 3.53976 10.4923 3.63515 10.5148 3.72607C10.5372 3.81699 10.5847 3.89981 10.6518 3.96515L11.5942 4.88346L11.3714 6.18063C11.3555 6.27295 11.3657 6.36789 11.4009 6.45469C11.4362 6.54149 11.495 6.6167 11.5708 6.67179C11.6466 6.72688 11.7363 6.75967 11.8297 6.76642C11.9231 6.77318 12.0166 6.75365 12.0995 6.71003L13.2637 6.09783L14.4289 6.71003C14.5118 6.75365 14.6053 6.77318 14.6987 6.76642C14.7922 6.75967 14.8818 6.72688 14.9576 6.67179C15.0334 6.6167 15.0922 6.54149 15.1275 6.45469C15.1627 6.36789 15.1729 6.27295 15.157 6.18063L14.9347 4.88346L15.8766 3.96515C15.9437 3.89985 15.9912 3.81707 16.0138 3.72617C16.0363 3.63528 16.0329 3.53989 16.0041 3.4508ZM5.0692 3.10907L3.76752 2.91989L3.18542 1.74014C3.14401 1.65611 3.0799 1.58534 3.00035 1.53586C2.9208 1.48638 2.82899 1.46015 2.7353 1.46015C2.64162 1.46015 2.5498 1.48638 2.47025 1.53586C2.3907 1.58534 2.32659 1.65611 2.28518 1.74014L1.70308 2.91989L0.400395 3.10907C0.307711 3.12253 0.220644 3.16166 0.149043 3.22203C0.0774415 3.2824 0.024164 3.36161 -0.00476242 3.45068C-0.0336888 3.53976 -0.0371097 3.63515 -0.014638 3.72607C0.0078337 3.81699 0.0553011 3.89981 0.122394 3.96515L1.06479 4.88346L0.842487 6.18063C0.826742 6.27284 0.837088 6.36763 0.872358 6.45427C0.907627 6.54092 0.966415 6.61598 1.04209 6.67099C1.11776 6.72599 1.2073 6.75875 1.3006 6.76556C1.3939 6.77237 1.48725 6.75296 1.57011 6.70953L2.7353 6.09733L3.89949 6.70953C3.98238 6.75324 4.07585 6.77287 4.16932 6.7662C4.26278 6.75952 4.35252 6.72681 4.42835 6.67176C4.50418 6.61671 4.56309 6.54153 4.59839 6.45473C4.6337 6.36793 4.64399 6.27298 4.62811 6.18063L4.40581 4.88346L5.34821 3.96515C5.41516 3.89976 5.46249 3.81694 5.48485 3.72605C5.50721 3.63517 5.50371 3.53984 5.47474 3.45085C5.44577 3.36185 5.39249 3.28273 5.32092 3.22242C5.24934 3.16211 5.16233 3.12303 5.0697 3.10957L5.0692 3.10907ZM13.0178 7.50389H2.98169C2.58255 7.50429 2.19987 7.66303 1.91764 7.94526C1.6354 8.22749 1.47667 8.61017 1.47627 9.00931V13.0238C1.47667 13.4229 1.6354 13.8056 1.91764 14.0878C2.19987 14.3701 2.58255 14.5288 2.98169 14.5292H6.28659L7.64498 15.8876C7.73908 15.9816 7.86669 16.0345 7.99975 16.0345C8.13281 16.0345 8.26043 15.9816 8.35453 15.8876L9.71292 14.5292H13.0178C13.417 14.5288 13.7996 14.3701 14.0819 14.0878C14.3641 13.8056 14.5228 13.4229 14.5232 13.0238V9.00931C14.5228 8.61017 14.3641 8.22749 14.0819 7.94526C13.7996 7.66303 13.417 7.50429 13.0178 7.50389ZM12.0142 12.522H3.9853C3.85221 12.522 3.72458 12.4691 3.63047 12.375C3.53636 12.2809 3.48349 12.1532 3.48349 12.0202C3.48349 11.8871 3.53636 11.7594 3.63047 11.6653C3.72458 11.5712 3.85221 11.5183 3.9853 11.5183H12.0142C12.1473 11.5183 12.2749 11.5712 12.369 11.6653C12.4631 11.7594 12.516 11.8871 12.516 12.0202C12.516 12.1532 12.4631 12.2809 12.369 12.375C12.2749 12.4691 12.1473 12.522 12.0142 12.522ZM12.0142 10.5147H3.9853C3.85221 10.5147 3.72458 10.4619 3.63047 10.3678C3.53636 10.2736 3.48349 10.146 3.48349 10.0129C3.48349 9.87984 3.53636 9.7522 3.63047 9.65809C3.72458 9.56399 3.85221 9.51112 3.9853 9.51112H12.0142C12.1473 9.51112 12.2749 9.56399 12.369 9.65809C12.4631 9.7522 12.516 9.87984 12.516 10.0129C12.516 10.146 12.4631 10.2736 12.369 10.3678C12.2749 10.4619 12.1473 10.5147 12.0142 10.5147Z"
 								fill="<?= $_primary ?>" />
-						</svg>
-					</p>
-					<p class="text-gray-100 text-sm font-light md:font-medium md:text-base">Rating :
-						<strong>4.8</strong>
-					</p>
-				</li>
-			</ul>
-		</div>
-
-		<div class="hidden md:block pt-4">
-			<strong class="w-[95px] h-[38px] font-semibold flex justify-center items-center rounded-[32px] bg-[#DFFE8E]">
-				-45 %</strong>
-			<div class="flex items-center gap-2 mt-4 text-white">
-				<span>Start from:</span>
-				<span class="text-[40px] font-semibold">100.00$</span>
-				<span>/ Person</span>
-			</div>
-			<button class=" w-full h-[56px] bg-[#FBFEF3] text-[#05363D] font-semibold rounded-[32px] mt-6">
-				See dates and prices
-			</button>
-		</div>
-	</div>
-
-
-	<div class="grid grid-cols-2 gap-4 max-h-[680px] md:max-h-[680px] max-h-[320px]">
-    <div class="col-span-1">
-        <img src="images/single-tour/abou-elholl.jpg" alt="Cairo" class="rounded-lg w-full h-full object-cover">
-    </div>
-    <div class="grid col-span-1 gap-4 h-full">
-        <img src="images/single-tour/cairo.jpg" alt="Cairo" class="rounded-lg w-full h-[155px] md:h-[330px] object-cover">
-        <div class="relative modal-btn cursor-pointer h-[155px] md:h-[330px]">
-            <div class="absolute inset-0 bg-black/30 rounded-lg flex items-center justify-center">
-                <span class="text-white text-lg md:text-2xl">+7 Photos</span>
+						</svg>                            </svg>
+                        </p>
+                        <p class="text-gray-100 text-sm font-light md:font-medium md:text-base">Rating :
+                            <strong>4.8</strong>
+                        </p>
+                    </li>
+                </ul>
+                <div class="mb-8">
+                    <strong class="w-[95px] h-[38px] font-semibold flex justify-center items-center rounded-[32px] bg-[#DFFE8E]">
+                        -45 %</strong>
+                    <div class="flex items-center gap-2 mt-4 text-white">
+                        <span>Start from:</span>
+                        <span class="text-[40px] font-semibold">100.00$</span>
+                        <span>/ Person</span>
+                    </div>
+                    <button class="mt-6 px-8 py-3 bg-[#FBFEF3] text-[#05363D] font-semibold rounded-full hover:bg-[<?= $_yellow ?>] transition-colors">
+                        See dates and prices
+                    </button>
+                </div>
             </div>
-            <img src="images/destinations/khan-el-khalili.jpg" alt="Cairo" class="rounded-lg w-full h-full object-cover">
+
+            <!-- Bottom row of images -->
+            <div class="grid grid-cols-3 gap-4 h-[250px]">
+                <img src="images/single-tour/cairo.jpg" 
+                     alt="Cairo" 
+                     class="rounded-lg w-full h-full object-cover">
+                <img src="images/single-tour/cairo.jpg" 
+                     alt="Cairo" 
+                     class="rounded-lg w-full h-full object-cover">
+                <div class="relative modal-btn cursor-pointer">
+                    <img src="images/destinations/khan-el-khalili.jpg" 
+                         alt="Cairo" 
+                         class="rounded-lg w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-black/30 rounded-lg flex items-center justify-center">
+                        <span class="text-white font-medium">See all (14)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile Layout -->
+    <div class="md:hidden">
+        <div class="mb-8">
+            <h1 style="font-family: 'Berkshire Swash', cursive;"
+                class="text-[32px] font-semibold mb-4 text-[<?= $_yellow ?>]">
+                Grand tour of Cairo
+            </h1>
+            <ul class="grid grid-cols-2 gap-2">
+                <!-- Your existing mobile icons/info -->
+            </ul>
+        </div>
+
+        <div class="grid grid-cols-2 gap-4 h-[320px]">
+            <div class="col-span-1">
+                <img src="images/single-tour/abou-elholl.jpg" 
+                     alt="Cairo" 
+                     class="rounded-lg w-full h-full object-cover">
+            </div>
+            <div class="grid col-span-1 gap-4 h-full">
+                <img src="images/single-tour/cairo.jpg" 
+                     alt="Cairo" 
+                     class="rounded-lg w-full h-[155px] object-cover">
+                <div class="relative modal-btn cursor-pointer h-[155px]">
+                    <div class="absolute inset-0 bg-black/30 rounded-lg flex items-center justify-center">
+                        <span class="text-white text-lg">+7 Photos</span>
+                    </div>
+                    <img src="images/destinations/khan-el-khalili.jpg" 
+                         alt="Cairo" 
+                         class="rounded-lg w-full h-full object-cover">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Modal -->
+<div id="image-modal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-[9999]">
+    <div class="bg-white p-6 rounded-md w-11/12 sm:w-8/12 md:w-6/12">
+        <button id="close-modal" class="mb-4 text-gray-500 hover:text-gray-700">
+            <i class="fas fa-close fa-2x text-[<?= $_primary ?>]"></i>
+        </button>
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+            <div class="relative">
+                <div class="overlay"></div>
+                <img src="images/single-tour/cairo.jpg" alt="Image 1" class="w-full h-auto rounded-md">
+            </div>
+            <div class="relative">
+                <div class="overlay"></div>
+                <img src="images/swipe1.jpg" alt="Image 2" class="w-full h-auto rounded-md">
+            </div>
+            <div class="relative">
+                <div class="overlay"></div>
+                <img src="images/swipe2.jpg" alt="Image 3" class="w-full h-auto rounded-md">
+            </div>
+            <div class="relative">
+                <div class="overlay"></div>
+                <img src="images/swipe3.jpg" alt="Image 1" class="w-full h-auto rounded-md">
+            </div>
+            <div class="relative">
+                <div class="overlay"></div>
+                <img src="images/single-tour/cairo.jpg" alt="Image 2" class="w-full h-auto rounded-md">
+            </div>
+            <div class="relative">
+                <div class="overlay"></div>
+                <img src="images/swipe1.jpg" alt="Image 3" class="w-full h-auto rounded-md">
+            </div>
         </div>
     </div>
 </div>
-	</section>
 
-<!-- Modal -->
-<div id="image-modal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center" style="z-index: 9999;">
-	<div class="bg-white p-6 rounded-md w-11/12 sm:w-8/12 md:w-6/12">
-		<button id="close-modal" class="mb-4 text-gray-500 hover:text-gray-700">
-			<i class="fas fa-close fa-2x text-[<?= $_primary ?>]"></i>
-		</button>
-		<div class="grid grid-cols-2 md:grid-cols-3 gap-4">
-			<div class="relative">
-				<div class="overlay"></div>
-				<img src="images/single-tour/cairo.jpg" alt="Image 1" class="w-full h-auto rounded-md">
-			</div>
-			<div class="relative">
-				<div class="overlay"></div>
-				<img src="images/swipe1.jpg" alt="Image 2" class="w-full h-auto rounded-md">
-			</div>
-			<div class="relative">
-				<div class="overlay"></div>
-				<img src="images/swipe2.jpg" alt="Image 3" class="w-full h-auto rounded-md">
-			</div>
-			<div class="relative">
-				<div class="overlay"></div>
-				<img src="images/swipe3.jpg" alt="Image 1" class="w-full h-auto rounded-md">
-			</div>
-			<div class="relative">
-				<div class="overlay"></div>
-				<img src="images/single-tour/cairo.jpg" alt="Image 2" class="w-full h-auto rounded-md">
-			</div>
-			<div class="relative">
-				<div class="overlay"></div>
-				<img src="images/swipe1.jpg" alt="Image 3" class="w-full h-auto rounded-md">
-			</div>
-			<!-- Add more images as needed -->
-		</div>
-	</div>
-</div>
+<style>
+.hero-section {
+    background: linear-gradient(180deg, #276C76 0%, #BAD0B4 70%, #FFFFFF 100%);
+}
 
+.overlay {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease;
+}
+
+.overlay:hover {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.rounded-lg {
+    transition: transform 0.3s ease;
+}
+
+.rounded-lg:hover {
+    transform: scale(1.02);
+}
+</style>
 
 <script>
-	document.addEventListener("DOMContentLoaded", () => {
-		const modal = document.getElementById("image-modal");
-		const modalBtns = document.querySelectorAll(".modal-btn");
-		const closeModal = document.getElementById("close-modal");
+document.addEventListener("DOMContentLoaded", () => {
+    const modal = document.getElementById("image-modal");
+    const modalBtns = document.querySelectorAll(".modal-btn");
+    const closeModal = document.getElementById("close-modal");
 
-		modalBtns.forEach(modalBtn => {
-			modalBtn.addEventListener("click", () => {
-				modal.classList.remove("hidden");
-			});
-		});
+    modalBtns.forEach(modalBtn => {
+        modalBtn.addEventListener("click", () => {
+            modal.classList.remove("hidden");
+        });
+    });
 
-		closeModal.addEventListener("click", () => {
-			modal.classList.add("hidden");
-		});
+    closeModal.addEventListener("click", () => {
+        modal.classList.add("hidden");
+    });
 
-		// Close modal when clicking outside of it
-		modal.addEventListener("click", (event) => {
-			if (event.target === modal) {
-				modal.classList.add("hidden");
-			}
-		});
-	});
+    modal.addEventListener("click", (event) => {
+        if (event.target === modal) {
+            modal.classList.add("hidden");
+        }
+    });
+});
 </script>
