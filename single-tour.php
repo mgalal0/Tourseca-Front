@@ -180,16 +180,69 @@ $_primary_two = "#074C56";
 
 
     <!-- Start tab-link -->
-    <section class="tab-link shadow-[0_4px_8px_rgba(0,0,0,0.08)] sticky top-0 bg-white z-50">
-    <ul class="p-4 max-w-7xl px-4 sm:px-6 lg:px-8 mx-auto relative my-12 md:my-16 grid grid-cols-3 md:grid-cols-8 gap-2">
-        <li><a href="#overview" data-content="overview" class="btn btn-secondary btn-primary">Overview</a></li>
-        <li><a href="#itinerary" data-content="itinerary" class="btn btn-secondary">Itinerary</a></li>
-        <li><a href="#flights" data-content="flights" class="btn btn-secondary">Flights</a></li>
-        <li><a href="#prices" data-content="prices" class="btn btn-secondary">Prices</a></li>
-        <li><a href="#reviews" data-content="reviews" class="btn btn-secondary">Reviews</a></li>
-        <li><a href="#faq" data-content="faq" class="btn btn-secondary">FAQ</a></li>
-    </ul>
+<!-- Start tab-link -->
+<section class="tab-link shadow-[0_4px_8px_rgba(0,0,0,0.08)] sticky top-0 bg-white z-50">
+    <div class="p-4 max-w-7xl mx-auto relative my-12 md:my-16">
+        <div class="overflow-x-auto custom-scrollbar">
+            <ul class="flex md:justify-between gap-8 md:gap-0 whitespace-nowrap w-max md:w-full px-4 md:px-0">
+                <li class="shrink-0"><a href="#overview" data-content="overview" class="btn btn-secondary btn-primary block text-[14px]">Overview</a></li>
+                <li class="shrink-0"><a href="#itinerary" data-content="itinerary" class="btn btn-secondary block text-[14px]">Itinerary</a></li>
+                <li class="shrink-0"><a href="#flights" data-content="flights" class="btn btn-secondary block text-[14px]">Flights</a></li>
+                <li class="shrink-0"><a href="#prices" data-content="prices" class="btn btn-secondary block text-[14px]">Prices</a></li>
+                <li class="shrink-0"><a href="#reviews" data-content="reviews" class="btn btn-secondary block text-[14px]">Reviews</a></li>
+                <li class="shrink-0"><a href="#faq" data-content="faq" class="btn btn-secondary block text-[14px]">FAQ</a></li>
+            </ul>
+        </div>
+    </div>
 </section>
+
+<style>
+/* Update btn styles */
+.btn {
+    width: auto;
+    padding-bottom: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    color: #095763;
+    position: relative;
+}
+
+.btn-primary::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #095763;
+}
+
+/* Customize scrollbar for webkit browsers */
+.custom-scrollbar::-webkit-scrollbar {
+    display: block;
+    height: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 2px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 2px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* For Firefox */
+.custom-scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: #888 #f1f1f1;
+}
+</style>
     <!-- End tab-link -->
 
     <div id="content" class="max-w-7xl mx-auto">
@@ -273,6 +326,7 @@ $_primary_two = "#074C56";
                 <div class="tab-content" id="itinerary" data-tab="itinerary">
                     <?php include "componets/st-itinerary.php" ?>
                 </div>
+                
                 <!-- flights -->
                 <div class="tab-content" id="flights" data-tab="flights">
                     <section class="max-w-7xl px-4 sm:px-6 lg:px-8 mx-auto relative mb-16">
@@ -495,16 +549,66 @@ $_primary_two = "#074C56";
         <!-- end tab link content -->
     </div>
     <!-- start subscribe -->
-    <div class="mb-16">
         <?php include "componets/subscribe.php" ?>
-    </div>
-    <!-- end subscribe -->
+
+        <!-- end subscribe -->
     <?php include "componets/footer.php" ?>
 
-    <script>
-    document.addEventListener('DOMContentLoaded', () => {
+ <script>
+ document.addEventListener('DOMContentLoaded', () => {
     // Tab link functionality
     const tabLinks = document.querySelectorAll('.tab-link a');
+    const sections = document.querySelectorAll('.tab-content');
+    
+    // Options for the Intersection Observer with adjusted values
+    const options = {
+        root: null,
+        threshold: [0, 0.1, 0.2, 0.3, 0.4, 0.5], // Multiple thresholds for better detection
+        rootMargin: '-120px 0px -50% 0px' // Adjusted margins
+    };
+
+    // Intersection Observer callback with improved logic
+    function updateActiveTab(entries) {
+        // Find the section that is most visible
+        let maxVisibleSection = null;
+        let maxVisibility = 0;
+
+        entries.forEach(entry => {
+            const visibilityRatio = entry.intersectionRatio;
+            if (visibilityRatio > maxVisibility) {
+                maxVisibility = visibilityRatio;
+                maxVisibleSection = entry.target;
+            }
+        });
+
+        if (maxVisibleSection) {
+            const activeId = maxVisibleSection.getAttribute('id');
+            
+            // Update active tab only if we have a valid section
+            if (activeId) {
+                // Remove active class from all links
+                tabLinks.forEach(link => {
+                    link.classList.remove('btn-primary');
+                });
+                
+                // Add active class to corresponding link
+                const activeLink = document.querySelector(`[href="#${activeId}"]`);
+                if (activeLink) {
+                    activeLink.classList.add('btn-primary');
+                }
+            }
+        }
+    }
+
+    // Create observer
+    const observer = new IntersectionObserver(updateActiveTab, options);
+
+    // Observe all sections
+    sections.forEach(section => {
+        if (section) {
+            observer.observe(section);
+        }
+    });
 
     // Add click event listeners to tab links
     tabLinks.forEach(link => {
@@ -523,8 +627,7 @@ $_primary_two = "#074C56";
             
             // Scroll to the section
             if (targetSection) {
-                // Adjust for sticky header if needed
-                const headerOffset = 100; // Adjust this value based on your sticky header height
+                const headerOffset = 120; // Increased offset to match rootMargin
                 const elementPosition = targetSection.getBoundingClientRect().top;
                 const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
                 
@@ -536,7 +639,7 @@ $_primary_two = "#074C56";
         });
     });
 
-    // Reusable function to initialize Swiper instances
+    // Rest of your Swiper initialization code remains the same
     const initializeSwiper = (selector, config = {}) => {
         const swiperElement = document.querySelector(selector);
         if (swiperElement) {
@@ -583,7 +686,7 @@ $_primary_two = "#074C56";
     initializeSwiper('.single-tours-swiper');
     initializeSwiper('.blog-swiper');
 });
-    </script>
+</script>
 
 </body>
 
