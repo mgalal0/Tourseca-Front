@@ -6,7 +6,7 @@ $_primary_two = "#074C56";
 
 <section class="hero-section max-w-7xl px-4 sm:px-6 lg:px-8 mx-auto pt-8 ">
     <!-- Desktop -->
-    <div class="hidden md:grid grid-cols-12 gap-3 h-[550px]">
+    <div class="hidden md:grid grid-cols-12 gap-4 h-[550px]">
         <!-- Left side - Main Image -->
         <div class="relative h-full col-span-4">
             <div class="absolute top-4 left-4 z-10">
@@ -14,7 +14,7 @@ $_primary_two = "#074C56";
             </div>
             <img src="images/single-tour/abou-elholl.jpg" 
                  alt="Cairo" 
-                 class="w-full h-full object-cover rounded-lg ">
+                 class="w-full h-full object-cover  ">
         </div>
 
         <!-- Right side content -->
@@ -87,19 +87,19 @@ $_primary_two = "#074C56";
             </div>
 
             <!-- Bottom row of images -->
-            <div class="grid grid-cols-12  gap-1 h-[250px]">
+            <div class="grid grid-cols-12  gap-2 h-[250px]">
     <img src="images/single-tour/cairo.jpg" 
          alt="Cairo" 
-         class="rounded-lg w-full h-full object-cover col-span-4">
+         class=" w-full h-full object-cover col-span-4">
     
     <img src="images/single-tour/cairo.jpg" 
          alt="Cairo" 
-         class="rounded-lg w-full h-full object-cover col-span-3">
+         class=" w-full h-full object-cover col-span-3">
     
     <div class="relative modal-btn cursor-pointer col-span-5">
         <img src="images/destinations/khan-el-khalili.jpg" 
              alt="Cairo" 
-             class="rounded-lg w-full h-full object-cover">
+             class=" w-full h-full object-cover">
         <div class="absolute bottom-2 right-2  bg-black/30  bg-white text-black text-sm font-medium px-3 py-1 rounded-full shadow-md">
             <span class="text-[#05363D] font-medium">See all (14)</span>
         </div>
@@ -112,34 +112,34 @@ $_primary_two = "#074C56";
     <!-- Mobile Layout -->
     <div class="md:hidden">
   
-
+    <h1 style="font-family: 'Berkshire Swash', cursive;"
+                    class="text-[32px] md:text-[64px] font-semibold my-4 text-[<?= $_yellow ?>]">
+                    Grand tour of Cairo
+                </h1>
         <div class="grid grid-cols-2 gap-4 h-[320px]">
             <div class="col-span-1">
                 <img src="images/single-tour/abou-elholl.jpg" 
                      alt="Cairo" 
-                     class="rounded-lg w-full h-full object-cover">
+                     class=" w-full h-full object-cover">
             </div>
             <div class="grid col-span-1 gap-4 h-full">
                 <img src="images/single-tour/cairo.jpg" 
                      alt="Cairo" 
-                     class="rounded-lg w-full h-[155px] object-cover">
+                     class=" w-full h-[155px] object-cover">
                 <div class="relative modal-btn cursor-pointer h-[155px]">
-                    <div class="absolute bottom-2 left-1/2 transform -translate-x-1/2 h-[36px]   bg-white text-black text-sm font-medium px-2 min-w-[100px] py-1 rounded-full shadow-md flex items-center justify-center">
+                    <div class="absolute bottom-2 left-1/2 transform -translate-x-1/2 h-[34px]   bg-white text-black text-sm font-medium px-2 min-w-[100px] py-1 rounded-full shadow-md flex items-center justify-center">
                         <span class="text-[#05363D] font-medium">+7 Photos</span>
                     </div>
                     <img src="images/destinations/khan-el-khalili.jpg" 
                          alt="Cairo" 
-                         class="rounded-lg w-full h-full object-cover">
+                         class=" w-full h-full object-cover">
                 </div>
             </div>
         </div>
 
         <div>
-                <h1 style="font-family: 'Berkshire Swash', cursive;"
-                    class="text-[32px] md:text-[64px] font-semibold my-4 text-[<?= $_yellow ?>]">
-                    Grand tour of Cairo
-                </h1>
-                <ul class=" ">
+             
+                <ul class=" mt-4">
                     <li class="flex items-center justify-start gap-2  mb-3">
                         <p class="w-[32px] h-[32px] rounded-full bg-[#FDFDFDB2] flex items-center justify-center">
                             <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -189,9 +189,9 @@ $_primary_two = "#074C56";
                     <strong class="max-w-[100px] mt-4 font-semibold flex justify-center items-center rounded-[32px] bg-[#DFFE8E]">
                         -45 %</strong>
                     <div class="flex items-center gap-2 mt-4 text-white ">
-                        <span>Start from:</span>
+                        <span class="text-[18px] font-semibold">Start from:</span>
                         <span class="text-[40px] font-semibold">100.00$</span>
-                        <span>/ Person</span>
+                        <span class="text-[18px] font-semibold">/ Person</span>
                     </div>
                     <button class="  mt-4 mb-8 px-8 py-3 bg-[#FBFEF3] text-[#05363D] font-semibold rounded-full hover:bg-[<?= $_yellow ?>] transition-colors">
                         See dates and prices
