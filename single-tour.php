@@ -184,7 +184,7 @@ $_primary_two = "#074C56";
 <section class="tab-link shadow-[0_4px_8px_rgba(0,0,0,0.08)] sticky top-0 bg-white z-50">
     <div class="p-4 max-w-7xl mx-auto relative my-12 md:my-16">
         <div class="overflow-x-auto custom-scrollbar">
-            <ul class="flex md:justify-between gap-8 md:gap-0 whitespace-nowrap w-max md:w-full px-4 md:px-0">
+            <ul class="flex md:justify-start gap-10  whitespace-nowrap w-max md:w-full px-4 md:px-0">
                 <li class="shrink-0"><a href="#overview" data-content="overview" class="btn btn-secondary btn-primary block text-[14px]">Overview</a></li>
                 <li class="shrink-0"><a href="#itinerary" data-content="itinerary" class="btn btn-secondary block text-[14px]">Itinerary</a></li>
                 <li class="shrink-0"><a href="#flights" data-content="flights" class="btn btn-secondary block text-[14px]">Flights</a></li>
