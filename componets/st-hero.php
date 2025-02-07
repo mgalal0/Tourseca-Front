@@ -4,7 +4,7 @@ $_primary = "#095763";
 $_primary_two = "#074C56";
 ?>
 
-<section class="hero-section max-w-7xl px-4 sm:px-6 lg:px-8 mx-auto pt-8 ">
+<section class="hero-section max-w-7xl px-4 sm:px-6 lg:px-8 mx-auto pt-6 ">
     <!-- Desktop -->
     <div class="hidden md:grid grid-cols-12 gap-4 h-[550px]">
         <!-- Left side - Main Image -->
@@ -113,16 +113,16 @@ $_primary_two = "#074C56";
     <div class="md:hidden">
   
     <h1 style="font-family: 'Berkshire Swash', cursive;"
-                    class="text-[32px] md:text-[64px] font-semibold my-4 text-[<?= $_yellow ?>]">
+                    class="text-[32px] md:text-[64px] font-semibold mt-0 mb-4 text-[<?= $_yellow ?>]">
                     Grand tour of Cairo
                 </h1>
-        <div class="grid grid-cols-2 gap-4 h-[320px]">
+        <div class="grid grid-cols-2 gap-2 h-[320px]">
             <div class="col-span-1">
                 <img src="images/single-tour/abou-elholl.jpg" 
                      alt="Cairo" 
                      class=" w-full h-full object-cover">
             </div>
-            <div class="grid col-span-1 gap-4 h-full">
+            <div class="grid col-span-1 gap-2 h-full">
                 <img src="images/single-tour/cairo.jpg" 
                      alt="Cairo" 
                      class=" w-full h-[155px] object-cover">
@@ -167,7 +167,7 @@ $_primary_two = "#074C56";
 						</svg>                                </g>
                             </svg>
                         </p>
-                        <p class="text-gray-100 text-sm font-light md:font-medium md:text-base">Duration :<strong>3
+                        <p class="text-[#05363D] text-md font-light md:font-medium md:text-base">Duration :<strong>3
                                 Days , 2 Nights</strong>
                         </p>
                     </li>
@@ -180,7 +180,7 @@ $_primary_two = "#074C56";
 								fill="<?= $_primary ?>" />
 						</svg>                            </svg>
                         </p>
-                        <p class="text-gray-100 text-sm font-light md:font-medium md:text-base">Rating :
+                        <p class="text-[#05363D] text-md font-light md:font-medium md:text-base">Rating :
                             <strong>4.8</strong>
                         </p>
                     </li>
@@ -188,7 +188,7 @@ $_primary_two = "#074C56";
                 <div class=" ">
                     <strong class="max-w-[100px] mt-4 font-semibold flex justify-center items-center rounded-[32px] bg-[#DFFE8E]">
                         -45 %</strong>
-                    <div class="flex items-center gap-2 mt-4 text-white ">
+                    <div class="flex items-center gap-2 mt-4 text-[#05363D] ">
                         <span class="text-[18px] font-semibold">Start from:</span>
                         <span class="text-[40px] font-semibold">100.00$</span>
                         <span class="text-[18px] font-semibold">/ Person</span>
