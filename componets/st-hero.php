@@ -4,7 +4,7 @@ $_primary = "#095763";
 $_primary_two = "#074C56";
 ?>
 
-<section class="hero-section max-w-7xl px-4 sm:px-6 lg:px-8 mx-auto pt-6 ">
+<section class="hero-section max-w-7xl px-0 md:px-4 lg:px-8 mx-auto pt-4 md:pt-6">
     <!-- Desktop -->
     <div class="hidden md:grid grid-cols-12 gap-4 h-[550px]">
         <!-- Left side - Main Image -->
@@ -113,7 +113,7 @@ $_primary_two = "#074C56";
     <div class="md:hidden">
   
     <h1 style="font-family: 'Berkshire Swash', cursive;"
-                    class="text-[32px] md:text-[64px] font-semibold mt-0 mb-4 text-[<?= $_yellow ?>]">
+                    class="text-[32px] md:text-[64px] font-semibold mt-0 ms-4 mb-4 text-[<?= $_yellow ?>]">
                     Grand tour of Cairo
                 </h1>
         <div class="grid grid-cols-2 gap-2 h-[320px]">
@@ -139,7 +139,7 @@ $_primary_two = "#074C56";
 
         <div>
              
-                <ul class=" mt-4">
+                <ul class=" mt-4 ms-4">
                     <li class="flex items-center justify-start gap-2  mb-3">
                         <p class="w-[32px] h-[32px] rounded-full bg-[#FDFDFDB2] flex items-center justify-center">
                             <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -185,7 +185,7 @@ $_primary_two = "#074C56";
                         </p>
                     </li>
                 </ul>
-                <div class=" ">
+                <div class="ms-4 ">
                     <strong class="max-w-[100px] mt-4 font-semibold flex justify-center items-center rounded-[32px] bg-[#DFFE8E]">
                         -45 %</strong>
                     <div class="flex items-center gap-2 mt-4 text-[#05363D] ">

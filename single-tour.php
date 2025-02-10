@@ -181,9 +181,9 @@ $_primary_two = "#074C56";
 
     <!-- Start tab-link -->
 <!-- Start tab-link -->
-<section class="tab-link shadow-[0_4px_8px_rgba(0,0,0,0.08)] sticky top-0 bg-white z-50">
+<section class="tab-link shadow-[0_4px_8px_rgba(0,0,0,0.08)] sticky top-0 bg-white z-50 hidden md:block">
     <div class="p-4 max-w-7xl mx-auto relative my-12 md:my-16">
-        <div class="overflow-x-auto custom-scrollbar">
+        <div class="overflow-x-auto">
             <ul class="flex md:justify-start gap-8  whitespace-nowrap w-max md:w-full px-4 md:px-0">
                 <li class="shrink-0"><a href="#overview" data-content="overview" class="btn btn-secondary btn-primary block text-[14px]">Overview</a></li>
                 <li class="shrink-0"><a href="#itinerary" data-content="itinerary" class="btn btn-secondary block text-[14px]">Itinerary</a></li>
@@ -195,6 +195,34 @@ $_primary_two = "#074C56";
         </div>
     </div>
 </section>
+<section class="tab-link shadow-[0_4px_8px_rgba(0,0,0,0.08)] sticky top-0 bg-white z-50 md:hidden">
+    <div class="p-4 max-w-7xl mx-auto relative my-12 md:my-16">
+        <!-- Swiper Wrapper -->
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide ">
+                    <a href="#overview" data-content="overview" class="btn btn-secondary btn-primary block text-[14px]">Overview</a>
+                </div>
+                <div class="swiper-slide ">
+                    <a href="#itinerary" data-content="itinerary" class="btn btn-secondary block text-[14px]">Itinerary</a>
+                </div>
+                <div class="swiper-slide ">
+                    <a href="#flights" data-content="flights" class="btn btn-secondary block text-[14px]">Flights</a>
+                </div>
+                <div class="swiper-slide ">
+                    <a href="#prices" data-content="prices" class="btn btn-secondary block text-[14px]">Prices</a>
+                </div>
+                <div class="swiper-slide ">
+                    <a href="#reviews" data-content="reviews" class="btn btn-secondary block text-[14px]">Reviews</a>
+                </div>
+                <div class="swiper-slide ">
+                    <a href="#faq" data-content="faq" class="btn btn-secondary block text-[14px]">FAQ</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 
 <style>
 /* Update btn styles */
@@ -554,8 +582,8 @@ $_primary_two = "#074C56";
         <!-- end subscribe -->
     <?php include "componets/footer.php" ?>
 
- <script>
- document.addEventListener('DOMContentLoaded', () => {
+    <script>
+document.addEventListener('DOMContentLoaded', () => {
     // Tab link functionality
     const tabLinks = document.querySelectorAll('.tab-link a');
     const sections = document.querySelectorAll('.tab-content');
@@ -567,32 +595,27 @@ $_primary_two = "#074C56";
         rootMargin: '-120px 0px -50% 0px' // Adjusted margins
     };
 
+    let manualClick = false; // Flag to track manual clicks
+
     // Intersection Observer callback with improved logic
     function updateActiveTab(entries) {
-        // Find the section that is most visible
+        if (manualClick) return; // Skip observer updates when manually clicking
+
         let maxVisibleSection = null;
         let maxVisibility = 0;
 
         entries.forEach(entry => {
-            const visibilityRatio = entry.intersectionRatio;
-            if (visibilityRatio > maxVisibility) {
-                maxVisibility = visibilityRatio;
+            if (entry.isIntersecting && entry.intersectionRatio > maxVisibility) {
+                maxVisibility = entry.intersectionRatio;
                 maxVisibleSection = entry.target;
             }
         });
 
         if (maxVisibleSection) {
             const activeId = maxVisibleSection.getAttribute('id');
-            
-            // Update active tab only if we have a valid section
             if (activeId) {
-                // Remove active class from all links
-                tabLinks.forEach(link => {
-                    link.classList.remove('btn-primary');
-                });
-                
-                // Add active class to corresponding link
-                const activeLink = document.querySelector(`[href="#${activeId}"]`);
+                tabLinks.forEach(link => link.classList.remove('btn-primary'));
+                const activeLink = document.querySelector(`.tab-link a[href="#${activeId}"]`);
                 if (activeLink) {
                     activeLink.classList.add('btn-primary');
                 }
@@ -602,44 +625,33 @@ $_primary_two = "#074C56";
 
     // Create observer
     const observer = new IntersectionObserver(updateActiveTab, options);
-
-    // Observe all sections
-    sections.forEach(section => {
-        if (section) {
-            observer.observe(section);
-        }
-    });
+    sections.forEach(section => observer.observe(section));
 
     // Add click event listeners to tab links
     tabLinks.forEach(link => {
         link.addEventListener('click', function(e) {
             e.preventDefault();
+            manualClick = true; // Set flag to disable observer temporarily
+
+            tabLinks.forEach(link => link.classList.remove('btn-primary'));
+            this.classList.add('btn-primary');
+
             const contentId = this.getAttribute('data-content');
             const targetSection = document.getElementById(contentId);
             
-            // Remove 'btn-primary' class from all links
-            tabLinks.forEach(link => {
-                link.classList.remove('btn-primary');
-            });
-
-            // Add 'btn-primary' class to the clicked link
-            this.classList.add('btn-primary');
-            
-            // Scroll to the section
             if (targetSection) {
-                const headerOffset = 120; // Increased offset to match rootMargin
+                const headerOffset = 120; // Adjusted offset
                 const elementPosition = targetSection.getBoundingClientRect().top;
                 const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-                
-                window.scrollTo({
-                    top: offsetPosition,
-                    behavior: "smooth"
-                });
+
+                window.scrollTo({ top: offsetPosition, behavior: "smooth" });
+
+                setTimeout(() => { manualClick = false; }, 1000); // Reactivate observer after scroll
             }
         });
     });
 
-    // Rest of your Swiper initialization code remains the same
+    // Swiper Initialization
     const initializeSwiper = (selector, config = {}) => {
         const swiperElement = document.querySelector(selector);
         if (swiperElement) {
@@ -675,17 +687,24 @@ $_primary_two = "#074C56";
     // Initialize Swiper instances
     initializeSwiper('.what-are-saying-swiper', {
         breakpoints: {
-            768: {
-                slidesPerView: 1,
-            },
-            1024: {
-                slidesPerView: 1.6,
-            },
+            768: { slidesPerView: 1 },
+            1024: { slidesPerView: 1.6 },
         }
     });
     initializeSwiper('.single-tours-swiper');
     initializeSwiper('.blog-swiper');
 });
+</script>
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        new Swiper(".mySwiper", {
+            slidesPerView: "4",  // Allow dynamic slide widths
+            spaceBetween: 16,       // Spacing between slides
+            freeMode: true,         // Enables smooth scrolling without snapping
+        });
+    });
 </script>
 
 </body>
