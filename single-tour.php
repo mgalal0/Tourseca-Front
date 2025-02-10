@@ -364,10 +364,10 @@ $_primary_two = "#074C56";
                 <?php include "componets/inquery-form.php" ?>
 
                 <!-- start More trips to discover -->
-                <div class="mt-8">
+                <div class="mt-8 ">
                     <h3 class="text-[<?= $_primary ?>] text-3xl text-center">More trips to discover</h3>
                     <div class="grid grid-cols-1 gap-4 my-6">
-                        <div class="bg-white rounded-[20px] shadow-[0_2px_8px_rgba(0,0,0,0.08)] overflow-hidden ">
+                        <div class="bg-white rounded-[20px] shadow-[0_2px_8px_rgba(0,0,0,0.08)]  ">
                             <div class="relative">
                                 <div class="overlay"></div>
                                 <img loading="lazy" src="images/swipe1.jpg" alt="Luxor Temple"
@@ -539,6 +539,9 @@ $_primary_two = "#074C56";
 
         </div>
         <!-- end tab link content -->
+         <div class="md:hidden mb-16">
+         <?php include "componets/inquery-form.php" ?>
+         </div>
     </div>
     <!-- start subscribe -->
         <?php include "componets/subscribe.php" ?>
@@ -554,43 +557,63 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Options for the Intersection Observer with adjusted values
     const options = {
-        root: null,
-        threshold: [0, 0.1, 0.2, 0.3, 0.4, 0.5], // Multiple thresholds for better detection
-        rootMargin: '-120px 0px -50% 0px' // Adjusted margins
-    };
-
+    root: null,
+    threshold: [0.05, 0.1, 0.2, 0.3], // Detect earlier
+    rootMargin: '-30% 0px -30% 0px'  // More generous margins
+};
     let manualClick = false; // Flag to track manual clicks
 
-    // Intersection Observer callback with improved logic
     function updateActiveTab(entries) {
-        if (manualClick) return; // Skip observer updates when manually clicking
+    if (manualClick) return; // Skip updates when manually clicking
 
-        let maxVisibleSection = null;
-        let maxVisibility = 0;
+    let maxVisibleSection = null;
+    let maxVisibility = 0;
 
-        entries.forEach(entry => {
-            if (entry.isIntersecting && entry.intersectionRatio > maxVisibility) {
-                maxVisibility = entry.intersectionRatio;
-                maxVisibleSection = entry.target;
-            }
-        });
+    console.log("Observer triggered!");
 
-        if (maxVisibleSection) {
-            const activeId = maxVisibleSection.getAttribute('id');
-            if (activeId) {
-                tabLinks.forEach(link => link.classList.remove('btn-primary'));
-                const activeLink = document.querySelector(`.tab-link a[href="#${activeId}"]`);
-                if (activeLink) {
-                    activeLink.classList.add('btn-primary');
-                }
+    entries.forEach(entry => {
+        console.log(`Observed ${entry.target.id}: isIntersecting = ${entry.isIntersecting}, intersectionRatio = ${entry.intersectionRatio}`);
+
+        if (entry.isIntersecting && entry.intersectionRatio > maxVisibility) {
+            maxVisibility = entry.intersectionRatio;
+            maxVisibleSection = entry.target;
+        }
+    });
+
+    if (maxVisibleSection) {
+        console.log(`✅ Active section detected: ${maxVisibleSection.id}`);
+        const activeId = maxVisibleSection.getAttribute('id');
+        if (activeId) {
+            tabLinks.forEach(link => link.classList.remove('btn-primary'));
+            const activeLink = document.querySelector(`.tab-link a[href="#${activeId}"]`);
+            if (activeLink) {
+                activeLink.classList.add('btn-primary');
             }
         }
+    } else {
+        console.log("❌ No section is currently active.");
     }
+    console.log(document.getElementById("itinerary").getBoundingClientRect());
+
+}
+
+
 
     // Create observer
     const observer = new IntersectionObserver(updateActiveTab, options);
-    sections.forEach(section => observer.observe(section));
+    setTimeout(() => {
+    const updatedSections = document.querySelectorAll('.tab-content');
+    updatedSections.forEach(section => {
+        observer.observe(section);
+        console.log(`Observer reattached to: ${section.id}`);
+    });
+}, 1500);
 
+
+setTimeout(() => {
+    const itinerarySection = document.getElementById("itinerary");
+    console.log(itinerarySection ? "Itinerary section found!" : "Itinerary section NOT found!");
+}, 1000);
     // Add click event listeners to tab links
     tabLinks.forEach(link => {
         link.addEventListener('click', function(e) {
@@ -604,7 +627,8 @@ document.addEventListener('DOMContentLoaded', () => {
             const targetSection = document.getElementById(contentId);
             
             if (targetSection) {
-                const headerOffset = 120; // Adjusted offset
+                const headerOffset = document.querySelector('.tab-link').offsetHeight + 20; // Dynamic height
+
                 const elementPosition = targetSection.getBoundingClientRect().top;
                 const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
 
@@ -661,15 +685,7 @@ document.addEventListener('DOMContentLoaded', () => {
 </script>
 
 
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-        new Swiper(".mySwiper", {
-            slidesPerView: "4",  // Allow dynamic slide widths
-            spaceBetween: 16,       // Spacing between slides
-            freeMode: true,         // Enables smooth scrolling without snapping
-        });
-    });
-</script>
+
 
 </body>
 
