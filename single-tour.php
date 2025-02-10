@@ -181,7 +181,7 @@ $_primary_two = "#074C56";
 
     <!-- Start tab-link -->
 <!-- Start tab-link -->
-<section class="tab-link shadow-[0_4px_8px_rgba(0,0,0,0.08)] sticky top-0 bg-white z-50 hidden md:block">
+<section class="tab-link shadow-[0_4px_8px_rgba(0,0,0,0.08)] sticky top-0 bg-white z-50">
     <div class="p-4 max-w-7xl mx-auto relative my-12 md:my-16">
         <div class="overflow-x-auto">
             <ul class="flex md:justify-start gap-8  whitespace-nowrap w-max md:w-full px-4 md:px-0">
@@ -195,33 +195,7 @@ $_primary_two = "#074C56";
         </div>
     </div>
 </section>
-<section class="tab-link shadow-[0_4px_8px_rgba(0,0,0,0.08)] sticky top-0 bg-white z-50 md:hidden">
-    <div class="p-4 max-w-7xl mx-auto relative my-12 md:my-16">
-        <!-- Swiper Wrapper -->
-        <div class="swiper mySwiper">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide ">
-                    <a href="#overview" data-content="overview" class="btn btn-secondary btn-primary block text-[14px]">Overview</a>
-                </div>
-                <div class="swiper-slide ">
-                    <a href="#itinerary" data-content="itinerary" class="btn btn-secondary block text-[14px]">Itinerary</a>
-                </div>
-                <div class="swiper-slide ">
-                    <a href="#flights" data-content="flights" class="btn btn-secondary block text-[14px]">Flights</a>
-                </div>
-                <div class="swiper-slide ">
-                    <a href="#prices" data-content="prices" class="btn btn-secondary block text-[14px]">Prices</a>
-                </div>
-                <div class="swiper-slide ">
-                    <a href="#reviews" data-content="reviews" class="btn btn-secondary block text-[14px]">Reviews</a>
-                </div>
-                <div class="swiper-slide ">
-                    <a href="#faq" data-content="faq" class="btn btn-secondary block text-[14px]">FAQ</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+
 
 
 <style>
@@ -244,32 +218,22 @@ $_primary_two = "#074C56";
     height: 2px;
     background-color: #095763;
 }
-
-/* Customize scrollbar for webkit browsers */
-.custom-scrollbar::-webkit-scrollbar {
-    display: block;
-    height: 4px;
+/* Reduce scrollbar width and height */
+.tab-link div::-webkit-scrollbar {
+  height: 1px; 
+  width: 1px; 
+}
+.tab-link div::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+  border-radius: 10px;
 }
 
-.custom-scrollbar::-webkit-scrollbar-track {
-    background: #f1f1f1;
-    border-radius: 2px;
+/* Customize the scrollbar thumb */
+.tab-link div::-webkit-scrollbar-thumb {
+  background:rgb(255, 255, 255); 
+  border-radius: 10px;
 }
 
-.custom-scrollbar::-webkit-scrollbar-thumb {
-    background: #888;
-    border-radius: 2px;
-}
-
-.custom-scrollbar::-webkit-scrollbar-thumb:hover {
-    background: #555;
-}
-
-/* For Firefox */
-.custom-scrollbar {
-    scrollbar-width: thin;
-    scrollbar-color: #888 #f1f1f1;
-}
 </style>
     <!-- End tab-link -->
 
