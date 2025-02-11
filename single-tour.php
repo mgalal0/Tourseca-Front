@@ -520,6 +520,9 @@ $_primary_two = "#074C56";
                 <div class="tab-content" id="prices" data-tab="prices">
                     <?php include "componets/st-prices.php" ?>
                 </div>
+                <div class="md:hidden mb-16 px-4">
+         <?php include "componets/inquery-form.php" ?>
+         </div>
                 <!-- reviews -->
                 <div class="tab-content" id="reviews" data-tab="reviews">
                     <section class="reviews-section max-w-7xl px-4 sm:px-6 lg:px-8 mx-auto relative mb-16">
@@ -539,9 +542,7 @@ $_primary_two = "#074C56";
 
         </div>
         <!-- end tab link content -->
-         <div class="md:hidden mb-16">
-         <?php include "componets/inquery-form.php" ?>
-         </div>
+       
     </div>
     <!-- start subscribe -->
         <?php include "componets/subscribe.php" ?>
